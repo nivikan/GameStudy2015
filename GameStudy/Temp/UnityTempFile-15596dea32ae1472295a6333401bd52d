@@ -81,5 +81,4 @@
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
 -i:UnityEditor
-'Assets/scripts/MakeBubble 1.js'
 'Assets/scripts/MakeBubble.js'
