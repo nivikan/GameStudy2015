@@ -1,9 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/People/girl1/girl1.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/buttonScript.js">
     <Files>
-      <File FileName="Assets/scripts/Objects/TentDoor/Tent.cs" Line="29" Column="30" />
-      <File FileName="Assets/scripts/People/girl1/girl1.cs" Line="4" Column="1" />
+      <File FileName="Assets/scripts/Bubble/CutsceneControls/ScenesScript.js" Line="117" Column="15" />
+      <File FileName="Assets/scripts/Bubble/CutsceneControls/cutscene1/Scene2.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/buttonScript.js" Line="3" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

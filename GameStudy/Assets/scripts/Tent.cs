@@ -5,6 +5,7 @@ public class Tent2 : MonoBehaviour {
 
 	public Animator anim;
 	public GameObject tent;
+	
 
 	// Use this for initialization
 	void Start () {
@@ -29,5 +30,13 @@ public class Tent2 : MonoBehaviour {
 			gameObject.tag = "closed";
 		}
 
+	}
+
+	void OnMouseEnter() {
+		print ("MOUSE OVER ME");
+	}
+
+	void OnMouseOver() {
+		print ("MOUSE OVER ME");
 	}
 }
