@@ -1,13 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/RestartScript.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/dialogues.js">
     <Files>
-      <File FileName="Assets/scripts/RestartScript.js" Line="11" Column="28" />
-      <File FileName="Assets/scripts/Bubble/CutsceneControls/ScenesScript.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/Bubble/CutsceneControls/cutscene1/Scene2.js" Line="65" Column="15" />
-      <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/buttonScript.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/Bubble/CutsceneControls/cutscene1/Scene1.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="58" Column="7" />
+      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="154" Column="5" />
+      <File FileName="Assets/scripts/storeVars.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Steps/step3/Bucket.js" Line="48" Column="129" />
+      <File FileName="Assets/scripts/Bubble/CutsceneControls/cutscene1/Scene1.js" Line="123" Column="86" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
