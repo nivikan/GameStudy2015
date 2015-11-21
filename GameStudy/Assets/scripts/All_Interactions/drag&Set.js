@@ -49,7 +49,7 @@ function Update () {
 
 function OnMouseDown()
 {
-    print ("click!");
+    //print ("click!");
 
 }
 
@@ -74,25 +74,25 @@ function OnMouseUp () {
 	{
 		if (transform.position.x < -4.4 )
 		{
-			print ("IN TENT!");
+			//print ("IN TENT!");
 			//anim.Play("tentIdle");
 			storeVars.alunaSet = "inTent";
 		}
 		if ((-4.4  < transform.position.x ) && (transform.position.x < -0.024))
 		{
-			print ("IN CAMPSITE!");
+			//print ("IN CAMPSITE!");
 			//anim.Play("campsiteIdle");
 			storeVars.alunaSet = "inCamp";
 		}
 		if ((-0.024  < transform.position.x ) && (transform.position.x < 4.4))
 		{
-			print ("IN WOODS!");
+			//print ("IN WOODS!");
 			//anim.Play("woodsIdle");
 			storeVars.alunaSet = "inWoods";
 		}
 		if (4.4 < transform.position.x)
 		{
-			print ("IN HILL!");
+			//print ("IN HILL!");
 			//anim.Play("hillIdle");
 			storeVars.alunaSet = "inHill";
 		}
@@ -103,25 +103,25 @@ function OnMouseUp () {
 	{
 		if (transform.position.x < -4.4 )
 		{
-			print ("IN TENT!");
+			//print ("IN TENT!");
 			//anim.Play("tentIdle");
 			storeVars.milkySet = "inTent";
 		}
 		if ((-4.4  < transform.position.x ) && (transform.position.x < -0.024))
 		{
-			print ("IN CAMPSITE!");
+			//print ("IN CAMPSITE!");
 			//anim.Play("campsiteIdle");
 			storeVars.milkySet = "inCamp";
 		}
 		if ((-0.024  < transform.position.x ) && (transform.position.x < 4.4))
 		{
-			print ("IN WOODS!");
+			//print ("IN WOODS!");
 			//anim.Play("woodsIdle");
 			storeVars.milkySet = "inWoods";
 		}
 		if (4.4 < transform.position.x)
 		{
-			print ("IN HILL!");
+			//print ("IN HILL!");
 			//anim.Play("hillIdle");
 			storeVars.milkySet = "inHill";
 		}
@@ -133,25 +133,25 @@ function OnMouseUp () {
 	{
 		if (transform.position.x < -4.4 )
 		{
-			print ("IN TENT!");
+			//print ("IN TENT!");
 			//anim.Play("tentIdle");
 			storeVars.estherSet = "inTent";
 		}
 		if ((-4.4  < transform.position.x ) && (transform.position.x < -0.024))
 		{
-			print ("IN CAMPSITE!");
+			//print ("IN CAMPSITE!");
 			//anim.Play("campsiteIdle");
 			storeVars.estherSet = "inCamp";
 		}
 		if ((-0.024  < transform.position.x ) && (transform.position.x < 4.4))
 		{
-			print ("IN WOODS!");
+			//print ("IN WOODS!");
 			//anim.Play("woodsIdle");
 			storeVars.estherSet = "inWoods";
 		}
 		if (4.4 < transform.position.x)
 		{
-			print ("IN HILL!");
+			//print ("IN HILL!");
 			//anim.Play("hillIdle");
 			storeVars.estherSet = "inHill";
 		}
@@ -163,25 +163,25 @@ function OnMouseUp () {
 	{
 		if (transform.position.x < -4.4 )
 		{
-			print ("IN TENT!");
-			//anim.Play("tentIdle");
+			//print ("IN TENT!");
+			///anim.Play("tentIdle");
 			storeVars.konstalSet = "inTent";
 		}
 		if ((-4.4  < transform.position.x ) && (transform.position.x < -0.024))
 		{
-			print ("IN CAMPSITE!");
+			//print ("IN CAMPSITE!");
 			//anim.Play("campsiteIdle");
 			storeVars.konstalSet = "inCamp";
 		}
 		if ((-0.024  < transform.position.x ) && (transform.position.x < 4.4))
 		{
-			print ("IN WOODS!");
+			//print ("IN WOODS!");
 			//anim.Play("woodsIdle");
 			storeVars.konstalSet = "inWoods";
 		}
 		if (4.4 < transform.position.x)
 		{
-			print ("IN HILL!");
+			//print ("IN HILL!");
 			//anim.Play("hillIdle");
 			storeVars.konstalSet = "inHill";
 		}
@@ -193,25 +193,25 @@ function OnMouseUp () {
 		Debug.Log("Drag ended!");
 		if (transform.position.x < -4.4 )
 		{
-			print ("IN TENT!");
-			//anim.Play("tentIdle");
+			//print ("IN TENT!");
+			///anim.Play("tentIdle");
 			storeVars.cratorSet = "inTent";
 		}
 		if ((-4.4  < transform.position.x ) && (transform.position.x < -0.024))
 		{
-			print ("IN CAMPSITE!");
-			//anim.Play("campsiteIdle");
+			//print ("IN CAMPSITE!");
+			///anim.Play("campsiteIdle");
 			storeVars.cratorSet = "inCamp";
 		}
 		if ((-0.024  < transform.position.x ) && (transform.position.x < 4.4))
 		{
-			print ("IN WOODS!");
+			//print ("IN WOODS!");
 			//anim.Play("woodsIdle");
 			storeVars.cratorSet = "inWoods";
 		}
 		if (4.4 < transform.position.x)
 		{
-			print ("IN HILL!");
+			//print ("IN HILL!");
 			//anim.Play("hillIdle");
 			storeVars.cratorSet = "inHill";
 		}

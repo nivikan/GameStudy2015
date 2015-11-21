@@ -1,4 +1,4 @@
-﻿#pragma strict
+﻿//#pragma strict
 
 var DarkenScene1 : GameObject;
 var DarkenScene2 : GameObject;
@@ -7,6 +7,12 @@ var DarkenScene4 : GameObject;
 
 var allCharacters : Animator;
 
+var isInConvo = false;
+var currentConvo: Array;
+currentConvo = new Array();
+var mouseDownNumber = 0;
+var chara;
+var dialogue;
 
 //var counter = System.Math.Floor(Time.time);
 var scenes : ScenesScript;
@@ -23,7 +29,7 @@ var anim : Animator;
 var dialogues : Hashtable;
 var Set1 : Hashtable;
 
-// this is the dialogue being said now
+//(temp) this is the dialogue being said now
 var currentDialogue;
 
 //temp var to store lines
@@ -40,7 +46,12 @@ var alunaSet = "inTent";
 var estherSet = "inTent";
 var milkySet = "inTent";
 
-
+var scene: Array;
+var aluna_milky_woods = false;
+var scene2: Array;
+var esther_milky_hill = false;
+var scene3: Array;
+var aluna_esther_hill = false;
 
 
 ////////////////////////////////////////
@@ -49,7 +60,8 @@ var milkySet = "inTent";
 
 
 function Start () {
-
+	
+	
 	//find the variables so you dont need to define them
 	game = GameObject.Find("GameObject");
 	anim = GetComponent(Animator);
@@ -74,30 +86,27 @@ function Start () {
 	//create a different dialoque sets and add them to the hashtable
 
 
-////// MILKY & ALUNA in WOODS
-	var scene: Array;
-
-	scene = new Array();
-	scene.Push(["Milky", "hello"]);
-	scene.Push(["Aluna", "o hai"]);
-	scene.Push(["Milky", "ooo"]);
-
-	Set1.Add("milky_aluna_woods", scene);
-	
+	Set1 = new Hashtable();
 
 ////// MILKY & ESTHER in HILL
-	var scene2: Array;
 
 	scene2 = new Array();
 	scene2.Push(["Milky", "Bonjour"]);
 	scene2.Push(["Esther", "Ca Va?"]);
 	scene2.Push(["Milky", "Ca Va Bien. Tu?"]);
 	
-	Set1.Add("milky_esther_hill", scene2);
+	Set1.Add("esther_milky_hill",scene2);
 
+////// MILKY & ALUNA in WOODS
+
+	scene = new Array();
+	scene.Push(["Milky", "hello"]);
+	scene.Push(["Aluna", "o hai"]);
+	scene.Push(["Milky", "ooo"]);
+	
+	Set1.Add("aluna_milky_woods",scene);
 
 ////// ALUNA & ESTHER in WOODS
-	var scene3: Array;
 
 	scene3 = new Array();
 	scene3.Push(["Aluna", "Who the Fuck Are you?"]);
@@ -105,10 +114,9 @@ function Start () {
 	scene3.Push(["Aluna", "I asked you first"]);
 	scene3.Push(["Esther", "I asked you second"]);
 	
-	Set1.Add("aluna_esther_woods", scene3);
+	Set1.Add("aluna_esther_woods",scene3);
 	
-
-
+	
 
 }
 
@@ -117,11 +125,12 @@ function Start () {
 function Update () { 
 
 
-cratorSet = storeVars.cratorSet;
-konstalSet = storeVars.konstalSet;
-alunaSet = storeVars.alunaSet;
-estherSet = storeVars.estherSet;
-milkySet = storeVars.milkySet;
+
+	cratorSet = storeVars.cratorSet;
+	konstalSet = storeVars.konstalSet;
+	alunaSet = storeVars.alunaSet;
+	estherSet = storeVars.estherSet;
+	milkySet = storeVars.milkySet;
 
 
 
@@ -151,9 +160,15 @@ milkySet = storeVars.milkySet;
 	if ((alunaSet == "inWoods") && (milkySet == "inWoods"))
 	{
 		print ("milky_aluna_woods");
-		//scenes.makeCharacterSpeak("Esther", "How did you even get pregnant? Was it boy 2?");
 		
 		//anim.Play("scene1_milky_aluna_woods");
+		
+    	if(Set1.Contains("aluna_milky_woods"))
+    	{
+    		currentConvo = Set1["aluna_milky_woods"];
+    		isInConvo = true;
+    		makeConvo("aluna_milky_woods");
+    	}
 
 
 	}
@@ -161,6 +176,15 @@ milkySet = storeVars.milkySet;
 	if ((alunaSet == "inWoods") && (estherSet == "inWoods") && (konstalSet != "inWoods") && (cratorSet != "inWoods") && (milkySet != "inWoods") )
 	{
 		print ("aluna_esther_woods");
+		
+		//anim.Play("scene1_aluna_esther_woods");
+		
+    	if(Set1.Contains("aluna_milky_woods"))
+    	{
+    		currentConvo = Set1["aluna_esther_woods"];
+    		isInConvo = true;
+    		makeConvo("aluna_esther_woods");
+    	}
 
 
 	}
@@ -174,34 +198,77 @@ milkySet = storeVars.milkySet;
 	if ((estherSet == "inHill") && (milkySet == "inHill"))
 	{
 		print ("milky_esther_hill");
+		
+		//anim.Play("scene1_aluna_esther_woods");
+		
+    	if(Set1.Contains("esther_milky_hill"))
+    	{
+    		currentConvo = Set1["esther_milky_hill"];
+    		isInConvo = true;
+    		makeConvo("esther_milky_hill");
+    	}
 
 
 	}
 
-
-
-
-
-
-
-
 }
 
 
-/*
-function makeCharaSpeak(lines:Array )
+
+
+
+
+
+////////////////////////////////////////
+///////////  Functions
+////////////////////////////////////////
+
+
+
+
+function makeConvo(stringName)
 {
-	scenes.makeCharacterSpeak("Esther", "How did you even get pregnant? Was it boy 2?");
+	if (mouseDownNumber == 0)
+	{
+		if (isInConvo == true)
+		{
+			if (mouseDownNumber == currentConvo.length)
+			{
+				isInConvo = false;
+				mouseDownNumber = 0;
+			
+			}
+			else
+			{
+				print (currentConvo);
+				chara = currentConvo[mouseDownNumber][0];
+		        dialoque = currentConvo[mouseDownNumber][1];
+		 	    scenes.makeCharacterSpeak( chara , dialoque);
+		 	    mouseDownNumber ++;
+	 	    }
+		}
 	
-	for(var i : int = 0; i < lines.length; i++)
-    {
-        Debug.Log("Creating dialogue number: " + i);
-        var arr = lines[i];
-        var chara = arr[0];
-        var dialoque = arr[1];
-        scenes.makeCharacterSpeak( chara , dialoque);
-    }
-    
+	}
+	else if(Input.GetMouseButtonUp(0) == true)
+	{
+		if (isInConvo == true)
+		{
+			if (mouseDownNumber == currentConvo.length)
+			{
+				isInConvo = false;
+				mouseDownNumber = 0;
+				Set1.Remove(stringName);
+			
+			}
+			else
+			{
+				print (currentConvo);
+				chara = currentConvo[mouseDownNumber][0];
+		        dialoque = currentConvo[mouseDownNumber][1];
+		 	    scenes.makeCharacterSpeak( chara , dialoque);
+		 	    mouseDownNumber ++;
+	 	    }
+		}
+	}
 
 }
-*/
