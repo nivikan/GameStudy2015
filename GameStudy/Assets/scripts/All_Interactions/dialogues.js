@@ -5,6 +5,10 @@ var DarkenScene2 : GameObject;
 var DarkenScene3 : GameObject;
 var DarkenScene4 : GameObject;
 
+var SpeakingChar1: GameObject;
+var SpeakingChar2: GameObject;
+var blank: Sprite;
+
 var allCharacters : Animator;
 
 var isInConvo = false;
@@ -75,6 +79,8 @@ function Start () {
 	DarkenScene2 = GameObject.Find("DarkenScene2");
 	DarkenScene3 = GameObject.Find("DarkenScene3");
 	DarkenScene4 = GameObject.Find("DarkenScene4");
+	SpeakingChar1 = GameObject.Find("SpeakingChar1");
+	SpeakingChar2 = GameObject.Find("SpeakingChar2");
 
 
 
@@ -234,8 +240,14 @@ function makeConvo(stringName)
 		{
 			if (mouseDownNumber == currentConvo.length)
 			{
-				isInConvo = false;
-				mouseDownNumber = 0;
+				//THIS IS WHERE CONVO ENDS!!!1
+				print ("working");
+				gamestate.characterSpeaking = "none";
+				print ("working 2");
+				SpeakingChar1.GetComponent.<UnityEngine.UI.Image>().sprite = blank;
+				SpeakingChar2.GetComponent.<UnityEngine.UI.Image>().sprite = blank;
+				//isInConvo = false;
+				//mouseDownNumber = 0;
 			
 			}
 			else
@@ -255,6 +267,12 @@ function makeConvo(stringName)
 		{
 			if (mouseDownNumber == currentConvo.length)
 			{
+				gamestate.characterSpeaking = "none";
+				print ("working 2");
+				SpeakingChar1.GetComponent.<UnityEngine.UI.Image>().sprite = blank;
+				SpeakingChar2.GetComponent.<UnityEngine.UI.Image>().sprite = blank;
+				makeScreensLight();
+				
 				isInConvo = false;
 				mouseDownNumber = 0;
 				Set1.Remove(stringName);
@@ -270,5 +288,14 @@ function makeConvo(stringName)
 	 	    }
 		}
 	}
+
+}
+
+function makeScreensLight(){
+	 DarkenScene1.GetComponent.<Image>().color = Color(0, 0, 0, 0);
+	 DarkenScene2.GetComponent.<Image>().color = Color(0, 0, 0, 0);
+	 DarkenScene3.GetComponent.<Image>().color = Color(0, 0, 0, 0);
+	 DarkenScene4.GetComponent.<Image>().color = Color(0, 0, 0, 0);
+
 
 }

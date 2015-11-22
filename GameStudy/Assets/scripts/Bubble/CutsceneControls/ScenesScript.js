@@ -75,7 +75,7 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 	
 	var variableScript : variables = selectedChar.GetComponent(variables);
 	
-	makeBubbleScript.makeBubble(positionx, positiony, text, variableScript.bubbleColor, variableScript.textColor, defaultImage);
+	makeBubbleScript.makeBubble(positionx, positiony, text, variableScript.bubbleColor, variableScript.textColor, defaultImage, character);
 
 
 }
@@ -84,7 +84,7 @@ function findLocationOfChar() {
 	if(selectedChar.transform.position.x >= -8.11 && selectedChar.transform.position.x < -4.48)
 	{
 	 positionx = -6.55;
-	 DarkenScene1.GetComponent.<Image>().color = Color(0, 0, 0, 0);
+	 DarkenScene1.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	 DarkenScene2.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	 DarkenScene3.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	 DarkenScene4.GetComponent.<Image>().color = Color(0, 0, 0, .5);
@@ -94,7 +94,7 @@ function findLocationOfChar() {
 	{
 	 positionx = -2.17;
 	 DarkenScene1.GetComponent.<Image>().color = Color(0, 0, 0, .5);
-	 DarkenScene2.GetComponent.<Image>().color = Color(0, 0, 0, 0);
+	 DarkenScene2.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	 DarkenScene3.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	 DarkenScene4.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	}
@@ -103,7 +103,7 @@ function findLocationOfChar() {
 	{
 	 positionx = 2.2;
 	 DarkenScene2.GetComponent.<Image>().color = Color(0, 0, 0, .5);
-	 DarkenScene3.GetComponent.<Image>().color = Color(0, 0, 0, 0);
+	 DarkenScene3.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	 DarkenScene1.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	 DarkenScene4.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	}
@@ -114,7 +114,7 @@ function findLocationOfChar() {
 	 DarkenScene2.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	 DarkenScene3.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	 DarkenScene1.GetComponent.<Image>().color = Color(0, 0, 0, .5);
-	 DarkenScene4.GetComponent.<Image>().color = Color(0, 0, 0, 0);
+	 DarkenScene4.GetComponent.<Image>().color = Color(0, 0, 0, .5);
 	}
 
 }
