@@ -120,65 +120,65 @@ if(line0 == false)
 
 if(Input.GetMouseButtonUp(0) == true && line1 == false)
 {
-	scenes.makeCharacterSpeak("Esther", "How did you even get pregnant? Was it boy 2?");
+	scenes.makeCharacterSpeak("Esther", "How did you even get pregnant? Was it boy 2?", "happy");
 	line1 = true;
 	allCharacters.Play("scene1Esther");
 }
 else if(Input.GetMouseButtonUp(0) == true && line2 == false)
 {
-	scenes.makeCharacterSpeak("Milky",  "No…");
+	scenes.makeCharacterSpeak("Milky",  "No…", "happy");
 	line2 = true;
 	allCharacters.Play("scene1Milky");
 }
 
 else if(Input.GetMouseButtonUp(0) == true && line3 == false)
 {
-	scenes.makeCharacterSpeak("Esther",  "I know you said it was a freak anomaly but that’s a little hard to swallow.");
+	scenes.makeCharacterSpeak("Esther",  "I know you said it was a freak anomaly but that’s a little hard to swallow.", "happy");
 	line3 = true;
 	allCharacters.Play("scene1Esther");
 }
 else if(Input.GetMouseButtonUp(0) == true && line4 == false)
 {
-	scenes.makeCharacterSpeak("Milky", "I don’t even know what happened. I just noticed I was pregnant.");
+	scenes.makeCharacterSpeak("Milky", "I don’t even know what happened. I just noticed I was pregnant.", "happy");
 	line4 = true;
 	allCharacters.Play("scene1Milky");
 }
 else if(Input.GetMouseButtonUp(0) == true && line5 == false)
 {
-	scenes.makeCharacterSpeak("Esther", "You didn’t have sex with anyone either…");
+	scenes.makeCharacterSpeak("Esther", "You didn’t have sex with anyone either…", "happy");
 	line5 = true;
 	allCharacters.Play("scene1Esther");
 }
 
 else if(Input.GetMouseButtonUp(0) == true && line6 == false)
 {
-	scenes.makeCharacterSpeak("Milky", "Yeah...");
+	scenes.makeCharacterSpeak("Milky", "Yeah...", "happy");
 	line6 = true;
 	allCharacters.Play("scene1Milky");
 }
 else if(Input.GetMouseButtonUp(0) == true && line7 == false)
 {
-	scenes.makeCharacterSpeak("Esther", "c’mon- that’s way too farfetched");
+	scenes.makeCharacterSpeak("Esther", "c’mon- that’s way too farfetched", "happy");
 	line7 = true;
 	allCharacters.Play("scene1Esther");
 }
 else if(Input.GetMouseButtonUp(0) == true && line8 == false)
 {
-	scenes.makeCharacterSpeak("Milky", "weirder stuff have happened. ");
+	scenes.makeCharacterSpeak("Milky", "weirder stuff have happened. ", "happy");
 	line8 = true;
 	allCharacters.Play("scene1Milky");
 }
 
 else if(Input.GetMouseButtonUp(0) == true && line9 == false)
 {
-	scenes.makeCharacterSpeak("Esther", "…");
+	scenes.makeCharacterSpeak("Esther", "…", "happy");
 	line9 = true;
 	allCharacters.Play("Characters2");
 }
 
 else if(Input.GetMouseButtonUp(0) == true && line10 == false)
 {
-	scenes.makeCharacterSpeak("Aluna", "…");
+	scenes.makeCharacterSpeak("Aluna", "…", "happy");
 	line10 = true;
 	allCharacters.Play("Characters2");
 }

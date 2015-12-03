@@ -1,13 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/dialogues.js">
     <Files>
-      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="208" Column="35" />
+      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="344" Column="78" />
       <File FileName="Assets/scripts/storeVars.js" Line="1" Column="1" />
       <File FileName="Assets/scripts/Steps/step3/Bucket.js" Line="1" Column="1" />
       <File FileName="Assets/scripts/Bubble/CutsceneControls/cutscene1/Scene1.js" Line="1" Column="1" />
       <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="1" Column="1" />
       <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Bubble/CutsceneControls/ScenesScript.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Bubble/CutsceneControls/cutscene1/Scene2.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

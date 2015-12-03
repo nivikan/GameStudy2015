@@ -51,10 +51,10 @@ function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, 
  
  function makeOnScreenChar(Char)
  {
- 	print(gamestate.characterSpeaking);
- 	print("CHARACTER");
- 	print(Char);
- 	print(Char == "Aluna");
+ 	//print(gamestate.characterSpeaking);
+ 	//print("CHARACTER");
+ 	//print(Char);
+ 	//print(Char == "Aluna");
  	if(gamestate.characterSpeaking == "1")
  	{
  		curImage = SpeakingChar1;
@@ -69,31 +69,31 @@ function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, 
 	if(Char == "Aluna")
 	{
 		curImage.GetComponent.<UnityEngine.UI.Image>().sprite = AlunaImage;
-		print("Aluna added");
+		//print("Aluna added");
 	}
 	
 	if(Char == "Milky")
 	{
 		curImage.GetComponent.<UnityEngine.UI.Image>().sprite = MilkyImage;
-		print("Milky added");
+		//print("Milky added");
 	}
 	
 	if(Char == "Esther")
 	{
 		curImage.GetComponent.<UnityEngine.UI.Image>().sprite = EstherImage;
-	print("Esther added");
+	//print("Esther added");
 	}
 	
 	if(Char == "Crator")
 	{
 	curImage.GetComponent.<UnityEngine.UI.Image>().sprite = CratorImage;
-	print("Crator added");
+	//print("Crator added");
 	}
 	
 	if(Char == "Konstal")
 	{
 		curImage.GetComponent.<UnityEngine.UI.Image>().sprite = KonstalImage;
-	print("Konstal added");
+	//print("Konstal added");
 	}
 	
  

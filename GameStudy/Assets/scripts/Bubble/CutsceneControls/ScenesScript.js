@@ -21,6 +21,36 @@ var MilkyImage: Sprite;
 var CratorImage: Sprite;
 var KonstalImage: Sprite;
 
+var AlunaImageAngry: Sprite;
+var EstherImageAngry: Sprite;
+var MilkyImageAngry: Sprite;
+var CratorImageAngry: Sprite;
+var KonstalImageAngry: Sprite;
+
+var AlunaImageSad: Sprite;
+var EstherImageSad: Sprite;
+var MilkyImageSad: Sprite;
+var CratorImageSad: Sprite;
+var KonstalImageSad: Sprite;
+
+var AlunaImageHappy: Sprite;
+var EstherImageHappy: Sprite;
+var MilkyImageHappy: Sprite;
+var CratorImageHappy: Sprite;
+var KonstalImageHappy: Sprite;
+
+var AlunaImageSmirk: Sprite;
+var EstherImageSmirk: Sprite;
+var MilkyImageSmirk: Sprite;
+var CratorImageSmirk: Sprite;
+var KonstalImageSmirk: Sprite;
+
+var AlunaImageSigh: Sprite;
+var EstherImageSigh: Sprite;
+var MilkyImageSigh: Sprite;
+var CratorImageSigh: Sprite;
+var KonstalImageSigh: Sprite;
+
 var defaultImage: Sprite;
 
 function Start () {
@@ -33,7 +63,7 @@ function Update () {
 
 }
 
-function makeCharacterSpeak(character, text){
+function makeCharacterSpeak(character, text, emotion){
 
 var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 
@@ -42,7 +72,34 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 	{
 		selectedChar = Aluna;
 		findLocationOfChar();	
-		defaultImage = AlunaImage;	
+		defaultImage = AlunaImage;
+		/*
+				//Choose Expression Image
+				if (emotion == "normal")
+				{
+					defaultImage = AlunaImage;
+				}	
+				if (emotion == "angry")
+				{
+					defaultImage = AlunaImageAngry;
+				}
+				if (emotion == "happy")
+				{
+					defaultImage = AlunaImageHappy;
+				}	
+				if (emotion == "sad")
+				{
+					defaultImage = AlunaImageSad;
+				}
+				if (emotion == "smirk")
+				{
+					defaultImage = AlunaImageSmirk;
+				}	
+				if (emotion == "sigh")
+				{
+					defaultImage = AlunaImageSigh;
+				}
+		*/
 	}
 	
 	if(character == "Esther")
@@ -50,6 +107,33 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 		selectedChar = Esther;
 		findLocationOfChar();
 		defaultImage = EstherImage;
+		/*
+			//Choose Expression Image
+				if (emotion == "normal")
+				{
+					defaultImage = EstherImage;
+				}	
+				if (emotion == "angry")
+				{
+					defaultImage = EstherImageAngry;
+				}
+				if (emotion == "happy")
+				{
+					defaultImage = EstherImageHappy;
+				}	
+				if (emotion == "sad")
+				{
+					defaultImage = EstherImageSad;
+				}
+				if (emotion == "smirk")
+				{
+					defaultImage = EstherImageSmirk;
+				}	
+				if (emotion == "sigh")
+				{
+					defaultImage = EstherImageSigh;
+				}
+			*/
 	}
 	
 	if(character == "Milky")
@@ -57,6 +141,33 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 		selectedChar = Milky;
 		findLocationOfChar();
 		defaultImage = MilkyImage;
+		/*
+				//Choose Expression Image
+				if (emotion == "normal")
+				{
+					defaultImage = MilkyImage;
+				}	
+				if (emotion == "angry")
+				{
+					defaultImage = MilkyImageAngry;
+				}
+				if (emotion == "happy")
+				{
+					defaultImage = MilkyImageHappy;
+				}	
+				if (emotion == "sad")
+				{
+					defaultImage = MilkyImageSad;
+				}
+				if (emotion == "smirk")
+				{
+					defaultImage = MilkyImageSmirk;
+				}	
+				if (emotion == "sigh")
+				{
+					defaultImage = MilkyImageSigh;
+				}
+		*/
 	}
 	
     if(character == "Crator")
@@ -64,6 +175,33 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 		selectedChar = Crator;
 		findLocationOfChar();
 		defaultImage = CratorImage;
+		/*
+				//Choose Expression Image
+				if (emotion == "normal")
+				{
+					defaultImage = CratorImage;
+				}	
+				if (emotion == "angry")
+				{
+					defaultImage = CratorImageAngry;
+				}
+				if (emotion == "happy")
+				{
+					defaultImage = CratorImageHappy;
+				}	
+				if (emotion == "sad")
+				{
+					defaultImage = CratorImageSad;
+				}
+				if (emotion == "smirk")
+				{
+					defaultImage = CratorImageSmirk;
+				}	
+				if (emotion == "sigh")
+				{
+					defaultImage = CratorImageSigh;
+				}
+		*/
 	}
 	
 		if(character == "Konstal")
@@ -71,6 +209,33 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 		selectedChar = Konstal;
 		findLocationOfChar();
 		defaultImage = KonstalImage;
+		/*
+				//Choose Expression Image
+				if (emotion == "normal")
+				{
+					defaultImage = KonstalImage;
+				}	
+				if (emotion == "angry")
+				{
+					defaultImage = KonstalImageAngry;
+				}
+				if (emotion == "happy")
+				{
+					defaultImage = KonstalImageHappy;
+				}	
+				if (emotion == "sad")
+				{
+					defaultImage = KonstalImageSad;
+				}
+				if (emotion == "smirk")
+				{
+					defaultImage = KonstalImageSmirk;
+				}	
+				if (emotion == "sigh")
+				{
+					defaultImage = KonstalImageSigh;
+				}
+		*/
 	}
 	
 	var variableScript : variables = selectedChar.GetComponent(variables);

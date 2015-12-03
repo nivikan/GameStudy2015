@@ -69,6 +69,11 @@ function OnMouseDrag()
 
 
 function OnMouseUp () {
+	var oldAlunaPos = storeVars.alunaSet;
+	var oldMilkyPos = storeVars.milkySet;
+	var oldEstherPos = storeVars.estherSet;
+	var oldKonstalPos = storeVars.konstalSet;
+	var oldCratorPos = storeVars.cratorSet;
 
 	if (objName == "Aluna")
 	{
@@ -215,6 +220,11 @@ function OnMouseUp () {
 			//anim.Play("hillIdle");
 			storeVars.cratorSet = "inHill";
 		}
+	}
+	
+	if ((oldAlunaPos != storeVars.alunaSet) || (oldKonstalPos != storeVars.konstalSet) || (oldMilkyPos != storeVars.milkySet) || (oldEstherPos != storeVars.estherSet) || (oldCratorPos != storeVars.cratorSet))
+	{
+		storeVars.moved = true;  //Tell game that a significant move has been made.
 	}
 		
 }
