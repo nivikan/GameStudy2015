@@ -33,11 +33,17 @@ function Update () {
 
 }
 
-function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, character, Char)
+function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, Char)
 {
-	newBubble = Instantiate(prefab, new Vector3(-0.14, 3.1, 0), transform.rotation);
-	newBubble.transform.GetChild(1).GetComponent.<UnityEngine.UI.Image>().color = speechColor;
-	newBubble.transform.GetChild(1).GetChild(0).GetComponent.<UnityEngine.UI.Image>().sprite = character;
+	print (Char);
+	if(gamestate.characterSpeaking == "1" && Char != "none")
+	{
+		instantiatex = -2.1;
+	}
+	if(gamestate.characterSpeaking == "2" && Char != "none"){
+		instantiatex = 2.2;
+	}
+	newBubble = Instantiate(prefab, new Vector3(instantiatex, 3.1, 0), transform.rotation);
 	newBubble.transform.GetChild(0).GetComponent.<UnityEngine.UI.Text>().text = speech;
 	newBubble.transform.GetChild(0).GetComponent.<UnityEngine.UI.Text>().color = textColor;
 	newBubble.GetComponent.<Image>().color = speechColor;
@@ -55,12 +61,12 @@ function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, 
  	//print("CHARACTER");
  	//print(Char);
  	//print(Char == "Aluna");
- 	if(gamestate.characterSpeaking == "1")
+ 	if(gamestate.characterSpeaking == "1" && Char != "none")
  	{
  		curImage = SpeakingChar1;
  		gamestate.characterSpeaking = "2";
  	}
-	else if (gamestate.characterSpeaking == "2"){
+	else if (gamestate.characterSpeaking == "2" && Char != "none"){
 		curImage = SpeakingChar2;
 		gamestate.characterSpeaking = "1";
 	}

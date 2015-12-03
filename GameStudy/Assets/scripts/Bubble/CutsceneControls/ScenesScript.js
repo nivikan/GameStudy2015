@@ -15,11 +15,13 @@ var DarkenScene2 : GameObject;
 var DarkenScene3 : GameObject;
 var DarkenScene4 : GameObject;
 
+/*
 var AlunaImage: Sprite;
 var EstherImage: Sprite;
 var MilkyImage: Sprite;
 var CratorImage: Sprite;
 var KonstalImage: Sprite;
+*/
 
 var AlunaImageAngry: Sprite;
 var EstherImageAngry: Sprite;
@@ -70,9 +72,13 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 	
     if(character == "Aluna")
 	{
+		if(selectedChar == Aluna)
+		{
+			character = "none";
+		}
 		selectedChar = Aluna;
 		findLocationOfChar();	
-		defaultImage = AlunaImage;
+		//defaultImage = AlunaImage;
 		/*
 				//Choose Expression Image
 				if (emotion == "normal")
@@ -104,9 +110,13 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 	
 	if(character == "Esther")
 	{
+		if(selectedChar == Esther)
+		{
+			character = "none";
+		}
 		selectedChar = Esther;
 		findLocationOfChar();
-		defaultImage = EstherImage;
+		//defaultImage = EstherImage;
 		/*
 			//Choose Expression Image
 				if (emotion == "normal")
@@ -138,9 +148,13 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 	
 	if(character == "Milky")
 	{
+		if(selectedChar == Milky)
+		{
+			character = "none";
+		}
 		selectedChar = Milky;
 		findLocationOfChar();
-		defaultImage = MilkyImage;
+		//defaultImage = MilkyImage;
 		/*
 				//Choose Expression Image
 				if (emotion == "normal")
@@ -172,9 +186,13 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 	
     if(character == "Crator")
 	{
+		if(selectedChar == Crator)
+		{
+			character = "none";
+		}
 		selectedChar = Crator;
 		findLocationOfChar();
-		defaultImage = CratorImage;
+		//defaultImage = CratorImage;
 		/*
 				//Choose Expression Image
 				if (emotion == "normal")
@@ -206,9 +224,13 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 	
 		if(character == "Konstal")
 	{
+		if(selectedChar == Konstal)
+		{
+			character = "none";
+		}
 		selectedChar = Konstal;
 		findLocationOfChar();
-		defaultImage = KonstalImage;
+		//defaultImage = KonstalImage;
 		/*
 				//Choose Expression Image
 				if (emotion == "normal")
@@ -240,7 +262,7 @@ var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 	
 	var variableScript : variables = selectedChar.GetComponent(variables);
 	
-	makeBubbleScript.makeBubble(positionx, positiony, text, variableScript.bubbleColor, variableScript.textColor, defaultImage, character);
+	makeBubbleScript.makeBubble(positionx, positiony, text, variableScript.bubbleColor, variableScript.textColor, character);
 
 
 }
