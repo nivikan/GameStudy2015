@@ -17,6 +17,7 @@ var MilkyImage: Sprite;
 var CratorImage: Sprite;
 var KonstalImage: Sprite;
 var blank: Sprite;
+var x = -2.209999;
 
 var gamestate : GameState;
 
@@ -38,12 +39,14 @@ function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, 
 	print (Char);
 	if(gamestate.characterSpeaking == "1" && Char != "none")
 	{
-		instantiatex = -2.1;
+		x = -2.209999;
 	}
 	if(gamestate.characterSpeaking == "2" && Char != "none"){
-		instantiatex = 2.2;
+		x = 2.200001;
 	}
-	newBubble = Instantiate(prefab, new Vector3(instantiatex, 3.1, 0), transform.rotation);
+	print ("INSTANTIATE X");
+	print ( instantiatex);
+	newBubble = Instantiate(prefab, new Vector3(x, 2.63, 0), transform.rotation);
 	newBubble.transform.GetChild(0).GetComponent.<UnityEngine.UI.Text>().text = speech;
 	newBubble.transform.GetChild(0).GetComponent.<UnityEngine.UI.Text>().color = textColor;
 	newBubble.GetComponent.<Image>().color = speechColor;

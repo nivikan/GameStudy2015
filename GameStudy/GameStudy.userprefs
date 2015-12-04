@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/GameState.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Bubble/MakeBubble.js">
     <Files>
-      <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="38" Column="15" />
+      <File FileName="Assets/scripts/Bubble/CutsceneControls/ScenesScript.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="47" Column="9" />
       <File FileName="Assets/scripts/GameState.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
