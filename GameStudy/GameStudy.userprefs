@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Intro/AfterAnimNextScene.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/buttonScript.js">
     <Files>
       <File FileName="Assets/scripts/Intro/AfterAnimNextScene.js" Line="12" Column="38" />
       <File FileName="Assets/scripts/RestartScript.js" Line="1" Column="1" />
+      <File FileName="Assets/NewScene.cs" Line="35" Column="3" />
+      <File FileName="Assets/scripts/buttonScript.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
