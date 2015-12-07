@@ -9,6 +9,7 @@ public var estherSet = "inTent";
 public var milkySet = "inTent";
 
 public var convoNumThisMove = 0;
+public var SetNum = 1;
 public var moved = false;
 
 //DIALOGUES
@@ -28,7 +29,12 @@ public var startPart2 = false;
 	public var konstalIsPreganant = false;
 	public var milkyIsPreganant = true;
 	
+	public var allTalk_alunaIsPreganant = false;
+	public var allTalk_estherIsPreganant = false;
+	public var allTalk_cratorIsPreganant = false;
+	public var allTalk_konstalIsPreganant = false;
 	
+	public var milkyAlunaTalkAboutKonstalPreg = true;
 
 
 

@@ -34,6 +34,7 @@ var anim : Animator;
 //Create a hashtable of dialogues which will contain all scenes and dialoque for each scenes
 var dialogues : Hashtable;
 var Set1 : Hashtable;
+var Set2 : Hashtable;
 
 //(temp) this is the dialogue being said now
 var currentDialogue;
@@ -53,11 +54,12 @@ var estherSet = "inTent";
 var milkySet = "inTent";
 
 var scene: Array;
-var aluna_milky_woods = false;
-var scene2: Array;
-var esther_milky_hill = false;
-var scene3: Array;
-var aluna_esther_hill = false;
+
+
+
+///STORY  VARIABLES
+var weaponProgress = 0;
+var decoyProgress = 0;
 
 
 ////////////////////////////////////////
@@ -95,6 +97,7 @@ function Start () {
 
 
 	Set1 = new Hashtable();
+	Set2 = new Hashtable();
 	
 ////// MILKY & KONSTAL - ALONE Anywhere
 
@@ -280,9 +283,6 @@ function Start () {
 	Set1.Add("esther_crator_maybeAluna_anywhere",scene);
 	
 
-///////////////////////////////////////////
-///////////////  PART 2
-///////////////////////////////////////////
 
 //ALUNA - Woods 
 scene = new Array();
@@ -415,16 +415,816 @@ scene.Push(["Konstal", "Figures, I get stuck doing their dirty work…", "angry"
 scene.Push(["Konstal", "Huh, it’s getting dark. Might as well take a nap here.", "sigh"]);
 Set1.Add("konstal_hill_part2",scene);	
 //>CUTSCENE: GET PREGNANT<
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
 
+//26.
+//IF ESTHER IS PREGNANT 
+//All In Camp
+scene = new Array();
+scene.Push(["Esther", "I feel terrible… Something is growing inside me…", "sad"]);
+scene.Push(["Konstal", "What’s going on with you?", "normal"]);
+scene.Push(["Esther", "I just…", "sad"]);
+scene.Push(["Crator", "Esther, sit down for a bit. You look like you’ve seen a ghost.", "angry"]);
+scene.Push(["Esther", "Exactly! I was at the Hill last night. I fell asleep there.", "angry"]);
+scene.Push(["Milky", "That happened to me too! Before I got pregnant.", "surprise"]);
+scene.Push(["Esther", "Yeah- that’s what I thought. See, I think I got pregnant from sleeping there too.", "sad"]);
+scene.Push(["Crator", "What?", "angry"]);
+scene.Push(["Konstal", "You girls are so delusional.", "angry"]);
+scene.Push(["Esther", "Excuse me?!", "angry"]);
+scene.Push(["Konstal", "No one just wakes up pregnant. You were probably sleeping around earlier this month.", "normal"]);
+scene.Push(["Esther", "I know this sounds impossible but I KNOW what happened to me and I KNOW this did not happen weeks ago. I got pregnant last night after sleeping at the hill.", "angry"]);
+scene.Push(["Milky", "It happened to me too! You have to believe us!", "sad"]);
+scene.Push(["Konstal", "You girls are so stupid. C’mon Crator, let’s get out of here.", "angry"]);
+scene.Push(["Crator", "Sure.", "normal"]);
+scene.Push(["Esther", "Damn. They don’t believe us at all.", "angry"]);
+scene.Push(["Milky", "I wish it was one of them in this situation…", "sad"]);
+scene.Push(["Aluna", "Maybe that’s not impossible…", "normal"]);
+scene.Push(["Milky", "What? ", "normal"]);
+scene.Push(["Aluna", "Nothing. Just that maybe if they see it the hill themselves they'll believe us.", "normal"]);
+scene.Push(["Esther", "Yeah, make them do something for a change.", "normal"]);
+Set1.Add("Esther_Pregnant_All_InCamp",scene);
+
+
+
+//22. 
+//IF ESTHER IS PREGNANT AND NO ONE ELSE 
+//KONSTAL and ESTHER and ALUNA 
+scene = new Array();
+scene.Push(["Aluna", "Esther, you look like you saw a ghost- what happened? ", "normal"]);
+scene.Push(["Konstal", "Yeah, where the hell were you last night?", "angry"]);
+scene.Push(["Esther", "This is going to sound crazy… but I think I’m pregnant.", "sad"]);
+scene.Push(["Konstal", "WHAT!", "surprise"]);
+scene.Push(["Konstal", "You just found out?", "normal"]);
+scene.Push(["Esther", "I just got up this morning and, I don’t know - I just know it. I feel it.", "sad"]);
+scene.Push(["Aluna", "Weird, you normally have to wait a few weeks to display any symptoms…", "normal"]);
+scene.Push(["Konstal", "Maybe she’s just more sensitive than most. But more importantly, it just means you were out having sex!", "normal"]);
+scene.Push(["Esther", "Excuse me?!", "normal"]);
+scene.Push(["Konstal", "You really think we need another mouth to feed right now?", "normal"]);
+scene.Push(["Esther", "I was not having sex. I know I did not have sex!", "angry"]);
+scene.Push(["Aluna", "And I saw both you boys around the camp last night. Esther was no where near you two.", "normal"]);
+scene.Push(["Konstal", "I don’t care! You girls are such sluts. You probably got pregnant a few weeks ago and only noticed it now considering how much you weigh.", "normal"]);
+scene.Push(["Esther", "EXCUSE ME?!!", "angry"]);
+scene.Push(["Esther", "I KNOW my body and I know that I somehow woke up pregnant last night. Besides, I didn’t even have sex with either of you for the past month.", "angry"]);
+scene.Push(["Konstal", "Yeah right. I have more important things to think about. Apparently, I need to think about how to feed another kid.", "angry"]);
+scene.Push(["Konstal", "Or a safe method of abortion with the limited tools we have…", "sad"]);
+scene.Push(["Aluna", "It’s just like what happened with Milky...", "normal"]);
+Set1.Add("Esther_Pregnant_Aluna_Konstal",scene);
+
+
+//23. 
+//IF ESTHER IS PREGNANT and all camp scene did not happen
+//KONSTAL and ESTHER
+scene = new Array();
+scene.Push(["Esther", "Something abnormal happened last night... I feel weird and bloated…", "sad"]);
+scene.Push(["Konstal", "What was that?", "normal"]);
+scene.Push(["Esther", "Oh, sorry just talking to myself.", "normal"]);
+scene.Push(["Konstal", "Yeah, don’t. You’re in the way, could you stop spacing out and get out of the way.", "normal"]);
+scene.Push(["Esther", "You’re such a dick.", "angry"]);
+Set1.Add("Esther_Pregnant_Konstal",scene);
+
+
+
+//24. 
+//IF ESTHER IS PREGNANT  and all camp scene did not happen
+//CRATOR and ESTHER
+scene = new Array();
+scene.Push(["Esther", "I really don’t feel right… ever since I woke up today...", "sad"]);
+scene.Push(["Crator", "Hey- you ok?", "normal"]);
+scene.Push(["Esther", "Oh! Yeah- I’m fine. Just distracted.", "normal"]);
+scene.Push(["Crator", "Where were you last night?", "normal"]);
+scene.Push(["Esther", "Just took a nap down at the hill. ", "normal"]);
+scene.Push(["Esther", "Do I need permission or something?", "sigh"]);
+scene.Push(["Crator", "No- just that Aluna was looking for you. ", "normal"]);
+scene.Push(["Esther", "Sorry, I’ll try talking to her soon.", "normal"]);
+Set1.Add("Esther_Pregnant_Crator",scene);
+
+
+//25. 
+//IF ESTHER IS PREGNANT and all camp scene did not happen
+//MILKY and ESTHER
+scene = new Array();
+scene.Push(["Esther", "I think I’m… Ugh, I can’t even say it.", "sad"]);
+scene.Push(["Milky", "Esther, what’s wrong?", "sad"]);
+scene.Push(["Esther", "Milky- did you happen to take a nap at the hill the night before you got pregnant. ", "normal"]);
+scene.Push(["Milky", "Huh, now that you mention it, I did sleep a bit under the big tree down there.", "normal"]);
+scene.Push(["Esther", "This is bad…", "angry"]);
+Set1.Add("Esther_Pregnant_Milky",scene);
+
+
+
+//26.
+//IF ESTHER IS PREGNANT AND NO ONE ELSE and all camp scene did not happen
+//ALUNA and ESTHER
+scene = new Array();
+scene.Push(["Esther", "I feel terrible… what’s happening to me?", "sad"]);
+scene.Push(["Aluna", "Esther, you ok? I was looking for you.", "normal"]);
+scene.Push(["Esther", "Sorry- just a bit distracted. What did you need to talk about?", "normal"]);
+scene.Push(["Aluna", "Where were you last night?", "normal"]);
+scene.Push(["Esther", "Actually, I was sleeping up on the hill. Under the big tree.", "normal"]);
+scene.Push(["Aluna", "So did you see anything? Any ideas what’s happening?", "normal"]);
+scene.Push(["Esther", "Actually, Aluna, I- I", "angry"]);
+scene.Push(["Aluna", "Yeah? ", "normal"]);
+scene.Push(["Esther", "I think I’m pregnant.", "angry"]);
+scene.Push(["Aluna", "What?", "normal"]);
+scene.Push(["Esther", "I know- this sounds crazy. But last night I think I got pregnant. It’s weird. You’re not supposed to be able to tell if you’re pregnant for a few weeks after conception. But I just feel it. i know I got pregnant last night. ", "sigh"]);
+scene.Push(["Aluna", "It’s just like Milky…", "normal"]);
+scene.Push(["Esther", "Exactly, I think so too. We both got like this through similar means. ", "normal"]);
+scene.Push(["Aluna", "Did you see anything?", "normal"]);
+scene.Push(["Esther", "No. I was asleep. ", "sad"]);
+scene.Push(["Aluna", "In any case, we should gather everyone at the camp to tell them what’s going on.", "normal"]);
+Set1.Add("Esther_Pregnant_Aluna",scene);
+
+
+//26A.
+//IF ESTHER IS PREGNANT and ALUNA is Pregnant and all camp scene did not happen
+//ALUNA and ESTHER
+scene = new Array();
+scene.Push(["Esther", "If feel terrible… what’s happening to me?", "normal"]);
+scene.Push(["Aluna", "Esther, you ok. I was looking for you.", "normal"]);
+scene.Push(["Esther", "Sorry, just a bit distracted. What did you need to talk about?", "normal"]);
+scene.Push(["Aluna", "Where were you last night?", "normal"]);
+scene.Push(["Esther", "Actually, I was sleeping up on the hill. Under the big tree.", "normal"]);
+scene.Push(["Aluna", "So did you see anything? Any ideas what’s happening?", "normal"]);
+scene.Push(["Esther", "Actually, Aluna, I- I", "normal"]);
+scene.Push(["Aluna", "Yeah? ", "normal"]);
+scene.Push(["Esther", "I think I’m pregnant.", "normal"]);
+scene.Push(["Aluna", "What?", "normal"]);
+scene.Push(["Esther", "I know- this sounds crazy. But last night I think I got pregnant. It’s weird. You’re not supposed to be able to tell if you’re pregnant for a few weeks after conception. But I just feel it. i know I got pregnant last night. ", "normal"]);
+scene.Push(["Aluna", "It’s just like Milky and I…", "normal"]);
+scene.Push(["Esther", "Exactly, I think so too. We all got pregnant through similar means. ", "normal"]);
+scene.Push(["Aluna", "Did you see anything?", "normal"]);
+scene.Push(["Esther", "No. I was asleep. ", "normal"]);
+scene.Push(["Aluna", "In any case, we should gather everyone at the camp to tell them what’s going on.", "normal"]);
+Set1.Add("Esther_Pregnant_Aluna_Pregnant",scene);
+
+
+//27.
+//IF KONSTAL IS PREGNANT AND NO ONE ELSE 
+//After aluna and Milky and Konstal Speak
+//ALL in Camp
+scene = new Array();
+scene.Push(["Milky", "Hey everyone, we have some news.", "normal"]);
+scene.Push(["Aluna", "It has to do with Konstal.", "normal"]);
+scene.Push(["Konstal", "It has more to do with the Hill.", "angry"]);
+scene.Push(["Esther", "Just tell us what’s going on.", "angry"]);
+scene.Push(["Milky", "Well I realized that I was at the jill before when I got pregnant. I took a nap there.", "normal"]);
+scene.Push(["Milky", "And just last night, Konstal took a nap there and now he’s experiencing pregnancy symptoms.", "sad"]);
+scene.Push(["Konstal", "But I’m NOT pregnant. I just have some sort of thing growing inside me, sucking up my life source, and generally eating me from the inside out.", "angry"]);
+scene.Push(["Esther", "… Ew.", "normal"]);
+scene.Push(["Crator", "You ok, man?", "sad"]);
+scene.Push(["Aluna", "Anyway, I think that seals it- Something at the hill is getting people pregnant- regardless of gender.", "normal"]);
+scene.Push(["Crator", "… Should we go see what’s up?", "sad"]);
+scene.Push(["Milky", "I told you all I didn’t have sex!", "angry"]);
+scene.Push(["Esther", "Sorry Milky. I guess I just assumed that you had to have had sex…", "sad"]);
+scene.Push(["Crator", "I mean… It seemed obvious that sex was the only thing that could have happened. But now that Konstal’s pregnant…", "sad"]);
+scene.Push(["Konstal", "I AM NOT PREGNANT!", "angry"]);
+scene.Push(["Aluna", "Everyone- let’s head to the Hill.", "normal"]);
+Set1.Add("Konstal_Pregnant_all_inCamp",scene);
+
+
+//28.
+//IF KONSTAL IS PREGNANT 
+//KONSTAL and MILKY
+scene = new Array();
+scene.Push(["Konstal", "What happened last night? My body feels so weird. I feel like I’m made of shit with a rock inside my gut.", "normal"]);
+scene.Push(["Milky", "Hey, what’s going on? Why are you talking to yourself like that?", "normal"]);
+scene.Push(["Konstal", "Nothing. Go away.", "normal"]);
+scene.Push(["Milky", "Ok…", "normal"]);
+scene.Push(["Konstal", "...", "normal"]);
+scene.Push(["Milky", "Where were you last night?", "normal"]);
+scene.Push(["Konstal", "Ugghhhhh.", "normal"]);
+scene.Push(["Milky", "...Sorry.", "normal"]);
+scene.Push(["Konstal", "… I was at the Hill. Took a nap.", "normal"]);
+scene.Push(["Milky", "That’s cool. Did you see anything weird there? I was there when I got pregnant, y’know?", "normal"]);
+scene.Push(["Konstal", " …", "normal"]);
+scene.Push(["Konstal", "…", "normal"]);
+scene.Push(["Konstal", " Hey, how does it feel to be pregnant?", "normal"]);
+scene.Push(["Milky", "Like you’re made of shit with rocks inside you.", "normal"]);
+scene.Push(["Konstal", "…", "normal"]);
+Set1.Add("Konstal_Pregnant_Milky",scene);
+
+
+
+//29.
+//IF KONSTAL IS PREGNANT 
+//KONSTAL and ALUNA
+scene = new Array();
+scene.Push(["Konstal", "Ughhh… my head…", "sad"]);
+scene.Push(["Konstal", "I feel like I crashed into a wall. And my gut’s trying to eat me from the inside…", "angry"]);
+scene.Push(["Aluna", "Hey Konstal, where were you last night?", "normal"]);
+scene.Push(["Konstal", "Geez, I just took a nap at the Hill. What’s it to you?", "angry"]);
+scene.Push(["Aluna", "Did you see anything? Any clue what’s happening here?", "normal"]);
+scene.Push(["Konstal", "N-No! I have no idea. I told you it was a waste of time.", "normal"]);
+scene.Push(["Aluna", "Ok… You don’t look too good.", "normal"]);
+scene.Push(["Konstal", "Yeah? Well, look in a mirror.", "angry"]);
+scene.Push(["Aluna", "… See you.", "normal"]);
+scene.Push(["Konstal", "… damn.", "sigh"]);
+Set1.Add("Konstal_Pregnant_Aluna",scene);
+
+
+//30.
+//IF KONSTAL IS PREGNANT
+//ALUNA and MILKY
+scene = new Array();
+scene.Push(["Milky", "Hey, Aluna, don’t you think Konstal is acting super weird? ", "sad"]);
+scene.Push(["Aluna", "Like how?", "normal"]);
+scene.Push(["Milky", "I dunno. It’s just- I think he slept next to the hill last night", "sad"]);
+scene.Push(["Milky", "That’s where I slept when I got pregnant. You don’t think Konstal is pregnant too… do you?", "sad"]);
+scene.Push(["Aluna", "Milky, that’s-", "normal"]);
+scene.Push(["Milky", "I know it’s farfetched. I mean, it’s impossible for a guy to get pregnant. But you believe in this sort of thing, right, Aluna? This sort of unexplainable, impossible stuff?", "sad"]);
+scene.Push(["Aluna", "Yeah… Let’s ask him next time we see him together.", "normal"]);
+scene.Push(["Milky", "Ok. But If I were him I’d have a tough time admitting it even if it is true.", "normal"]);
+scene.Push(["Aluna", "Why?", "normal"]);
+scene.Push(["Milky", "Well, it’s a little bit emasculating, isn’t it? I feel sorry for him.", "sad"]);
+scene.Push(["Aluna", "… I guess it is.", "normal"]);
+Set1.Add("Konstal_Pregnant_Aluna_Milky_alone",scene);
+
+
+
+//31.
+//IF KONSTAL IS PREGNANT 
+//After aluna and Milky Speak
+//ALUNA and MILKY and KONSTAL
+scene = new Array();
+scene.Push(["Milky", "Konstal- we wanted to talk to you.", "normal"]);
+scene.Push(["Konstal", "What the hell is this?", "angry"]);
+scene.Push(["Aluna", "You don’t look too good. Milky and I were worried.", "normal"]);
+scene.Push(["Konsal", "I’m fine.", "normal"]);
+scene.Push(["Milky", "Did something happen at the Hill? ", "normal"]);
+scene.Push(["Aluna", "It’s ok - we’re thinking something supernatural may have happened.", "normal"]);
+scene.Push(["Milky", "Like what happened to me.", "normal"]);
+scene.Push(["Konstal", "I…", "angry"]);
+scene.Push(["Konstal", "Well…", "sad"]);
+scene.Push(["Konstal", " … Something did happen. I feel weird, bloated. Kind of like I’m-", "sad"]);
+scene.Push(["Milky", "Pregnant?", "normal"]);
+scene.Push(["Konstal", "I AM NOT PREGNANT! I just feel weird like there's something growing inside my belly and sucking all the energy away from me and rearranging my inner organs…", "angry"]);
+scene.Push(["Milky", "Ok…", "sad"]);
+scene.Push(["Aluna", "This happened after you were at the hill. Let’s gather everyone for a meeting at the campsite. We need to devise a plan to find out what exactly is going on at the hill.", "normal"]);
+scene.Push(["Konstal", "Ok.", "normal"]);
+scene.Push(["Milky", "Right.", "normal"]);
+Set1.Add("Konstal_Pregnant_Aluna_Milky_confrontation",scene);
+
+
+//32.
+//IF KONSTAL IS PREGNANT and all camp scene did not happen
+//KONSTAL and Crator
+scene = new Array();
+scene.Push(["Konstal", "Ugh, what was that? I feel so weird.. like there’s something inside of me. ", "sad"]);
+scene.Push(["Konstal", "No… it can’t be.", "angry"]);
+scene.Push(["Crator", "You ok, man?", "normal"]);
+scene.Push(["Konstal", "No, yeah, I’m fine.", "normal"]);
+scene.Push(["Crator", "Sure.", "normal"]);
+Set1.Add("Konstal_Pregnant_Crator",scene);
+
+
+//33.
+//IF KONSTAL IS PREGNANT and all camp scene did not happen
+//KONSTAL and ESTHER
+scene = new Array();
+scene.Push(["Konstal", "My body feels like lead. I really feel like there’s something inside of me… like I’m... Oh God, I can’t even say it.", "sad"]);
+scene.Push(["Esther", "talking to yourself?", "normal"]);
+scene.Push(["Konstal", "What the- don’t sneak up on me.", "angry"]);
+scene.Push(["Esther", "I’ve been here for awhile.", "normal"]);
+scene.Push(["Konstal", "Yeah, well, get out of my face.", "angry"]);
+scene.Push(["Esther", "You don’t look too good.", "sad"]);
+scene.Push(["Konstal", "Fuck off.", "angry"]);
+scene.Push(["Esther", "Huh, you too, then.", "sigh"]);
+Set1.Add("Konstal_Pregnant_Esther",scene);
+
+
+//34.
+//IF ALUNA IS PREGNANT AND NO ONE ELSE 
+//All In Camp
+scene = new Array();
+scene.Push(["Aluna", "Something is growing inside me…", "sad"]);
+scene.Push(["Konstal", "What’s going on here?", "normal"]);
+scene.Push(["Aluna", "I was at the hill last night. I fell asleep there. I'm pregnant.", "normal"]);
+scene.Push(["Aluna", "I think Milky slept there too, before she got pregnant. I think there’s something about that hill that makes people pregnant. A weird type of preganncy that shows symptoms the next day.", "normal"]);
+scene.Push(["Crator", "Excuse me?", "normal"]);
+scene.Push(["Konstal", "Oh my god- here we go again.", "angry"]);
+scene.Push(["Aluna", "You don’t believe me? The proof is right in front of you.", "normal"]);
+scene.Push(["Konstal", "The only proof here is that, like Milky, you are a dumb slut. No one just wakes up pregnant. ", "normal"]);
+scene.Push(["Aluna", "Well that was uncalled for.", "normal"]);
+scene.Push(["Milky", "It happened to me too! You have to believe us!", "angry"]);
+scene.Push(["Konstal", "AUGH! I can’t take this! C’mon, Crator, let’s get out of here.", "angry"]);
+scene.Push(["Crator", "Sure.", "normal"]);
+scene.Push(["Aluna", "Esther? How about you?", "normal"]);
+scene.Push(["Esther", "I wish I could believe you but… It’s just so farfetched… It’s more likely that one of the boys drugged you.", "sad"]);
+scene.Push(["Aluna", "...", "normal"]);
+scene.Push(["Milky", "I believe you, Aluna!", "normal"]);
+scene.Push(["Aluna", " …", "normal"]);
+scene.Push(["Aluna", "Maybe if they see the hill for themselves, they’ll believe me...", "normal"]);
+Set1.Add("Aluna_Pregnant_All_inCamp",scene);
+
+
+//35.
+//IF ALUNA IS PREGNANT AND ESTHER is pregnant
+//All In Camp
+scene = new Array();
+scene.Push(["Aluna", "Something is growing inside me…", "sad"]);
+scene.Push(["Konstal", "What’s going on here?", "normal"]);
+scene.Push(["Aluna", "I was at the Hill last night. I fell asleep there.", "normal"]);
+scene.Push(["Aluna", "I think Milky slept there too, before she got pregnant. I think there’s something about that hill that makes people pregnant. A weird type of preganncy that shows symptoms the next day.", "normal"]);
+scene.Push(["Crator", "Excuse me?", "normal"]);
+scene.Push(["Konstal", "Oh my god- here we go again.", "angry"]);
+scene.Push(["Aluna", "You don’t believe me? The proof is right in front of you.", "normal"]);
+scene.Push(["Konstal", "The only proof here is that, like Milky, you are a dumb slut. No one just wakes up pregnant. ", "normal"]);
+scene.Push(["Aluna", "Well that was uncalled for.", "normal"]);
+scene.Push(["Milky", "It happened to me too! You have to believe us!", "angry"]);
+scene.Push(["Esther", "I’m pregnant too! You guys can’t seriously not believe all three of us, can you?", "angry"]);
+scene.Push(["Konstal", "AUGH! I can’t take this! C’mon, Crator, let’s get out of here.", "angry"]);
+scene.Push(["Crator", "Sure.", "normal"]);
+scene.Push(["Esther", "Augh! They are so impossible!", "angry"]);
+scene.Push(["Aluna", "…", "normal"]);
+scene.Push(["Aluna", "Maybe if they see the hill for themselves, they’ll believe us..", "normal"]);
+Set1.Add("Aluna_Pregnant_Esther_pregnant_All_inCamp",scene);
+
+
+
+//36.
+//IF ALUNA IS PREGNANT AND NO ONE ELSE and all camp scene did not happen
+//ALUNA and ESTHER
+scene = new Array();
+scene.Push(["Aluna", "I feel so weird. Something crazy happened last night. Something- extraterrestrial.", "normal"]);
+scene.Push(["Esther", "Hey, Aluna. What’s going on? You look a bit spooked.", "normal"]);
+scene.Push(["Aluna", "Oh. It’s just that something really weird happened last night.", "normal"]);
+scene.Push(["Esther", "Weird? How?", "normal"]);
+scene.Push(["Aluna", "I’m pregnant. ", "normal"]);
+scene.Push(["Esther", "That’s terrible! The mystery rapist strikes again, huh? We should just ban together and throw those two in a ditch or something! We- ", "normal"]);
+scene.Push(["Aluna", "No. It wasn’t them. I don’t even think it was human.", "normal"]);
+scene.Push(["Esther", "Ok…", "normal"]);
+Set1.Add("Aluna_Pregnant_esther",scene);
+
+
+//37.
+//IF ALUNA IS PREGNANT and ESTHER is pregnant and all camp scene did not happen
+//ALUNA and ESTHER
+scene = new Array();
+scene.Push(["Aluna", "I feel so weird. Something crazy happened last night. Something- extraterrestrial.", "normal"]);
+scene.Push(["Esther", "Hey, Aluna. What’s going on? You look a bit spooked.", "normal"]);
+scene.Push(["Aluna", "Oh. It’s just that something really weird happened last night.", "normal"]);
+scene.Push(["Esther", " Weird? How?", "normal"]);
+scene.Push(["Aluna", "I’m pregnant. ", "normal"]);
+scene.Push(["Esther", "That’s terrible! Was it the same thing that happened to me and Milky?", "surprise"]);
+scene.Push(["Aluna", "Yes. I think it wasn’t human. We need to tell the boys. Lets all meet at the camp.", "normal"]);
+scene.Push(["Esther", "Right. Hopefully they’ll believe us with three pregnant girls.", "smirk"]);
+Set1.Add("Aluna_Pregnant_Esther_Pregnant",scene);
+
+
+
+
+//38.
+//IF ALUNA IS PREGNANT  and all camp scene did not happen
+//ALUNA and MILKY
+scene = new Array();
+scene.Push(["Aluna", "I feel something in my gut. It’s like I’m pregnant… like Milky.", "sad"]);
+scene.Push(["Milky", "Aluna- what’s going on?", "normal"]);
+scene.Push(["Aluna", "Milky- you fell asleep at the hill when you get pregnant, didn’t you?", "normal"]);
+scene.Push(["Milky", "Y-Yes. Did I tell you that?", "surprise"]);
+scene.Push(["Aluna", "I fell asleep there last night and now… it seems like I’m pregnant.", "sad"]);
+scene.Push(["Milky", "Aluna! That’s awful!", "normal"]);
+scene.Push(["Aluna", "But now we know- something at that hill is weird. Something is happening at the hill. We need to tell everyone.", "normal"]);
+scene.Push(["Milky", "Alright… but I don’t know if everyone will believe you.", "sad"]);
+scene.Push(["Aluna", "You believe me, right?", "normal"]);
+scene.Push(["Milky", "Well, yes. I want to believe you since it would really explain why I’m pregnant.", "normal"]);
+scene.Push(["Aluna", "Good enough for me.", "normal"]);
+Set1.Add("Aluna_Pregnant_Milky",scene);
+
+
+
+//39.
+//IF ALUNA IS PREGNANT and all camp scene did not happen
+//ALUNA and KONSTAL
+scene = new Array();
+scene.Push(["Aluna", "Something weird definitely happened at the Hill Last night. Something is in my body.", "sad"]);
+scene.Push(["Konstal", "What’s going on?", "normal"]);
+scene.Push(["Aluna", "I think I’m pregnant ...like Milky.", "normal"]);
+scene.Push(["Konstal", "Great. Just what we need.", "angry"]);
+scene.Push(["Aluna", "I think It’s because I slept under the big tree at the Hill last night. Something weird is happening there. We need to go investigate it.", "normal"]);
+scene.Push(["Konstal", "Save your nonsensical theories for someone who cares. Apparently, I need to go work on the distributions of rations… again.", "sigh"]);
+Set1.Add("Aluna_Pregnant_Konstal",scene);
+
+
+//40.
+//IF ALUNA IS PREGNANT AND NO ONE ELSE and all camp scene did not happen
+//ALUNA and CRATOR
+scene = new Array();
+scene.Push(["Aluna", "Something crazy is happening at the Hill. I just know something happened last night while I was asleep. It’s why my gut feels full right now. I need to tell everyone about this.", "sad"]);
+scene.Push(["Crator", "What’s going on, Aluna? ", "normal"]);
+scene.Push(["Aluna", "Something strange is going on at the Hill. I think I’m… pregnant. From sleeping under the large tree there.", "normal"]);
+scene.Push(["Crator", " …", "normal"]);
+scene.Push(["Aluna", "I’m going to tell everyone. We need to come up with a plan to find out what’s going on. Remember- don’t go next to the tree. ", "normal"]);
+scene.Push(["Crator", "… Sure.", "normal"]);
+scene.Push(["Aluna", "See you.", "normal"]);
+scene.Push(["Crator", "That girl ain’t right…", "normal"]);
+Set1.Add("Aluna_Pregnant_Crator",scene);
+
+
+
+//41.
+//IF CRATOR IS PREGNANT 
+//ALL in Camp
+scene = new Array();
+scene.Push(["Crator", "Everyone- I think I was unfair to Milky earlier. I think- she was right.", "sad"]);
+scene.Push(["Esther", "What brought this on all of a sudden?", "normal"]);
+scene.Push(["Milky", "Crator! You believe me?", "surprise"]);
+scene.Push(["Crator", "Yeah… last night I slept under the big tree at the hill. ", "sad"]);
+scene.Push(["Crator", "I’m pregnant.", "sad"]);
+scene.Push(["Konstal", "…!", "surprise"]);
+scene.Push(["Aluna", "…!", "surprise"]);
+scene.Push(["Esther", " …!", "surprise"]);
+scene.Push(["Milky", "... !", "surprise"]);
+scene.Push(["Konstal", "What are you saying? You’re a guy!", "angry"]);
+scene.Push(["Crator", "Then maybe I’m not but it sure feels that way. Here- you can feel it. Something is moving inside my gut.", "normal"]);
+scene.Push(["Milky", "Oh my god, he’s right!", "surprise"]);
+scene.Push(["Aluna", "I knew it… it is the hill. Something is happening there and we need to find out what. ", "normal"]);
+scene.Push(["Crator", "I agree.", "normal"]);
+scene.Push(["Konstal", "How can this be… a boy getting pregnant...", "surprise"]);
+scene.Push(["Milky", "I told you all I didn’t have sex!", "angry"]);
+scene.Push(["Esther", "Sorry Milky. I guess I just assumed that you had to have had sex…", "sad"]);
+scene.Push(["Crator", "I mean… It seemed obvious that sex was the only thing that could have happened but now…", "sad"]);
+scene.Push(["Aluna", "Everyone- let’s head to the Hill.", "normal"]);
+Set1.Add("Crator_Pregnant_all_inCamp",scene);
+
+
+//42.
+//IF CRATOR IS PREGNANT and all camp scene did not happen
+//CRATOR and ALUNA:
+scene = new Array();
+scene.Push(["Crator", "I feel… so weird. My gut is bloated and I feel something moving in there…", "sad"]);
+scene.Push(["Aluna", "Crator, did you see anything at the Hill last night?", "normal"]);
+scene.Push(["Crator", "… I might have.", "sad"]);
+scene.Push(["Aluna", "What is it? Any clue as to what’s going on?", "normal"]);
+scene.Push(["Crator", " … A small clue. ", "normal"]);
+scene.Push(["Aluna", "Well?", "normal"]);
+scene.Push(["Crator", "I’ll tell everyone at once. When we all meet at the Camp.", "sad"]);
+scene.Push(["Aluna", "Sure.", "normal"]);
+Set1.Add("Crator_Pregnant_aluna",scene);
+
+//43.
+//IF CRATOR IS PREGNANT and all camp scene did not happen
+//CRATOR and KONSTAL:
+scene = new Array();
+scene.Push(["Crator", "Something’s moving in my stomach. SOmething fucked up is happening here.", "sad"]);
+scene.Push(["Konstal", "What’s fuked up?", "normal"]);
+scene.Push(["Crator", " … nothing.", "sad"]);
+Set1.Add("Crator_Pregnant_konstal",scene);
+
+
+//44.
+//IF CRATOR IS PREGNANT and all camp scene did not happen
+//CRATOR and ESTHER:
+scene = new Array();
+scene.Push(["Crator", "I feel it in my gut... Oh god, it’s moving! I’m going to fuck up whatever did this to me!", "angry"]);
+scene.Push(["Esther", "Quit mumbling to yourself.", "angry"]);
+scene.Push(["Crator", "…", "normal"]);
+Set1.Add("Crator_Pregnant_esther",scene);
+
+
+//44A.
+//IF CRATOR IS PREGNANT and all camp scene did not happen
+//CRATOR and MILKY:
+scene = new Array();
+scene.Push(["Crator", "God, it really does feel like I’m pregnant…", "angry"]);
+scene.Push(["Milky", "You talking about me?", "normal"]);
+scene.Push(["Crator", "What? Of course, not.", "normal"]);
+scene.Push(["Milky", "Oh, I just heard you say ‘pregnant’.", "normal"]);
+scene.Push(["Crator", "Milky…", "sad"]);
+scene.Push(["Milky", "Hm?", "normal"]);
+scene.Push(["Crator", "I’m so sorry I doubted you…", "sad"]);
+Set1.Add("Crator_Pregnant_milky",scene);
+
+//45.
+//ALL in HILL
+scene = new Array();
+scene.Push(["Aluna", "Good. It’s getting dark. We’ll see our mystery culprit for sure.", "normal"]);
+scene.Push(["Konstal", "We’ll show that fucker. ", "angry"]);
+scene.Push(["Crator", "I don’t know… Maybe we need someone under the tree to attract whatever is doing this. ", "concerned"]);
+scene.Push(["Milky", "Why do you think that, Crator? ", "concerned"]);
+scene.Push(["Crator", "Well, we’ve been on this planet for awhile now, right? And nothing like this happened till now. And it’s, presumably, because none of us have ever really fallen asleep under the tree before.", "normal"]);
+scene.Push(["Esther", "That’s true.. I’ve been here at night and nothing like this has ever happened to me. It must be that you have to actually fall asleep under that tree to attract whatever is doing this.", "normal"]);
+scene.Push(["Aluna", "Any volunteers?", "normal"]);
+scene.Push(["Konstal", "Really, Aluna?", "normal"]);
+scene.Push(["Milky", "Aluna, you’re not serious, are you? You want to use someone as bait?", "angry"]);
+scene.Push(["Aluna", "We won’t be able to get rid of this threat till we figure out what it is.", "normal"]);
+scene.Push(["Konstal", "You do it, then, if you’re so interested.", "angry"]);
+scene.Push(["Aluna", "Fine, I will. You all wait here.", "normal"]);
+scene.Push(["Milky", "No! Aluna, it’s dangerous!", "surprise"]);
+scene.Push(["Esther", "It’s ok, Milky, Aluna knows what she’s doing. And we’re all here to watch her back in case something does go down.", "normal"]);
+scene.Push(["Esther", "We’re counting on you, Aluna.", "normal"]);
+scene.Push(["Aluna", "Thanks", "normal"]);
+scene.Push(["Esther", "We’ll all watch from behind those bushes.", "normal"]);
+//(Cutscene: aluna lays under the tree. others move behind the bushes)
+scene.Push(["Konstal", "Stop Pushing!", "angry"]);
+scene.Push(["Esther", "Stop Pulling!", "angry"]);
+//(pause)
+scene.Push(["Milky", "I don’t see anything.", "normal"]);
+scene.Push(["Esther", "It’ll happen soon, I’m sure.", "normal"]);
+//(pause)
+scene.Push(["Milky", "I don’t - ", "surprise"]);
+scene.Push(["Crator", "HOLY FUCK! WHAT IS THAT?!", "surprise"]);
+//(Image of spider coming down to infect Aluna)
+scene.Push(["Esther", "ALUNA!!! WAKE UP! GET OUT OF THERE!", "surprise"]);
+scene.Push(["Aluna", "Huh?", "normal"]);
+//(spider looks around)
+scene.Push(["Konstal", "GET AWAY FROM HER! HIYA!", "angry"]);
+//(Spider climbs back up)
+scene.Push(["Esther", "ALUNA! Are you ok?", "surprise"]);
+scene.Push(["Aluna", "Yeah… I think so.", "normal"]);
+scene.Push(["Milky", "Thank God, that was too close.", "sad"]);
+scene.Push(["Crator", "Aluna, that was… that was…", "surprise"]);
+scene.Push(["Aluna", "Let’s all regroup at the tent.", "normal"]);
+scene.Push(["Konstal", "Right. Good idea.", "normal"]);
+Set2.Add("Hill_SeeMonster",scene);
 
 
 ///////////////////////////////////////////
-///////////////  PART 3
+///////////////  PART 2
 ///////////////////////////////////////////
+
+
+
+//46.
+//ALL in CAMP
+// if Konstal is pregnant
+scene = new Array();
+scene.Push(["Aluna", "That was messed up.", "normal"]);
+scene.Push(["Esther", "What do we do now? It’s only a matter of time before that things starts eating us.", "angry"]);
+scene.Push(["Milky", "I’m scared, you guys…", "sad"]);
+scene.Push(["Crator", "Don’t worry, Milky, I’m here for you.", "normal"]);
+scene.Push(["Konstal", "I was right! I’m not pregnant!", "happy"]);
+scene.Push(["Esther", "Konstal, what the fuck?", "angry"]);
+scene.Push(["Kosntal", "Don’t you see- it’s probably a species that needs hosts to incubate it’s eggs. You all thought I was pregnant but I’m not! The monster’s just using our guts to incubate it’s eggs.", "happy"]);
+scene.Push(["Esther", "Thanks Konstal, the fact that you’re not pregnant but incubating eggs was really important to bring up right now. I don’t know how we could have gone on without knowing that bit of information.", "normal"]);
+scene.Push(["Konstal", "Huh, just wanted to set the record straight.", "happy"]);
+scene.Push(["Crator", "Guys- how are we going to solve this?", "normal"]);
+scene.Push(["Milky", "… will we have to fight it?", "sad"]);
+scene.Push(["Crator", "I don’t know.", "normal"]);
+scene.Push(["Konstal", "Seems like a good plan. But it won’t come down unless we have some bait. ", "normal"]);
+scene.Push(["Aluna", "I could- ", "normal"]);
+scene.Push(["Milky", "You are NOT acting as our bait! Now that I saw that monster I cannot let you. Oh god, we’ve all been sleeping so close to that thing… I have that thing’s babies in me!", "angry"]);
+scene.Push(["Aluna", "So we need some sort of decoy, huh?", "normal"]);
+scene.Push(["Crator", "... I can’t think of anything.", "normal"]);
+scene.Push(["Esther", "Guys, we’ve been up all night. Let’s just take it easy for now. Maybe if we split up for a bit we can think of something.", "normal"]);
+scene.Push(["Milky", "yeah… something much safer.", "sad"]);
+scene.Push(["Aluna", "We need a decoy and we need weapons.", "normal"]);
+Set2.Add("Regroup_KonstalIsPregnant",scene);
+
+
+
+
+//46A.
+//ALL in CAMP if konstal is not pregnant
+scene = new Array();
+scene.Push(["Aluna", "That was messed up.", "normal"]);
+scene.Push(["Esther", "What do we do now. It’s only a matter of time before that things starts eating us.", "angry"]);
+scene.Push(["Milky", "I’m scared, you guys…", "sad"]);
+scene.Push(["Crator", "Don’t worry, Milky, I’m here for you.", "normal"]);
+scene.Push(["Milky", "Oh god, we’ve all been sleeping so close to that thing… I have that thing’s babies in me!", "angry"]);
+scene.Push(["Crator", "It seems to be a species that needs hosts to incubate its eggs. You're not pregnant in the traditional sense of the word. It's mor elike you're incubating eggs in your body.", "normal"]);
+scene.Push(["Milky", "Ew...", "sad"]);
+scene.Push(["Crator", "Guys- how are we going to solve this?", "normal"]);
+scene.Push(["Milky", "… Will we have to fight it?", "sad"]);
+scene.Push(["Crator", "I don’t know.", "normal"]);
+scene.Push(["Konstal", "Seems like a good plan. But it won’t come down unless we have some bait. ", "normal"]);
+scene.Push(["Aluna", "I could- ", "normal"]);
+scene.Push(["Milky", "You are NOT acting as our bait! Now that I saw that monster I cannot let you. ", "angry"]);
+scene.Push(["Aluna", "So we need some sort of decoy, huh?", "normal"]);
+scene.Push(["Crator", "... I can’t think of anything.", "normal"]);
+scene.Push(["Esther", "Guys, we’ve been up all night. Let’s just take it easy for now. Maybe if we split up for a bit we can think of something.", "normal"]);
+scene.Push(["Milky", "Yeah… something much safer.", "sad"]);
+scene.Push(["Aluna", "We need a decoy and we need weapons.", "normal"]);
+Set2.Add("Regroup_KonstalIsNotPregnant",scene);
+
+
+//47.
+//ALUNA and Konstal anywhere other than hill & before 48
+scene = new Array();
+scene.Push(["Aluna", "Do you know where we can find a decoy? ", "normal"]);
+scene.Push(["Konstal", "D-Decoy? Of course not! I don’t have anything we can use as a decoy!", "angry"]);
+scene.Push(["Aluna", "Um, I was just asking.", "normal"]);
+scene.Push(["Konstal", "Yeah? Well, um, ask someone else!", "angry"]);
+Set2.Add("Aluna_Konstal_beforeAlunaAndMilky_pillow0",scene);
+
+
+//48.
+//ALUNA and MILKY anywhere other than hill
+scene = new Array();
+scene.Push(["Aluna", "Do you know where we can find a decoy?", "normal"]);
+scene.Push(["Milky", "By decoy, you basically mean anything that looks like a person, right?", "normal"]);
+scene.Push(["Aluna", "Yes- exactly.", "normal"]);
+scene.Push(["Milky", "Um, not sure if this will work. But Konstal has a body pillow that he sleeps with at night.", "normal"]);
+scene.Push(["Aluna", "Konstal has a body pillow? That’s perfect!", "surprise"]);
+scene.Push(["Milky", "Yeah, the problem is that he doesn’t want anyone to know he has it so You’ll have to seriously pry it from him.", "normal"]);
+scene.Push(["Aluna", "Yes- thank you! I’ll do that. Thanks, Milky!", "happy"]);
+Set2.Add("Aluna_Milky_pillow",scene);
+
+
+//49.
+//ALUNA and Konstal anywhere other than hill & after 48
+scene = new Array();
+scene.Push(["Aluna", "Do you know where we can find a decoy? ", "normal"]);
+scene.Push(["Konstal", "D-Decoy? Of course not! I don’t have anything we can use as a decoy!", "angry"]);
+scene.Push(["Aluna", "Milky told me you have a body pillow. Could we use that? ", "normal"]);
+scene.Push(["Konstal", " She’s Lying!", "angry"]);
+scene.Push(["Aluna", "I don’t think so.", "normal"]);
+scene.Push(["Konstal", "… ", "normal"]);
+scene.Push(["Konstal", "She’s Lying.", "normal"]);
+scene.Push(["Aluna", "Konstal, we really need it-", "normal"]);
+scene.Push(["Konstal", "I can’t take this right now. I’ll find a way to protect us from the monster. Don’t worry.", "angry"]);
+scene.Push(["Aluna", "But Konstal - ", "normal"]);
+scene.Push(["Konstal", "I said don’t worry! You just leave this to me. Just go- go clean up around the tent or something.", "angry"]);
+scene.Push(["Aluna", "Seriously, Konstal-", "normal"]);
+scene.Push(["Konstal", "I’m not in the mood, Aluna. Just go make me a sandwhich or something.", "angry"]);
+scene.Push(["Aluna", "...", "normal"]);
+scene.Push(["Konstal", " See you.", "normal"]);
+scene.Push(["Aluna", "… he’ll probably feel bad for saying that to me. Maybe I can use that to my advantage. I think I will go make him that sandwich.", "normal"]);
+scene.Push(["Aluna", "A sandwich, a sandwich…. ", "normal"]);
+scene.Push(["Aluna", "I need bread, and maybe some peanut butter. ", "normal"]);
+scene.Push(["Aluna", "Crator is in charge of all the supplies. I’ll go ask him.", "normal"]);
+Set2.Add("Aluna_Konstal_pillow1",scene);
+
+
+
+//50.
+//ALUNA and CRATOR after #49 anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", "Crator. I need ingredients for a sandwich.", "normal"]);
+scene.Push(["Crator", "A sandwich? Why do you want a sandwich now? ", "surprise"]);
+scene.Push(["Aluna", "I just need one. I have a reason. I promise. ", "normal"]);
+scene.Push(["Crator", "I don’t know, Aluna, I need to save our rations especially with the situation we’re in right now…", "normal"]);
+scene.Push(["Aluna", "It’s ok, I’ll skip my next meal for it. I promise.", "normal"]);
+scene.Push(["Crator", "Aluna, you’re a skinny twig. I can’t let you skip your next meal. Sorry Aluna.", "sad"]);
+scene.Push(["Aluna", "If Milky asked, I bet you’d say ok…", "normal"]);
+scene.Push(["Crator", "What was that?", "normal"]);
+scene.Push(["Aluna", "Nothing! Just thought of another plan.", "normal"]);
+Set2.Add("Aluna_Crator_pillow",scene);
+
+
+
+//51.
+//ALUNA and MILKY after #50 anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", " Milky. I need a favor.", "normal"]);
+scene.Push(["Milky", "What is it? I’ll help if I can.", "normal"]);
+scene.Push(["Aluna", "Can you ask Crator for some sandwhich ingredients?", "normal"]);
+scene.Push(["Milky", "Um, sure. But why me? Why can’t you do it?", "surprise"]);
+scene.Push(["Aluna", "I think he’ll be more receptive to you.", "normal"]);
+scene.Push(["Milky", "Ok… I’ll ask next time I see him.", "normal"]);
+Set2.Add("Aluna_Milky_pillow2",scene);
+
+
+//52.
+//MILKY and CRATOR after #51 anywhere but hill
+scene = new Array();
+scene.Push(["Milky", "Hey Crator.", "normal"]);
+scene.Push(["Crator", "Milky. Hey.", "normal"]);
+scene.Push(["Milky", "Can I have some bread and some peanut butter? ", "normal"]);
+scene.Push(["Crator", "Making a sandwhich, Milky?", "normal"]);
+scene.Push(["Milky", "Is that a problem?", "normal"]);
+scene.Push(["Crator", "Um, no. Here you go.", "normal"]);
+scene.Push(["Milky", "Thanks, Crator.", "normal"]);
+scene.Push(["Crator", "Don’t mention it.", "happy"]);
+Set2.Add("Crator_Milky_pillow",scene);
+
+
+//53.
+//MILKY and ALUNA after #52 anywhere but hill
+scene = new Array();
+scene.Push(["Milky", "Here are the sandwich ingredients you needed, Aluna.", "normal"]);
+scene.Push(["Aluna", "Thanks, Milky! I couldn’t have done it without you.", "happy"]);
+scene.Push(["Milky", "It’s all good.", "happy"]);
+scene.Push(["Aluna", "Just put this here…", "normal"]);
+scene.Push(["Aluna", "A little there…", "normal"]);
+scene.Push(["Aluna", "And Ta-Da! Here it is! The perfect peanut butter sandwich.", "normal"]);
+scene.Push(["Milky", "Good job, Aluna.", "happy"]);
+Set2.Add("Aluna_Milky_pillow3",scene);
+
+
+//54.
+//ALUNA and KONSTAL after #53 anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", "Here’s that sandwich you wanted. ", "normal"]);
+scene.Push(["Konstal", "What?", "normal"]);
+scene.Push(["Aluna", " You told me to go make one. I realize it was just you being mean but, um, you do look really pale… and stuff.", "normal"]);
+scene.Push(["Konstal", "Seriously, Aluna? You went through all this trouble…", "surprise"]);
+scene.Push(["Konstal", "... if you want, you can have that body pillow. ", "normal"]);
+scene.Push(["Konstal", "God you must have known I would say that…", "angry"]);
+scene.Push(["Aluna", "How did you even guess?", "happy"]);
+scene.Push(["Aluna", "Thanks for the body Pillow, Konstal.", "normal"]);
+scene.Push(["Konstal", "Sure…", "normal"]);
+scene.Push(["Aluna", "This won’t really fool the monster, I think. I need someone to dress it up. Make it cute. Someone who knows makeup… maybe Esther?", "normal"]);
+Set2.Add("Aluna_Konstal_pillow2",scene);
+
+
+
+//55.
+//ALUNA and ESTHER after #54 anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", "Esther, I was looking for you.", "normal"]);
+scene.Push(["Esther", "What do you need?", "normal"]);
+scene.Push(["Aluna", "I need you to help me turn this body pillow into a good decoy.", "normal"]);
+scene.Push(["Esther", "Aluna! That’s perfect! Where did you even find a body pillow?", "surprise"]);
+scene.Push(["Aluna", "It’s a secret. Will you help?", "normal"]);
+scene.Push(["Esther", "Of course! Let me just get out my make up. ", "happy"]);
+scene.Push(["Esther", "Add some red over here… some blush over there… some mascara… eyeliner… and Viola! There you go. I think it’s pretty convincing.", "happy"]);
+scene.Push(["Aluna", "Thank you Esther! I’ll put this under the tree once it’s time.", "happy"]);
+scene.Push(["Esther", "Great going, Aluna!", "happy"]);
+Set2.Add("Aluna_Esther_pillow",scene);
+
+
+//55.
+//ALUNA and CRATOR anywhere but hill before #56
+scene = new Array();
+scene.Push(["Aluna", "Any ideas for a weapon? ", "normal"]);
+scene.Push(["Crator", "I’m not sure… Esther is pretty good at fabricating things, isn’t she? Why don’t you ask her?", "normal"]);
+scene.Push(["Aluna", "Yeah… She is pretty good at stuff like that. I’ll go ask.", "normal"]);
+Set2.Add("Aluna_Crator_weapon1",scene);
+
+
+//56.
+//ALUNA and ESTHER anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", "Esther- you’re pretty good at crafting, aren’t you? Do you think you could make some sort of weapon for us? ", "normal"]);
+scene.Push(["Esther", "I could. But it’s a matter of finding the right materials for it.  ", "normal"]);
+scene.Push(["Aluna", "Tell me what you need. I’ll find the materials for you. ", "normal"]);
+scene.Push(["Esther", "Well, if you’re sure... ", "surprise"]);
+scene.Push(["Esther", "I was thinking of making bows and arrows for all of us. They’re easy to make with the right equipment. And I have the wood for the bow and arrows right here. I gathered them in the forest. ", "normal"]);
+scene.Push(["Aluna", "What do you need me to do? ", "normal"]);
+scene.Push(["Esther", "I need feathers for the back of the bows so they’ll fly properly. I also need string for the bow. It has to be strong but light. And sort of stretchy. ", "normal"]);
+scene.Push(["Aluna", "Alright… got it.  ", "normal"]);
+Set2.Add("Aluna_Esther_weapon1",scene);
+
+
+//57.
+//ALUNA and KONSTAL after #56 anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", "Hey, any ideas where I can find feathers or string? ", "normal"]);
+scene.Push(["Konstal", "Sorry. I’m busy at the moment. And where would you even find those things on this planet? ", "normal"]);
+scene.Push(["Aluna", "That’s what I want to know… ", "normal"]);
+Set2.Add("Aluna_Konstal_weapon",scene);
+
+
+//58.
+//ALUNA and MILKY after #56 anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", "Hey, any ideas where I can find feathers or string? ", "normal"]);
+scene.Push(["Milky", "Hm, Crator may know. I know he really liked bird watching back on earth. I looked at his photo album on his cellphone once and it was all birds. ", "normal"]);
+scene.Push(["Aluna", "Why were you looking at his photo album? ", "normal"]);
+scene.Push(["Milky", "No reason. I asked permission if that’s what you mean. ", "normal"]);
+scene.Push(["Aluna", "Thanks, Milky. I’ll go ask Crator about it. ", "normal"]);
+Set2.Add("Aluna_Milky_weapon",scene);
+
+
+//59.
+//ALUNA and CRATOR after #56 anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", "Hey, any ideas where I can find feathers or string?", "normal"]);
+scene.Push(["Crator", "Actually, I do have some feathers.", "normal"]);
+scene.Push(["Aluna", "Really?! You found them here?", "normal"]);
+scene.Push(["Crator", "No, I brought them with me from earth. I kind of have a thing for bird watching.", "normal"]);
+scene.Push(["Crator", "But… it’s ok, I guess, if you take them. It’s for the plan to take care of the monster, right?", "sad"]);
+scene.Push(["Aluna", "Crator… are you sure?", "surprise"]);
+scene.Push(["Crator", "Yes, of course. Here you go.", "normal"]);
+scene.Push(["Aluna", "Thank you, Crator.", "happy"]);
+Set2.Add("Aluna_Crator_weapon2",scene);
+
+
+//60.
+//ALUNA at the hill after #56 anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", "Hm, feathers or string….", "normal"]);
+scene.Push(["Aluna", "You know… this webbing on the floor kind of looks like string. Maybe this’ll work.", "normal"]);
+scene.Push(["Aluna", "Hmm….. yup, definitely quite strong.", "normal"]);
+scene.Push(["Aluna", "I hope Esther doesn’t ask where I got this from…", "normal"]);
+Set2.Add("Aluna_weapon_OnHill",scene);
+
+
+//61.
+//ALUNA and ESTHER after #60 & #59 anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", "Esther. Here are the items you needed.", "normal"]);
+scene.Push(["Esther", " Aluna! I can’t believe you got these!", "surprise"]);
+scene.Push(["Aluna", "Yeah… I just needed to ask around a bit.", "normal"]);
+scene.Push(["Esther", "Thank you… I couldn’t have got these without you.", "happy"]);
+scene.Push(["Aluna", "I didn’t really do anything…", "normal"]);
+scene.Push(["Esther", "Just put this here…", "normal"]);
+scene.Push(["Esther", "Some over there…", "normal"]);
+scene.Push(["Esther", "Tie this around here…", "normal"]);
+scene.Push(["Esther", "And there it is! Bows and arrows for all!", "happy"]);
+Set2.Add("Aluna_Esther_Weapon2",scene);
+
+
+//61.
+//ALUNA after #61 & #55 anywhere but hill
+scene = new Array();
+scene.Push(["Aluna", "We’re done! We have all the things we need to face that monster!.", "normal"]);
+Set2.Add("Aluna_weapon_decoy_Done",scene);
+//overHere///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 }
@@ -458,499 +1258,1316 @@ function Update () {
 
 if (storeVars.moved == true)
 {
-////////////////////////////////////////
-///////////  CHECK  ANYWERE
-////////////////////////////////////////
 
-////// MILKY & CRATOR - ALONE Anywhere
-if ((milkySet == cratorSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != konstalSet) && isInConvo == false)
-{
-		print ("milky_crator_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if(Set1.Contains("milky_crator_anywhere"))
-    	{
-    		currentConvo = Set1["milky_crator_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="milky_crator_anywhere";
-    		makeConvo("milky_crator_anywhere");
-    		
-    	}
-}
-
-////// MILKY & KONSTAL - ALONE Anywhere
-if ((milkySet == konstalSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != cratorSet) && isInConvo == false)
-{
-		print ("konstal_milky_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if(Set1.Contains("konstal_milky_anywhere"))
-    	{
-    		currentConvo = Set1["konstal_milky_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="konstal_milky_anywhere";
-    		makeConvo("konstal_milky_anywhere");
-    		
-    	}
-}
-
-
-////// ALUNA & MILKY - ALONE Anywhere
-if ((alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != estherSet) && (alunaSet != konstalSet) && isInConvo == false)
-{
-		print ("aluna_milky_alone_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if(Set1.Contains("aluna_milky_alone_anywhere"))
-    	{
-    		currentConvo = Set1["aluna_milky_alone_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_milky_alone_anywhere";
-    		makeConvo("aluna_milky_alone_anywhere");
-
-    	}
-}
-
-//ESTHER and MILKY - Alone - Any Scene
-if ((milkySet == estherSet) && (milkySet != alunaSet) && (milkySet != cratorSet) && (milkySet != konstalSet) && isInConvo == false)
-{
-		print ("esther_milky_alone_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if(Set1.Contains("esther_milky_alone_anywhere"))
-    	{
-    		currentConvo = Set1["esther_milky_alone_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="esther_milky_alone_anywhere";
-    		makeConvo("esther_milky_alone_anywhere");
-    	}
-}
-
-////// ALUNA & ESTHER & MILKY - ALONE Anywhere
-if ((alunaSet ==  estherSet) && (alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != konstalSet) && isInConvo == false)
-{
-		print ("aluna_esther_milky_alone_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if(Set1.Contains("aluna_esther_milky_alone_anywhere"))
-    	{
-    		currentConvo = Set1["aluna_esther_milky_alone_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_esther_milky_alone_anywhere";
-    		makeConvo("aluna_esther_milky_alone_anywhere");
-    	}
-}
-
-
-////// KONSTAL & CRATOR - ALONE Anywhere
-if ((konstalSet == cratorSet) && (konstalSet != alunaSet) && (konstalSet != estherSet) && (konstalSet != milkySet) && isInConvo == false)
-{
-		print ("crator_konstal_alone_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if (Set1.Contains("crator_konstal_alone_anywhere"))
-    	{
-    		currentConvo = Set1["crator_konstal_alone_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="crator_konstal_alone_anywhere";
-    		makeConvo("crator_konstal_alone_anywhere");
-    	}
-}
-
-
-
-////// ALUNA & ESTHER - ALONE Anywhere
-if ((alunaSet == estherSet) && (alunaSet != konstalSet) && (alunaSet != cratorSet) && (alunaSet != milkySet) && isInConvo == false)
-{
-		print ("aluna_esther_alone_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if ((Set1.Contains("aluna_esther_alone_anywhere")) && (Set1.Contains("aluna_esther_milky_alone_anywhere") == false))
-    	{
-    		currentConvo = Set1["aluna_esther_alone_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_esther_alone_anywhere";
-    		makeConvo("aluna_esther_alone_anywhere");
-    	}
-}
-
-////// ALUNA & KONSTAL & CRATOR - ALONE Anywhere
-if ((alunaSet == konstalSet) && (alunaSet == cratorSet) && (alunaSet != estherSet) && (alunaSet != milkySet) && isInConvo == false)
-{
-		print ("aluna_crator_konstal_alone_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if (Set1.Contains("aluna_crator_konstal_alone_anywhere")) 
-    	{
-    		currentConvo = Set1["aluna_crator_konstal_alone_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_crator_konstal_alone_anywhere";
-    		makeConvo("aluna_crator_konstal_alone_anywhere");
-    	}
-}
-
-
-////// ESTHER & KONSTAL & CRATOR - alone Anywhere
-if ((estherSet == konstalSet) && (estherSet == cratorSet) && (estherSet != milkySet) && (estherSet != alunaSet) && isInConvo == false)
-{
-		print ("crator_esther_konstal_alone_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if (Set1.Contains("crator_esther_konstal_alone_anywhere")) 
-    	{
-    		currentConvo = Set1["crator_esther_konstal_alone_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="crator_esther_konstal_alone_anywhere";
-    		makeConvo("crator_esther_konstal_alone_anywhere");
-    	}
-}
-
-
-////// ESTHER & KONSTAL- maybeAluna Anywhere
-if ((estherSet == konstalSet) && (estherSet != cratorSet) && (estherSet != milkySet) && isInConvo == false)
-{
-		print ("esther_konstal_maybeAluna_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if (Set1.Contains("esther_konstal_maybeAluna_anywhere")) 
-    	{
-    		currentConvo = Set1["esther_konstal_maybeAluna_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="esther_konstal_maybeAluna_anywhere";
-    		makeConvo("esther_konstal_maybeAluna_anywhere");
-    	}
-}
-
-////// ESTHER & KONSTAL- maybeAluna Anywhere
-if ((estherSet == cratorSet) && (estherSet != konstalSet) && (estherSet != milkySet) && isInConvo == false)
-{
-		print ("esther_crator_maybeAluna_anywhere");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if (Set1.Contains("esther_crator_maybeAluna_anywhere")) 
-    	{
-    		currentConvo = Set1["esther_crator_maybeAluna_anywhere"];
-    		isInConvo = true;
-    		currentConvoName ="esther_crator_maybeAluna_anywhere";
-    		makeConvo("esther_crator_maybeAluna_anywhere");
-    	}
-}
-
-
-
-////////////////////////////////////////
-///////////  CHECK THE TENT
-////////////////////////////////////////
-
-
-
-
-
-
-////////////////////////////////////////
-///////////  CHECK THE CAMP
-////////////////////////////////////////
-
-
-////// ALL 
-if ((konstalSet == "inCamp") && (alunaSet == "inCamp") && (cratorSet == "inCamp") && (milkySet == "inCamp")&& (estherSet == "inCamp") && isInConvo == false)
-{
-		print ("aluna_crator_esther_konstal_milky_inCamp");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if (Set1.Contains("aluna_crator_esther_konstal_milky_inCamp"))
-    	{
-    		currentConvo = Set1["aluna_crator_esther_konstal_milky_inCamp"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_crator_esther_konstal_milky_inCamp";
-    		makeConvo("aluna_crator_esther_konstal_milky_inCamp");
-    	}
-}
-
-
-
-
-////////////////////////////////////////
-///////////  CHECK THE WOODS
-////////////////////////////////////////
-
-	if ((alunaSet == "inWoods") && (milkySet == "inWoods") && isInConvo == false)
+	if (storeVars.SetNum == 1)
 	{
-		print ("milky_aluna_woods");
-		
-		//anim.Play("scene1_milky_aluna_woods");
-		
-    	if(Set1.Contains("aluna_milky_woods"))
-    	{
-    		currentConvo = Set1["aluna_milky_woods"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_milky_woods";
-    		makeConvo("aluna_milky_woods");
-    	}
+
+		////////////////////////////////////////
+		///////////  CHECK THE CAMP
+		////////////////////////////////////////
 
 
-	}
+		////// ALL 
+		if ((konstalSet == "inCamp") && (alunaSet == "inCamp") && (cratorSet == "inCamp") && (milkySet == "inCamp")&& (estherSet == "inCamp") && isInConvo == false)
+		{
+				print ("aluna_crator_esther_konstal_milky_inCamp");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if (Set1.Contains("aluna_crator_esther_konstal_milky_inCamp"))
+		    	{
+		    		currentConvo = Set1["aluna_crator_esther_konstal_milky_inCamp"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_crator_esther_konstal_milky_inCamp";
+		    		makeConvo("aluna_crator_esther_konstal_milky_inCamp");
+		    	}
+		}
+
+		// ALL TALK - esther is pregnant 
+		if ((storeVars.estherIsPreganant == true ) && (storeVars.alunaIsPreganant == true ) && (konstalSet == "inCamp") && (alunaSet == "inCamp") && (cratorSet == "inCamp") && (milkySet == "inCamp")&& (estherSet == "inCamp") && isInConvo == false)
+		{
+				print ("Esther_Pregnant_All_InCamp");
+				
+				//anim.Play("Esther_Pregnant_All_InCamp");
+				
+		    	if (Set1.Contains("Esther_Pregnant_All_InCamp"))
+		    	{
+		    		currentConvo = Set1["Esther_Pregnant_All_InCamp"];
+		    		isInConvo = true;
+		    		currentConvoName ="Esther_Pregnant_All_InCamp";
+		    		makeConvo("Esther_Pregnant_All_InCamp");
+		    	}
+		    	storeVars.allTalk_estherIsPreganant = true;
+		}
+
+		// ALL TALK - konstal is pregnant 
+		if ( (storeVars.konstalIsPreganant == true ) && (storeVars.milkyAlunaTalkAboutKonstalPreg== true) && (konstalSet == "inCamp") && (alunaSet == "inCamp") && (cratorSet == "inCamp") && (milkySet == "inCamp")&& (estherSet == "inCamp") && isInConvo == false)
+		{
+				print ("Konstal_Pregnant_all_inCamp");
+				
+				//anim.Play("Esther_Pregnant_All_InCamp");
+				
+		    	if (Set1.Contains("Konstal_Pregnant_all_inCamp"))
+		    	{
+		    		currentConvo = Set1["Konstal_Pregnant_all_inCamp"];
+		    		isInConvo = true;
+		    		currentConvoName ="Konstal_Pregnant_all_inCamp";
+		    		makeConvo("Konstal_Pregnant_all_inCamp");
+		    	}
+		    	storeVars.allTalk_konstalIsPreganant = true;
+		}
+
+		// ALL TALK - aluna is pregnant 
+		if ( (storeVars.alunaIsPreganant == true ) &&  (storeVars.estherIsPreganant == false ) && (storeVars.allTalk_alunaIsPreganant == false)  && (konstalSet == "inCamp") && (alunaSet == "inCamp") && (cratorSet == "inCamp") && (milkySet == "inCamp")&& (estherSet == "inCamp") && isInConvo == false)
+		{
+				print ("Aluna_Pregnant_All_inCamp");
+				
+				//anim.Play("Aluna_Pregnant_All_inCamp");
+				
+		    	if (Set1.Contains("Aluna_Pregnant_All_inCamp"))
+		    	{
+		    		currentConvo = Set1["Aluna_Pregnant_All_inCamp"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Pregnant_All_inCamp";
+		    		makeConvo("Aluna_Pregnant_All_inCamp");
+		    	}
+		    	storeVars.allTalk_alunaIsPreganant = true;
+		}
+
+		// ALL TALK - aluna is pregnant  - esther is pregnant
+		if ( (storeVars.alunaIsPreganant == true ) &&  (storeVars.estherIsPreganant == true ) && (storeVars.allTalk_alunaIsPreganant == false) && (konstalSet == "inCamp") && (alunaSet == "inCamp") && (cratorSet == "inCamp") && (milkySet == "inCamp")&& (estherSet == "inCamp") && isInConvo == false)
+		{
+				print ("Aluna_Pregnant_Esther_pregnant_All_inCamp");
+				
+				//anim.Play("Aluna_Pregnant_All_inCamp");
+				
+		    	if (Set1.Contains("Aluna_Pregnant_Esther_pregnant_All_inCamp"))
+		    	{
+		    		currentConvo = Set1["Aluna_Pregnant_Esther_pregnant_All_inCamp"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Pregnant_Esther_pregnant_All_inCamp";
+		    		makeConvo("Aluna_Pregnant_Esther_pregnant_All_inCamp");
+		    	}
+		    	storeVars.allTalk_alunaIsPreganant = true;
+		}
+
+
+		// ALL TALK - crator is pregnant 
+		if ( (storeVars.cratorIsPreganant == true )  && (storeVars.allTalk_cratorIsPreganant == false) && (konstalSet == "inCamp") && (alunaSet == "inCamp") && (cratorSet == "inCamp") && (milkySet == "inCamp")&& (estherSet == "inCamp") && isInConvo == false)
+		{
+				print ("Crator_Pregnant_all_inCamp");
+				
+				//anim.Play("Crator_Pregnant_all_inCamp");
+				
+		    	if (Set1.Contains("Crator_Pregnant_all_inCamp"))
+		    	{
+		    		currentConvo = Set1["Crator_Pregnant_all_inCamp"];
+		    		isInConvo = true;
+		    		currentConvoName ="Crator_Pregnant_all_inCamp";
+		    		makeConvo("Crator_Pregnant_all_inCamp");
+		    	}
+		    	storeVars.allTalk_alunaIsPreganant = true;
+		}
 
 
 
-	if ((alunaSet == "inWoods") && storeVars.startPart2 == true)
-	{
-		print ("aluna_woods_part2");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("aluna_woods_part2"))
-    	{
-    		currentConvo = Set1["aluna_woods_part2"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_woods_part2";
-    		makeConvo("aluna_woods_part2");
-    		storeVars.alunaLookedAtFootprints = true;
-    	}
-
-	}
-
-if ((cratorSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaLookedAtFootprints == true)
-	{
-		print ("aluna_crator_woods_part2_talk1");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("aluna_crator_woods_part2_talk1"))
-    	{
-    		currentConvo = Set1["aluna_crator_woods_part2_talk1"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_crator_woods_part2_talk1";
-    		makeConvo("aluna_crator_woods_part2_talk1");
-    		storeVars.alunaKnowsMilkyFootprints = true;
-    	}
-
-	}
 
 
-if ((milkySet == "inWoods") && (alunaSet == "inWoods") &&  (storeVars.alunaKnowsMilkyFootprints == true) )
-	{
-		print ("aluna_milky_woods_part2");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("aluna_milky_woods_part2"))
-    	{
-    		currentConvo = Set1["aluna_milky_woods_part2"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_milky_woods_part2";
-    		makeConvo("aluna_milky_woods_part2");
-    		storeVars.milkyLookedAtFootprints = true;
-    	}
+		////////////////////////////////////////
+		///////////  CHECK  ANYWERE
+		////////////////////////////////////////
 
-	}
-	
-	
-if ((konstalSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
-	{
-		print ("aluna_konstal_woods_part2");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("aluna_konstal_woods_part2"))
-    	{
-    		currentConvo = Set1["aluna_konstal_woods_part2"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_konstal_woods_part2";
-    		makeConvo("aluna_konstal_woods_part2");
-    	}
+		////// MILKY & CRATOR - ALONE Anywhere
+		if ((milkySet == cratorSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != konstalSet) && isInConvo == false)
+		{
+				print ("milky_crator_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("milky_crator_anywhere"))
+		    	{
+		    		currentConvo = Set1["milky_crator_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="milky_crator_anywhere";
+		    		makeConvo("milky_crator_anywhere");
+		    		
+		    	}
+		}
 
-	}
-
-
-if ((estherSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
-	{
-		print ("aluna_esther_woods_part2");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("aluna_esther_woods_part2"))
-    	{
-    		currentConvo = Set1["aluna_esther_woods_part2"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_esther_woods_part2";
-    		makeConvo("aluna_esther_woods_part2");
-    		storeVars.milkyLookedAtFootprints = true;
-    	}
-
-	}
+		////// MILKY & KONSTAL - ALONE Anywhere
+		if ((milkySet == konstalSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != cratorSet) && isInConvo == false)
+		{
+				print ("konstal_milky_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("konstal_milky_anywhere"))
+		    	{
+		    		currentConvo = Set1["konstal_milky_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="konstal_milky_anywhere";
+		    		makeConvo("konstal_milky_anywhere");
+		    		
+		    	}
+		}
 
 
-if ((cratorSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
-	{
-		print ("aluna_crator_woods_part2");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("aluna_crator_woods_part2"))
-    	{
-    		currentConvo = Set1["aluna_crator_woods_part2"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_crator_woods_part2";
-    		makeConvo("aluna_crator_woods_part2");
-    		storeVars.cratorLookedAtFootprints = true;
-    	}
+		////// ALUNA & MILKY - ALONE Anywhere
+		if ((alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != estherSet) && (alunaSet != konstalSet) && isInConvo == false)
+		{
+				print ("aluna_milky_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("aluna_milky_alone_anywhere"))
+		    	{
+		    		currentConvo = Set1["aluna_milky_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_milky_alone_anywhere";
+		    		makeConvo("aluna_milky_alone_anywhere");
 
-	}
+		    	}
+		}
+
+		//ESTHER and MILKY - Alone - Any Scene
+		if ((milkySet == estherSet) && (milkySet != alunaSet) && (milkySet != cratorSet) && (milkySet != konstalSet) && isInConvo == false)
+		{
+				print ("esther_milky_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("esther_milky_alone_anywhere"))
+		    	{
+		    		currentConvo = Set1["esther_milky_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="esther_milky_alone_anywhere";
+		    		makeConvo("esther_milky_alone_anywhere");
+		    	}
+		}
+
+		////// ALUNA & ESTHER & MILKY - ALONE Anywhere
+		if ((alunaSet ==  estherSet) && (alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != konstalSet) && isInConvo == false)
+		{
+				print ("aluna_esther_milky_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("aluna_esther_milky_alone_anywhere"))
+		    	{
+		    		currentConvo = Set1["aluna_esther_milky_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_esther_milky_alone_anywhere";
+		    		makeConvo("aluna_esther_milky_alone_anywhere");
+		    	}
+		}
 
 
-if ((cratorSet == "inWoods") && (konstalSet == "inWoods") &&  storeVars.cratorLookedAtFootprints == true)
-	{
-		print ("crator_konstal_woods_part2");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("crator_konstal_woods_part2"))
-    	{
-    		currentConvo = Set1["crator_konstal_woods_part2"];
-    		isInConvo = true;
-    		currentConvoName ="crator_konstal_woods_part2";
-    		makeConvo("crator_konstal_woods_part2");
-    		storeVars.konstalLookedAtFootprints = true;
-    	}
+		////// KONSTAL & CRATOR - ALONE Anywhere
+		if ((konstalSet == cratorSet) && (konstalSet != alunaSet) && (konstalSet != estherSet) && (konstalSet != milkySet) && isInConvo == false)
+		{
+				print ("crator_konstal_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if (Set1.Contains("crator_konstal_alone_anywhere"))
+		    	{
+		    		currentConvo = Set1["crator_konstal_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="crator_konstal_alone_anywhere";
+		    		makeConvo("crator_konstal_alone_anywhere");
+		    	}
+		}
 
-	}
-	
-	
+
+
+		////// ALUNA & ESTHER - ALONE Anywhere
+		if ((alunaSet == estherSet) && (alunaSet != konstalSet) && (alunaSet != cratorSet) && (alunaSet != milkySet) && isInConvo == false)
+		{
+				print ("aluna_esther_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if ((Set1.Contains("aluna_esther_alone_anywhere")) && (Set1.Contains("aluna_esther_milky_alone_anywhere") == false))
+		    	{
+		    		currentConvo = Set1["aluna_esther_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_esther_alone_anywhere";
+		    		makeConvo("aluna_esther_alone_anywhere");
+		    	}
+		}
+
+		////// ALUNA & KONSTAL & CRATOR - ALONE Anywhere
+		if ((alunaSet == konstalSet) && (alunaSet == cratorSet) && (alunaSet != estherSet) && (alunaSet != milkySet) && isInConvo == false)
+		{
+				print ("aluna_crator_konstal_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if (Set1.Contains("aluna_crator_konstal_alone_anywhere")) 
+		    	{
+		    		currentConvo = Set1["aluna_crator_konstal_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_crator_konstal_alone_anywhere";
+		    		makeConvo("aluna_crator_konstal_alone_anywhere");
+		    	}
+		}
+
+
+		////// ESTHER & KONSTAL & CRATOR - alone Anywhere
+		if ((estherSet == konstalSet) && (estherSet == cratorSet) && (estherSet != milkySet) && (estherSet != alunaSet) && isInConvo == false)
+		{
+				print ("crator_esther_konstal_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if (Set1.Contains("crator_esther_konstal_alone_anywhere")) 
+		    	{
+		    		currentConvo = Set1["crator_esther_konstal_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="crator_esther_konstal_alone_anywhere";
+		    		makeConvo("crator_esther_konstal_alone_anywhere");
+		    	}
+		}
+
+
+		////// ESTHER & KONSTAL- maybeAluna Anywhere
+		if ((estherSet == konstalSet) && (estherSet != cratorSet) && (estherSet != milkySet) && isInConvo == false)
+		{
+				print ("esther_konstal_maybeAluna_anywhere");
+				
+				//anim.Play("esther_konstal_maybeAluna_anywhere");
+				
+		    	if (Set1.Contains("esther_konstal_maybeAluna_anywhere")) 
+		    	{
+		    		currentConvo = Set1["esther_konstal_maybeAluna_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="esther_konstal_maybeAluna_anywhere";
+		    		makeConvo("esther_konstal_maybeAluna_anywhere");
+		    	}
+		}
+
+		////// ESTHER & KONSTAL- maybeAluna Anywhere
+		if ((estherSet == cratorSet) && (estherSet != konstalSet) && (estherSet != milkySet) && isInConvo == false)
+		{
+				print ("esther_crator_maybeAluna_anywhere");
+				
+				//anim.Play("esther_crator_maybeAluna_anywhere");
+				
+		    	if (Set1.Contains("esther_crator_maybeAluna_anywhere")) 
+		    	{
+		    		currentConvo = Set1["esther_crator_maybeAluna_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="esther_crator_maybeAluna_anywhere";
+		    		makeConvo("esther_crator_maybeAluna_anywhere");
+		    	}
+		}
+
+
+
+		////// ESTHER & KONSTAL & ALUNA - esther is pregnant
+		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == cratorSet) && (estherSet == alunaSet) && isInConvo == false)
+		{
+				print ("Esther_Pregnant_Aluna_Konstal");
+				
+				//anim.Play("Esther_Pregnant_Aluna_Konstal");
+				
+		    	if (Set1.Contains("Esther_Pregnant_Aluna_Konstal")) 
+		    	{
+		    		currentConvo = Set1["Esther_Pregnant_Aluna_Konstal"];
+		    		isInConvo = true;
+		    		currentConvoName ="Esther_Pregnant_Aluna_Konstal";
+		    		makeConvo("Esther_Pregnant_Aluna_Konstal");
+		    	}
+		}
+
+
+		////// ESTHER & KONSTAL - esther is pregnant
+		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == konstalSet) && isInConvo == false)
+		{
+				print ("Esther_Pregnant_Konstal");
+				
+				//anim.Play("Esther_Pregnant_Konstal");
+				
+		    	if (Set1.Contains("Esther_Pregnant_Konstal")) 
+		    	{
+		    		currentConvo = Set1["Esther_Pregnant_Konstal"];
+		    		isInConvo = true;
+		    		currentConvoName ="Esther_Pregnant_Konstal";
+		    		makeConvo("Esther_Pregnant_Konstal");
+		    	}
+		}
+
+		////// ESTHER & CRATOR - esther is pregnant
+		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == cratorSet) && isInConvo == false)
+		{
+				print ("Esther_Pregnant_Crator");
+				
+				//anim.Play("Esther_Pregnant_Crator");
+				
+		    	if (Set1.Contains("Esther_Pregnant_Crator")) 
+		    	{
+		    		currentConvo = Set1["Esther_Pregnant_Crator"];
+		    		isInConvo = true;
+		    		currentConvoName ="Esther_Pregnant_Crator";
+		    		makeConvo("Esther_Pregnant_Crator");
+		    	}
+		}
+
+
+		////// ESTHER & MILKY - esther is pregnant
+		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == milkySet) && isInConvo == false)
+		{
+				print ("Esther_Pregnant_Milky");
+				
+				//anim.Play("Esther_Pregnant_Milky");
+				
+		    	if (Set1.Contains("Esther_Pregnant_Milky")) 
+		    	{
+		    		currentConvo = Set1["Esther_Pregnant_Milky"];
+		    		isInConvo = true;
+		    		currentConvoName ="Esther_Pregnant_Milky";
+		    		makeConvo("Esther_Pregnant_Milky");
+		    	}
+		}
+
+		////// ESTHER & ALUNA - esther is pregnant - aluna is not pregnant
+		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (storeVars.alunaIsPreganant == false) && (estherSet == alunaSet) && isInConvo == false)
+		{
+				print ("Esther_Pregnant_Aluna");
+				
+				//anim.Play("Esther_Pregnant_Aluna");
+				
+		    	if (Set1.Contains("Esther_Pregnant_Aluna")) 
+		    	{
+		    		currentConvo = Set1["Esther_Pregnant_Aluna"];
+		    		isInConvo = true;
+		    		currentConvoName ="Esther_Pregnant_Aluna";
+		    		makeConvo("Esther_Pregnant_Aluna");
+		    	}
+		}
+
+
+		////// ESTHER & KONSTAL - esther is pregnant - aluna is pregant
+		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (storeVars.alunaIsPreganant == true)  && (estherSet == alunaSet) && isInConvo == false)
+		{
+				print ("Esther_Pregnant_Aluna_Pregnant");
+				
+				//anim.Play("Esther_Pregnant_Aluna_Pregnant");
+				
+		    	if (Set1.Contains("Esther_Pregnant_Aluna_Pregnant")) 
+		    	{
+		    		currentConvo = Set1["Esther_Pregnant_Aluna_Pregnant"];
+		    		isInConvo = true;
+		    		currentConvoName ="Esther_Pregnant_Aluna_Pregnant";
+		    		makeConvo("Esther_Pregnant_Aluna_Pregnant");
+		    	}
+		}
+
+
+		////// KONSTAL & MILKY - konstal is pregnant 
+		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (konstalSet == milkySet) && isInConvo == false)
+		{
+				print ("Konstal_Pregnant_Milky");
+				
+				//anim.Play("Konstal_Pregnant_Milky");
+				
+		    	if (Set1.Contains("Konstal_Pregnant_Milky")) 
+		    	{
+		    		currentConvo = Set1["Konstal_Pregnant_Milky"];
+		    		isInConvo = true;
+		    		currentConvoName ="Konstal_Pregnant_Milky";
+		    		makeConvo("Konstal_Pregnant_Milky");
+		    	}
+		}
+
+
+		////// KONSTL: & ALUNA - konstal is pregnant 
+		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (konstalSet == alunaSet) && isInConvo == false)
+		{
+				print ("Konstal_Pregnant_Aluna");
+				
+				//anim.Play("Konstal_Pregnant_Aluna");
+				
+		    	if (Set1.Contains("Konstal_Pregnant_Aluna")) 
+		    	{
+		    		currentConvo = Set1["Konstal_Pregnant_Aluna"];
+		    		isInConvo = true;
+		    		currentConvoName ="Konstal_Pregnant_Aluna";
+		    		makeConvo("Konstal_Pregnant_Aluna");
+		    	}
+		}
+
+		////// MILKY & ALUNA - konstal is pregnant
+		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (milkySet == alunaSet) && isInConvo == false)
+		{
+				print ("Konstal_Pregnant_Aluna_Milky_alone");
+				
+				//anim.Play("Konstal_Pregnant_Aluna_Milky_alone");
+				
+		    	if (Set1.Contains("Konstal_Pregnant_Aluna_Milky_alone")) 
+		    	{
+		    		currentConvo = Set1["Konstal_Pregnant_Aluna_Milky_alone"];
+		    		isInConvo = true;
+		    		currentConvoName ="Konstal_Pregnant_Aluna_Milky_alone";
+		    		makeConvo("Konstal_Pregnant_Aluna_Milky_alone");
+		    	}
+		}
+
+
+		////// KONSTAL & MILKY & ALUNA - konstal is pregnant
+		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (milkySet == konstalSet) && (milkySet == alunaSet) && isInConvo == false)
+		{
+				print ("Konstal_Pregnant_Aluna_Milky_confrontation");
+				
+				//anim.Play("Konstal_Pregnant_Aluna_Milky_confrontation");
+				
+		    	if (Set1.Contains("Konstal_Pregnant_Aluna_Milky_confrontation")) 
+		    	{
+		    		currentConvo = Set1["Konstal_Pregnant_Aluna_Milky_confrontation"];
+		    		isInConvo = true;
+		    		currentConvoName ="Konstal_Pregnant_Aluna_Milky_confrontation";
+		    		makeConvo("Konstal_Pregnant_Aluna_Milky_confrontation");
+		    		storeVars.milkyAlunaTalkAboutKonstalPreg = true;
+		    	}
+		}
+
+
+		////// KONSTAL & CRATOR - konstal is pregnant
+		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (cratorSet == konstalSet) && isInConvo == false)
+		{
+				print ("Konstal_Pregnant_Crator");
+				
+				//anim.Play("Konstal_Pregnant_Crator");
+				
+		    	if (Set1.Contains("Konstal_Pregnant_Crator")) 
+		    	{
+		    		currentConvo = Set1["Konstal_Pregnant_Crator"];
+		    		isInConvo = true;
+		    		currentConvoName ="Konstal_Pregnant_Crator";
+		    		makeConvo("Konstal_Pregnant_Crator");
+		    	}
+		}
+
+		////// KONSTAL & ESTHER - konstal is pregnant
+		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (estherSet == konstalSet) && isInConvo == false)
+		{
+				print ("Konstal_Pregnant_Esther");
+				
+				//anim.Play("Konstal_Pregnant_Esther");
+				
+		    	if (Set1.Contains("Konstal_Pregnant_Esther")) 
+		    	{
+		    		currentConvo = Set1["Konstal_Pregnant_Esther"];
+		    		isInConvo = true;
+		    		currentConvoName ="Konstal_Pregnant_Esther";
+		    		makeConvo("Konstal_Pregnant_Esther");
+		    	}
+		}
+
+		////// ALUNA & ESTHER - Aluna is pregnant - esther is not pregnant
+		if ((storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (storeVars.estherIsPreganant == false) && (alunaSet == estherSet) && isInConvo == false)
+		{
+				print ("Aluna_Pregnant_esther");
+				
+				//anim.Play("Aluna_Pregnant_esther");
+				
+		    	if (Set1.Contains("Aluna_Pregnant_esther")) 
+		    	{
+		    		currentConvo = Set1["Aluna_Pregnant_esther"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Pregnant_esther";
+		    		makeConvo("Aluna_Pregnant_esther");
+		    	}
+		}
+
+		////// ALUNA & ESTHER - Aluna is pregnant - esther is  pregnant
+		if ((storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (storeVars.estherIsPreganant == true) && (alunaSet == estherSet) && isInConvo == false)
+		{
+				print ("Aluna_Pregnant_Esther_Pregnant");
+				
+				//anim.Play("Aluna_Pregnant_esther");
+				
+		    	if (Set1.Contains("Aluna_Pregnant_Esther_Pregnant")) 
+		    	{
+		    		currentConvo = Set1["Aluna_Pregnant_Esther_Pregnant"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Pregnant_Esther_Pregnant";
+		    		makeConvo("Aluna_Pregnant_Esther_Pregnant");
+		    	}
+		}
+
+		////// ALUNA & Milky - Aluna is pregnant
+		if ((storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (alunaSet == milkySet) && isInConvo == false)
+		{
+				print ("Aluna_Pregnant_Milky");
+				
+				//anim.Play("Aluna_Pregnant_Milky");
+				
+		    	if (Set1.Contains("Aluna_Pregnant_Milky")) 
+		    	{
+		    		currentConvo = Set1["Aluna_Pregnant_Milky"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Pregnant_Milky";
+		    		makeConvo("Aluna_Pregnant_Milky");
+		    	}
+		}
+
+
+		////// ALUNA & KONSTAL - Aluna is pregnant
+		if ((storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (alunaSet == konstalSet) && isInConvo == false)
+		{
+				print ("Aluna_Pregnant_Konstal");
+				
+				//anim.Play("Aluna_Pregnant_Milky");
+				
+		    	if (Set1.Contains("Aluna_Pregnant_Konstal")) 
+		    	{
+		    		currentConvo = Set1["Aluna_Pregnant_Konstal"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Pregnant_Konstal";
+		    		makeConvo("Aluna_Pregnant_Konstal");
+		    	}
+		}
+
+
+		////// ALUNA & CRATOR - Aluna is pregnant
+		if ((storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (alunaSet == cratorSet) && isInConvo == false)
+		{
+				print ("Aluna_Pregnant_Crator");
+				
+				//anim.Play("Aluna_Pregnant_Milky");
+				
+		    	if (Set1.Contains("Aluna_Pregnant_Crator")) 
+		    	{
+		    		currentConvo = Set1["Aluna_Pregnant_Crator"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Pregnant_Crator";
+		    		makeConvo("Aluna_Pregnant_Crator");
+		    	}
+		}
+
+
+		////// CRATOR & ALUNA - crator is pregnant
+		if ((storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == alunaSet) && isInConvo == false)
+		{
+				print ("Crator_Pregnant_aluna");
+				
+				//anim.Play("Aluna_Pregnant_Milky");
+				
+		    	if (Set1.Contains("Crator_Pregnant_aluna")) 
+		    	{
+		    		currentConvo = Set1["Crator_Pregnant_aluna"];
+		    		isInConvo = true;
+		    		currentConvoName ="Crator_Pregnant_aluna";
+		    		makeConvo("Crator_Pregnant_aluna");
+		    	}
+		}
+
+
+		////// CRATOR & KONSTAL - crator is pregnant
+		if ((storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == konstalSet) && isInConvo == false)
+		{
+				print ("Crator_Pregnant_konstal");
+				
+				//anim.Play("Aluna_Pregnant_Milky");
+				
+		    	if (Set1.Contains("Crator_Pregnant_konstal")) 
+		    	{
+		    		currentConvo = Set1["Crator_Pregnant_konstal"];
+		    		isInConvo = true;
+		    		currentConvoName ="Crator_Pregnant_konstal";
+		    		makeConvo("Crator_Pregnant_konstal");
+		    	}
+		}
+
+
+		////// CRATOR & ESTHER - crator is pregnant
+		if ((storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == estherSet) && isInConvo == false)
+		{
+				print ("Crator_Pregnant_esther");
+				
+				//anim.Play("Aluna_Pregnant_Milky");
+				
+		    	if (Set1.Contains("Crator_Pregnant_esther")) 
+		    	{
+		    		currentConvo = Set1["Crator_Pregnant_esther"];
+		    		isInConvo = true;
+		    		currentConvoName ="Crator_Pregnant_esther";
+		    		makeConvo("Crator_Pregnant_esther");
+		    	}
+		}
+
+
+		////// CRATOR & ESTHER - crator is pregnant
+		if ((storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == milkySet) && isInConvo == false)
+		{
+				print ("Crator_Pregnant_milky");
+				
+				//anim.Play("Crator_Pregnant_milky");
+				
+		    	if (Set1.Contains("Crator_Pregnant_milky")) 
+		    	{
+		    		currentConvo = Set1["Crator_Pregnant_milky"];
+		    		isInConvo = true;
+		    		currentConvoName ="Crator_Pregnant_milky";
+		    		makeConvo("Crator_Pregnant_milky");
+		    	}
+		}
+
+
+		////////////////////////////////////////
+		///////////  CHECK THE TENT
+		////////////////////////////////////////
+
+
+
+
+
+		////////////////////////////////////////
+		///////////  CHECK THE WOODS
+		////////////////////////////////////////
+
+			if ((alunaSet == "inWoods") && (milkySet == "inWoods") && isInConvo == false)
+			{
+				print ("milky_aluna_woods");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("aluna_milky_woods"))
+		    	{
+		    		currentConvo = Set1["aluna_milky_woods"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_milky_woods";
+		    		makeConvo("aluna_milky_woods");
+		    	}
+
+
+			}
+
+
+
+			if ((alunaSet == "inWoods") && storeVars.startPart2 == true)
+			{
+				print ("aluna_woods_part2");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("aluna_woods_part2"))
+		    	{
+		    		currentConvo = Set1["aluna_woods_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_woods_part2";
+		    		makeConvo("aluna_woods_part2");
+		    		storeVars.alunaLookedAtFootprints = true;
+		    	}
+
+			}
+
+		if ((cratorSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaLookedAtFootprints == true)
+			{
+				print ("aluna_crator_woods_part2_talk1");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("aluna_crator_woods_part2_talk1"))
+		    	{
+		    		currentConvo = Set1["aluna_crator_woods_part2_talk1"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_crator_woods_part2_talk1";
+		    		makeConvo("aluna_crator_woods_part2_talk1");
+		    		storeVars.alunaKnowsMilkyFootprints = true;
+		    	}
+
+			}
+
+
+		if ((milkySet == "inWoods") && (alunaSet == "inWoods") &&  (storeVars.alunaKnowsMilkyFootprints == true) )
+			{
+				print ("aluna_milky_woods_part2");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("aluna_milky_woods_part2"))
+		    	{
+		    		currentConvo = Set1["aluna_milky_woods_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_milky_woods_part2";
+		    		makeConvo("aluna_milky_woods_part2");
+		    		storeVars.milkyLookedAtFootprints = true;
+		    	}
+
+			}
 			
-	
-	
-////////////////////////////////////////
-///////////  CHECK THE Hill
-////////////////////////////////////////
+			
+		if ((konstalSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
+			{
+				print ("aluna_konstal_woods_part2");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("aluna_konstal_woods_part2"))
+		    	{
+		    		currentConvo = Set1["aluna_konstal_woods_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_konstal_woods_part2";
+		    		makeConvo("aluna_konstal_woods_part2");
+		    	}
 
-	if ((estherSet == "inHill") && (milkySet == "inHill") && isInConvo == false)
-	{
-		print ("milky_esther_hill");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("esther_milky_hill"))
-    	{
-    		currentConvo = Set1["esther_milky_hill"];
-    		isInConvo = true;
-    		currentConvoName ="esther_milky_hill";
-    		makeConvo("esther_milky_hill");
-    	}
+			}
 
+
+		if ((estherSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
+			{
+				print ("aluna_esther_woods_part2");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("aluna_esther_woods_part2"))
+		    	{
+		    		currentConvo = Set1["aluna_esther_woods_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_esther_woods_part2";
+		    		makeConvo("aluna_esther_woods_part2");
+		    		storeVars.milkyLookedAtFootprints = true;
+		    	}
+
+			}
+
+
+		if ((cratorSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
+			{
+				print ("aluna_crator_woods_part2");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("aluna_crator_woods_part2"))
+		    	{
+		    		currentConvo = Set1["aluna_crator_woods_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_crator_woods_part2";
+		    		makeConvo("aluna_crator_woods_part2");
+		    		storeVars.cratorLookedAtFootprints = true;
+		    	}
+
+			}
+
+
+		if ((cratorSet == "inWoods") && (konstalSet == "inWoods") &&  storeVars.cratorLookedAtFootprints == true)
+			{
+				print ("crator_konstal_woods_part2");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("crator_konstal_woods_part2"))
+		    	{
+		    		currentConvo = Set1["crator_konstal_woods_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="crator_konstal_woods_part2";
+		    		makeConvo("crator_konstal_woods_part2");
+		    		storeVars.konstalLookedAtFootprints = true;
+		    	}
+
+			}
+			
+			
+					
+			
+			
+		////////////////////////////////////////
+		///////////  CHECK THE Hill
+		////////////////////////////////////////
+
+			if ((estherSet == "inHill") && (milkySet == "inHill") && isInConvo == false)
+			{
+				print ("milky_esther_hill");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("esther_milky_hill"))
+		    	{
+		    		currentConvo = Set1["esther_milky_hill"];
+		    		isInConvo = true;
+		    		currentConvoName ="esther_milky_hill";
+		    		makeConvo("esther_milky_hill");
+		    	}
+
+
+			}
+			
+
+
+
+
+		if ((alunaSet == "inHill") && (konstalSet != "inHill")  && (estherSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.alunaShowedAllFootprints == false) )
+			{
+				print ("aluna_hill_part2_beforeShowingFootprints");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("aluna_hill_part2_beforeShowingFootprints"))
+		    	{
+		    		currentConvo = Set1["aluna_hill_part2_beforeShowingFootprints"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_hill_part2_beforeShowingFootprints";
+		    		makeConvo("aluna_hill_part2_beforeShowingFootprints");
+		    	}
+
+			}
+
+
+		if ((alunaSet == "inHill") && (konstalSet != "inHill")  && (estherSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.alunaShowedAllFootprints == true) )
+			{
+				print ("aluna_hill_part2");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("aluna_hill_part2"))
+		    	{
+		    		currentConvo = Set1["aluna_hill_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_hill_part2";
+		    		makeConvo("aluna_hill_part2");
+		    		storeVars.alunaIsPreganant = true;
+		    	}
+
+			}
+			
+			
+		if ((estherSet == "inHill") && (konstalSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.estherLookedAtFootprints == true) )
+			{
+				print ("esther_hill_part2");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("esther_hill_part2"))
+		    	{
+		    		currentConvo = Set1["esther_hill_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="esther_hill_part2";
+		    		makeConvo("esther_hill_part2");
+		    		storeVars.estherIsPreganant = true;
+		    	}
+
+			}
+
+		if ((cratorSet == "inHill") && (konstalSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (estherSet != "inHill") &&  (storeVars.cratorLookedAtFootprints == true) )
+			{
+				print ("crator_hill_part2");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("crator_hill_part2"))
+		    	{
+		    		currentConvo = Set1["crator_hill_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="crator_hill_part2";
+		    		makeConvo("crator_hill_part2");
+		    		storeVars.cratorIsPreganant = true;
+		    	}
+
+			}	
+
+		if ((konstalSet == "inHill") && (cratorSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (estherSet != "inHill") &&  (storeVars.konstalLookedAtFootprints == true) )
+			{
+				print ("konstal_hill_part2");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("konstal_hill_part2"))
+		    	{
+		    		currentConvo = Set1["konstal_hill_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="konstal_hill_part2";
+		    		makeConvo("konstal_hill_part2");
+		    		storeVars.konstalIsPreganant = true;
+		    	}
+
+			}
+			
+			
+		if ((storeVars.allTalk_konstalIsPreganant == true || storeVars.allTalk_cratorIsPreganant == true) && (konstalSet == "inHill") && (cratorSet == "inHill")  && (alunaSet == "inHill") && (milkySet == "inHill") && (estherSet == "inHill") )
+			{
+				print ("Hill_SeeMonster");
+				
+				//anim.Play("scene1_aluna_esther_woods");
+				
+		    	if(Set1.Contains("Hill_SeeMonster"))
+		    	{
+		    		currentConvo = Set1["Hill_SeeMonster"];
+		    		isInConvo = true;
+		    		currentConvoName ="Hill_SeeMonster";
+		    		makeConvo("Hill_SeeMonster");
+		    		storeVars.SetNum = 2;
+		    		
+		    	}
+
+			}
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	}
 	
-
-
-
-
-if ((alunaSet == "inHill") && (konstalSet != "inHill")  && (estherSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.alunaShowedAllFootprints == false) )
+	
+	
+	
+	if (storeVars.SetNum == 2)
 	{
-		print ("aluna_hill_part2_beforeShowingFootprints");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("aluna_hill_part2_beforeShowingFootprints"))
-    	{
-    		currentConvo = Set1["aluna_hill_part2_beforeShowingFootprints"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_hill_part2_beforeShowingFootprints";
-    		makeConvo("aluna_hill_part2_beforeShowingFootprints");
-    	}
 
-	}
+		////////////////////////////////////////
+		///////////  CHECK THE CAMP
+		////////////////////////////////////////
+		
+		if ( (storeVars.regrouped == false) && (storeVars.konstalIsPreganant == true) && (konstalSet == "inCamp") && (cratorSet == "inCamp")  && (alunaSet == "inCamp") && (milkySet == "inCamp") && (estherSet == "inCamp") )
+			{
+				print ("Regroup_KonstalIsPregnant");
+				
+				//anim.Play("Regroup_KonstalIsPregnant");
+				
+		    	if(Set2.Contains("Regroup_KonstalIsPregnant"))
+		    	{
+		    		currentConvo = Set1["Regroup_KonstalIsPregnant"];
+		    		isInConvo = true;
+		    		currentConvoName ="Regroup_KonstalIsPregnant";
+		    		makeConvo("Regroup_KonstalIsPregnant");
+		    		storeVars.regrouped = true;	
+		    	}
+
+			}
+
+		if ( (storeVars.regrouped == false) && (storeVars.konstalIsPreganant == false)  && (konstalSet == "inCamp") && (cratorSet == "inCamp")  && (alunaSet == "inCamp") && (milkySet == "inCamp") && (estherSet == "inCamp") )
+			{
+				print ("Regroup_KonstalIsNotPregnant");
+				
+				//anim.Play("Regroup_KonstalIsNotPregnant");
+				
+		    	if(Set2.Contains("Regroup_KonstalIsNotPregnant"))
+		    	{
+		    		currentConvo = Set1["Regroup_KonstalIsNotPregnant"];
+		    		isInConvo = true;
+		    		currentConvoName ="Regroup_KonstalIsNotPregnant";
+		    		makeConvo("Regroup_KonstalIsNotPregnant");
+		    		storeVars.regrouped = true;	
+		    	}
+
+			}
+			
+			
+
+		////////////////////////////////////////
+		///////////  CHECK  ANYWERE
+		////////////////////////////////////////
+
+		if ( (storeVars.regrouped == true) && (decoyProgress == 0)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
+			{
+				print ("Aluna_Konstal_beforeAlunaAndMilky_pillow0");
+				
+				//anim.Play("Aluna_Konstal_beforeAlunaAndMilky_pillow0");
+				
+		    	if(Set2.Contains("Aluna_Konstal_beforeAlunaAndMilky_pillow0"))
+		    	{
+		    		currentConvo = Set1["Aluna_Konstal_beforeAlunaAndMilky_pillow0"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Konstal_beforeAlunaAndMilky_pillow0";
+		    		makeConvo("Aluna_Konstal_beforeAlunaAndMilky_pillow0");
+		    	}
+
+			}
+		
+		if ( (storeVars.regrouped == true) && (decoyProgress == 0)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
+			{
+				print ("Aluna_Milky_pillow");
+				
+				//anim.Play("Aluna_Milky_pillow");
+				
+		    	if(Set2.Contains("Aluna_Milky_pillow"))
+		    	{
+		    		currentConvo = Set1["Aluna_Milky_pillow"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Milky_pillow";
+		    		makeConvo("Aluna_Milky_pillow");
+		    		decoyProgress = 1;	
+		    	}
+			}
+		
+	
+		if ( (storeVars.regrouped == true) && (decoyProgress == 1)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
+			{
+				print ("Aluna_Konstal_pillow1");
+				
+				//anim.Play("Aluna_Konstal_pillow1");
+				
+		    	if(Set2.Contains("Aluna_Konstal_pillow1"))
+		    	{
+		    		currentConvo = Set1["Aluna_Konstal_pillow1"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Konstal_pillow1";
+		    		makeConvo("Aluna_Konstal_pillow1");
+		    		decoyProgress = 2;
+		    	}
+			}
+			
+		
+		if ( (storeVars.regrouped == true) && (decoyProgress == 2)  && (alunaSet != "inHill") && (alunaSet == cratorSet) )
+			{
+				print ("Aluna_Crator_pillow");
+				
+				//anim.Play("Aluna_Konstal_pillow1");
+				
+		    	if(Set2.Contains("Aluna_Crator_pillow"))
+		    	{
+		    		currentConvo = Set1["Aluna_Crator_pillow"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Crator_pillow";
+		    		makeConvo("Aluna_Crator_pillow");
+		    		decoyProgress = 3;
+		    	}
+			}
+		
+		if ( (storeVars.regrouped == true) && (decoyProgress == 3)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
+			{
+				print ("Aluna_Milky_pillow2");
+				
+				//anim.Play("Aluna_Konstal_pillow1");
+				
+		    	if(Set2.Contains("Aluna_Milky_pillow2"))
+		    	{
+		    		currentConvo = Set1["Aluna_Milky_pillow2"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Milky_pillow2";
+		    		makeConvo("Aluna_Milky_pillow2");
+		    		decoyProgress = 4;
+		    	}
+			}
+			
+			
+		
+		if ( (storeVars.regrouped == true) && (decoyProgress == 4)  && (milkySet != "inHill") && (milkySet == cratorSet) )
+			{
+				print ("Crator_Milky_pillow");
+				
+				//anim.Play("Crator_Milky_pillow");
+				
+		    	if(Set2.Contains("Crator_Milky_pillow"))
+		    	{
+		    		currentConvo = Set1["Crator_Milky_pillow"];
+		    		isInConvo = true;
+		    		currentConvoName ="Crator_Milky_pillow";
+		    		makeConvo("Crator_Milky_pillow");	
+		    		decoyProgress = 5;
+		    	}
+			}
+			
+		
+		if ( (storeVars.regrouped == true) && (decoyProgress == 5)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
+			{
+				print ("Aluna_Milky_pillow3");
+				
+				//anim.Play("Aluna_Milky_pillow3");
+				
+		    	if(Set2.Contains("Aluna_Milky_pillow3"))
+		    	{
+		    		currentConvo = Set1["Aluna_Milky_pillow3"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Milky_pillow3";
+		    		makeConvo("Aluna_Milky_pillow3");	
+		    		decoyProgress = 6;
+		    	}
+			}
+		
+		
+		if ( (storeVars.regrouped == true) && (decoyProgress == 6)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
+			{
+				print ("Aluna_Konstal_pillow2");
+				
+				//anim.Play("Aluna_Konstal_pillow2");
+				
+		    	if(Set2.Contains("Aluna_Konstal_pillow2"))
+		    	{
+		    		currentConvo = Set1["Aluna_Konstal_pillow2"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Konstal_pillow2";
+		    		makeConvo("Aluna_Konstal_pillow2");	
+		    		decoyProgress = 7;
+		    	}
+			}
+		
+
+		if ( (storeVars.regrouped == true) && (decoyProgress == 7)  && (alunaSet != "inHill") && (alunaSet == estherSet) )
+			{
+				print ("Aluna_Esther_pillow");
+				
+				//anim.Play("Aluna_Esther_pillow");
+				
+		    	if(Set2.Contains("Aluna_Esther_pillow"))
+		    	{
+		    		currentConvo = Set1["Aluna_Esther_pillow"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Esther_pillow";
+		    		makeConvo("Aluna_Esther_pillow");	
+		    		decoyProgress = 8;
+		    	}
+			}
+			
+		
+		if ( (storeVars.regrouped == true) && (weaponProgress == 0)  && (alunaSet != "inHill") && (alunaSet == cratorSet) )
+			{
+				print ("Aluna_Crator_weapon1");
+				
+				//anim.Play("Aluna_Esther_pillow");
+				
+		    	if(Set2.Contains("Aluna_Crator_weapon1"))
+		    	{
+		    		currentConvo = Set1["Aluna_Crator_weapon1"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Crator_weapon1";
+		    		makeConvo("Aluna_Crator_weapon1");	
+		    	}
+			}	
+		
+		if ( (storeVars.regrouped == true) && (weaponProgress == 0)  && (alunaSet != "inHill") && (alunaSet == estherSet) )
+			{
+				print ("Aluna_Esther_weapon1");
+				
+				//anim.Play("Aluna_Esther_weapon1");
+				
+		    	if(Set2.Contains("Aluna_Esther_weapon1"))
+		    	{
+		    		currentConvo = Set1["Aluna_Esther_weapon1"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Esther_weapon1";
+		    		makeConvo("Aluna_Esther_weapon1");	
+		    		weaponProgress = 1;
+		    	}
+			}
+			
+		if ( (storeVars.regrouped == true) && (weaponProgress == 0)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
+			{
+				print ("Aluna_Konstal_weapon");
+				
+				//anim.Play("Aluna_Konstal_weapon");
+				
+		    	if(Set2.Contains("Aluna_Konstal_weapon"))
+		    	{
+		    		currentConvo = Set1["Aluna_Konstal_weapon"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Konstal_weapon";
+		    		makeConvo("Aluna_Konstal_weapon");	
+		    	}
+			}
+
+		if ( (storeVars.regrouped == true) && (weaponProgress == 1)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
+			{
+				print ("Aluna_Milky_weapon");
+				
+				//anim.Play("Aluna_Milky_weapon");
+				
+		    	if(Set2.Contains("Aluna_Milky_weapon"))
+		    	{
+		    		currentConvo = Set1["Aluna_Milky_weapon"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Milky_weapon";
+		    		makeConvo("Aluna_Milky_weapon");	
+		    	}
+			}
+
+		if ( (storeVars.regrouped == true) && (weaponProgress == 1)  && (alunaSet != "inHill") && (alunaSet == cratorSet) )
+			{
+				print ("Aluna_Crator_weapon2");
+				
+				//anim.Play("Aluna_Milky_weapon");
+				
+		    	if(Set2.Contains("Aluna_Crator_weapon2"))
+		    	{
+		    		currentConvo = Set1["Aluna_Crator_weapon2"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Crator_weapon2";
+		    		makeConvo("Aluna_Crator_weapon2");	
+		    		weaponProgress = 2;
+		    	}
+			}
+			
+
+		if ( (storeVars.regrouped == true) && (weaponProgress == 2)  && (alunaSet == "inHill") )
+			{
+				print ("Aluna_weapon_OnHill");
+				
+				//anim.Play("Aluna_weapon_OnHill");
+				
+		    	if(Set2.Contains("Aluna_weapon_OnHill"))
+		    	{
+		    		currentConvo = Set1["Aluna_weapon_OnHill"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_weapon_OnHill";
+		    		makeConvo("Aluna_weapon_OnHill");	
+		    		weaponProgress = 3;
+		    	}
+			}
+			
+
+		if ( (storeVars.regrouped == true) && (weaponProgress == 3)  && (alunaSet != "inHill")&& (alunaSet == estherSet) )
+			{
+				print ("Aluna_Esther_Weapon2");
+				
+				//anim.Play("Aluna_weapon_OnHill");
+				
+		    	if(Set2.Contains("Aluna_Esther_Weapon2"))
+		    	{
+		    		currentConvo = Set1["Aluna_Esther_Weapon2"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_Esther_Weapon2";
+		    		makeConvo("Aluna_Esther_Weapon2");	
+		    		weaponProgress = 3;
+		    	}
+			}
+		
+		if ( (storeVars.regrouped == true) && (weaponProgress == 4) && (decoyProgress == 8) )
+			{
+				print ("Aluna_weapon_decoy_Done");
+				
+				//anim.Play("Aluna_weapon_Done");
+				
+		    	if(Set2.Contains("Aluna_weapon_decoy_Done"))
+		    	{
+		    		currentConvo = Set1["Aluna_weapon_decoy_Done"];
+		    		isInConvo = true;
+		    		currentConvoName ="Aluna_weapon_decoy_Done";
+		    		makeConvo("Aluna_weapon_decoy_Done");	
+		    	}
+			}
+		
+		
+		
+		
+		
+			
+		////////////////////////////////////////
+		///////////  CHECK THE TENT
+		////////////////////////////////////////
 
 
-if ((alunaSet == "inHill") && (konstalSet != "inHill")  && (estherSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.alunaShowedAllFootprints == true) )
-	{
-		print ("aluna_hill_part2");
+
+
+		////////////////////////////////////////
+		///////////  CHECK THE WOODS
+		////////////////////////////////////////
+
 		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("aluna_hill_part2"))
-    	{
-    		currentConvo = Set1["aluna_hill_part2"];
-    		isInConvo = true;
-    		currentConvoName ="aluna_hill_part2";
-    		makeConvo("aluna_hill_part2");
-    		storeVars.alunaIsPreganant = true;
-    	}
+			
+			
+			
+		////////////////////////////////////////
+		///////////  CHECK THE Hill
+		////////////////////////////////////////
+
+
+
+
+
+
+
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	}
 	
-	
-if ((estherSet == "inHill") && (konstalSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.estherLookedAtFootprints == true) )
-	{
-		print ("esther_hill_part2");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("esther_hill_part2"))
-    	{
-    		currentConvo = Set1["esther_hill_part2"];
-    		isInConvo = true;
-    		currentConvoName ="esther_hill_part2";
-    		makeConvo("esther_hill_part2");
-    		storeVars.estherIsPreganant = true;
-    	}
-
-	}
-
-if ((cratorSet == "inHill") && (konstalSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (estherSet != "inHill") &&  (storeVars.cratorLookedAtFootprints == true) )
-	{
-		print ("crator_hill_part2");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("crator_hill_part2"))
-    	{
-    		currentConvo = Set1["crator_hill_part2"];
-    		isInConvo = true;
-    		currentConvoName ="crator_hill_part2";
-    		makeConvo("crator_hill_part2");
-    		storeVars.cratorIsPreganant = true;
-    	}
-
-	}	
-
-if ((konstalSet == "inHill") && (cratorSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (estherSet != "inHill") &&  (storeVars.konstalLookedAtFootprints == true) )
-	{
-		print ("konstal_hill_part2");
-		
-		//anim.Play("scene1_aluna_esther_woods");
-		
-    	if(Set1.Contains("konstal_hill_part2"))
-    	{
-    		currentConvo = Set1["konstal_hill_part2"];
-    		isInConvo = true;
-    		currentConvoName ="konstal_hill_part2";
-    		makeConvo("konstal_hill_part2");
-    		storeVars.konstalIsPreganant = true;
-    	}
-
-	}
-
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 
 
