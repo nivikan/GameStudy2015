@@ -187,7 +187,8 @@ function Start () {
 //KONSTAL and CRATOR - Alone - Any Scene
 	scene = new Array();
 	scene.Push(["Konstal", "So it is true then. Milky got herself knocked up.", "angry"]);
-	scene.Push(["Crator", "It’s not as simple as that. She said she just turned up pregnant. She said she doesn’t know what happened. ", "normal"]);
+	scene.Push(["Crator", "It’s not as simple as that. She said she just turned up pregnant.", "angry"]);
+	scene.Push(["Crator", "She said she doesn’t know what happened. ", "normal"]);
 	scene.Push(["Konstal", "Well, I think it’s pretty obvious what happened... ", "normal"]);
 	scene.Push(["Konstal", "And you and Milky have always been on good terms.", "smirk"]);
 	scene.Push(["Crator", "She said she didn’t have sex with anyone.", "normal"]);
@@ -203,13 +204,15 @@ function Start () {
 	scene = new Array();
 	scene.Push(["Esther", "Hey guys- did you get dinner ready?", "normal"]);
 	scene.Push(["Konstal", "Did you all find out how Milky even got pregnant?", "angry"]);
-	scene.Push(["Esther", "We told you… She just turned up pregnant. We need to find out how it happened.", "normal"]);
+	scene.Push(["Esther", "We told you… She just turned up pregnant.", "normal"]);
+	scene.Push(["Esther", "We need to find out how it happened.", "normal"]);
 	scene.Push(["Konstal", "Right…", "normal"]);
 	scene.Push(["Crator", "We need to split our rations.", "normal"]);
 	scene.Push(["Milky", "You mean for the baby?", "normal"]);
 	scene.Push(["Esther", "I thought we were going to find a way to abort it.", "surprise"]);
 	scene.Push(["Crator", "Abort it? I thought we were keeping it?", "angry"]);
-	scene.Push(["Esther", "Well, we can’t really feed it, can we? And Milky didn’t even want it in the first place.", "normal"]);
+	scene.Push(["Esther", "Well, we can’t really feed it, can we?", "normal"]);
+	scene.Push(["Esther", "And Milky didn’t even want it in the first place.", "normal"]);
 	scene.Push(["Crator", "But that doesn’t mean she wants it aborted.", "normal"]);
 	scene.Push(["Konstal", "I think Esther’s right. We don’t have enough food to feed it.", "normal"]);
 	scene.Push(["Crator", "Shut Up. Let’s just ask Milky.", "normal"]);
@@ -247,14 +250,17 @@ function Start () {
 	
 //ESTHER and KONSTAl and CRATOR - Alone - Anywhere
 	scene = new Array();
+	scene.Push(["Konstal", "What are you doing here?", "normal"]);
 	scene.Push(["Esther", "Hey guys. So Milky really doesn’t know how she got pregnant.", "normal"]);
 	scene.Push(["Konstal", "Yeah, perfectly convenient for her.", "normal"]);
 	scene.Push(["Esther", "Hm, yeah. ", "normal"]);
 	scene.Push(["Esther", "Say, you guys wouldn’t happen to know what happened, would you?", "normal"]);
 	scene.Push(["Konstal", "Why would we know? She doesn’t even know herself.", "normal"]);
-	scene.Push(["Esther", "I don’t know, there’s a lot of ways a girl can not know what’s been done to her and only one way to get pregnant, y’know? ", "normal"]);
+	scene.Push(["Esther", "I don’t know, there’s lots of ways a girl can not know", "normal"]);
+	scene.Push(["Esther", "what’s been done to her and only one way to get pregnant, y’know? ", "normal"]);
 	scene.Push(["Konstal", "What are you getting at?", "mad"]);
-	scene.Push(["Crator", "Esther, don’t worry. Konstal and I haven’t done anything. We’re just as clueless as anyone here.", "normal"]);
+	scene.Push(["Crator", "Esther, don’t worry. Konstal and I haven’t done anything.", "normal"]);
+	scene.Push(["Crator", "We’re just as clueless as anyone here.", "normal"]);
 	scene.Push(["Konstal", "Why would we even want to get Milky pregnant anyway?", "normal"]);
 	scene.Push(["Esther", "Huh, just checking…", "normal"]);
 	Set1.Add("crator_esther_konstal_alone_anywhere",scene);
@@ -268,14 +274,15 @@ function Start () {
 	scene.Push(["Konstal", "Well, no. But it’s fairly obvious if you look at both of them.", "normal"]);
 	scene.Push(["Esther", "I believe Milky. She really doesn’t know what happened.", "normal"]);
 	scene.Push(["Konstal", "What else could have happened other than sex?", "normal"]);
-	scene.Push(["Esther", "You seem pretty defensive there. You sure you didn’t have anything to do with it? ", "smirk"]);
+	scene.Push(["Esther", "You're pretty defensive there.", "normal"]);
+	scene.Push(["Esther", "You sure you didn’t have anything to do with it? ", "smirk"]);
 	scene.Push(["Konstal", "Wh-What?! Of course not! ", "angry"]);
 	scene.Push(["Esther", "Hmmm…", "normal"]);
 	Set1.Add("esther_konstal_maybeAluna_anywhere",scene);
 	
 //ESTHER and CRATOR - with or without Aluna - Anywhere
 	scene = new Array();
-	scene.Push(["Esther", "Hey, you really don’t know anything about Milky’s pregnancy? How it could have happened?", "normal"]);
+	scene.Push(["Esther", "Hey, you really don’t know anything about Milky’s pregnancy?", "normal"]);
 	scene.Push(["Crator", "No. I didn’t have sex with her, so it was probably Konstal.", "normal"]);
 	scene.Push(["Esther", "You think he drugged her?", "normal"]);
 	scene.Push(["Crator", "What?! Why would you say that?", "normal"]);
@@ -467,7 +474,7 @@ scene.Push(["Esther", "I was not having sex. I know I did not have sex!", "angry
 scene.Push(["Aluna", "And I saw both you boys around the camp last night. Esther was no where near you two.", "normal"]);
 scene.Push(["Konstal", "I don’t care! You probably got pregnant a few weeks ago and only noticed it now considering how much you weigh.", "normal"]);
 scene.Push(["Esther", "EXCUSE ME?!!", "angry"]);
-scene.Push(["Esther", "I KNOW my body and I know that I somehow woke up pregnant last night., "angry"]);
+scene.Push(["Esther", "I KNOW my body and I know that I somehow woke up pregnant last night.", "angry"]);
 scene.Push(["Esther", "Besides, I didn’t even do anything recently.", "angry"]);
 scene.Push(["Konstal", "Yeah right. I have more important things to think about. Apparently, I need to think about how to feed another kid.", "angry"]);
 scene.Push(["Konstal", "Or a safe method of abortion with the limited tools we have…", "sad"]);
@@ -983,7 +990,7 @@ scene.Push(["Milky", "… will we have to fight it?", "sad"]);
 scene.Push(["Crator", "I don’t know.", "normal"]);
 scene.Push(["Konstal", "Seems like a good plan. But it won’t come down unless we have some bait. ", "normal"]);
 scene.Push(["Aluna", "I could- ", "normal"]);
-scene.Push(["Milky", "You are NOT acting as our bait! Now that I saw that monster I cannot let you.", "angry"] 
+scene.Push(["Milky", "You are NOT acting as our bait! Now that I saw that monster I cannot let you.", "angry"]) ;
 scene.Push(["Milky", "Oh god, we’ve all been sleeping so close to that thing… I have that thing’s babies in me!", "angry"]);
 scene.Push(["Aluna", "So we need some sort of decoy, huh?", "normal"]);
 scene.Push(["Crator", "... I can’t think of anything.", "normal"]);

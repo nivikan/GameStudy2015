@@ -1,13 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/drag&amp;Set.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/startCutscene.js">
     <Files>
-      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="2188" Column="128" />
-      <File FileName="Assets/scripts/Bubble/CutsceneControls/ScenesScript.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/storeVars.js" Line="11" Column="20" />
-      <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="83" Column="36" />
-      <File FileName="Assets/scripts/All_Interactions/KeepTrackOfAnims.js" Line="12" Column="22" />
+      <File FileName="Assets/scripts/All_Interactions/startCutscene.js" Line="191" Column="23" />
+      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="1363" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

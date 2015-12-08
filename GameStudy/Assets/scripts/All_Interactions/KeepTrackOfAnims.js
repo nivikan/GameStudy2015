@@ -25,7 +25,7 @@ function Update () {
 		{
 			AlunaAnim.SetBool("isHeld", true);
 		}
-		/*
+		
 		if (curHeld == "Crator")
 		{
 			CratorAnim.SetBool("isHeld", true);
@@ -45,15 +45,15 @@ function Update () {
 		{
 			KonstalAnim.SetBool("isHeld", true);
 		}
-		*/
+		
 		
 		if (curHeld == "None")
 		{
 			AlunaAnim.SetBool("isHeld", false);
-			//CratorAnim.SetBool("isHeld", false);
-			//EstherAnim.SetBool("isHeld", false);
-			//MilkyAnim.SetBool("isHeld", false);
-			//KonstalAnim.SetBool("isHeld", false);
+			CratorAnim.SetBool("isHeld", false);
+			EstherAnim.SetBool("isHeld", false);
+			MilkyAnim.SetBool("isHeld", false);
+			KonstalAnim.SetBool("isHeld", false);
 		}
 		
 		prevHeld = curHeld;

@@ -250,4 +250,5 @@ function OnMouseUp () {
 	}
 	
 	storeVars.justClickedChar = objName;
+	storeVars.heldChar = "None";
 }

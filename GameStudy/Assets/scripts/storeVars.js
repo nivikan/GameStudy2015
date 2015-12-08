@@ -14,6 +14,12 @@ public var convoNumThisMove = 0;
 public var SetNum = 1;
 public var moved = false;
 public var justClickedChar = "Aluna";
+public var inCutscene = false;
+public var currentCutscene = "None";
+
+
+
+
 
 //DIALOGUES
 public var startPart2 = false;
