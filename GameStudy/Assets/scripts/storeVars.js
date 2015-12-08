@@ -8,9 +8,12 @@ public var alunaSet = "inTent";
 public var estherSet = "inTent";
 public var milkySet = "inTent";
 
+public var heldChar = "None";
+
 public var convoNumThisMove = 0;
 public var SetNum = 1;
 public var moved = false;
+public var justClickedChar = "Aluna";
 
 //DIALOGUES
 public var startPart2 = false;
@@ -35,6 +38,7 @@ public var startPart2 = false;
 	public var allTalk_konstalIsPreganant = false;
 	
 	public var milkyAlunaTalkAboutKonstalPreg = true;
+	
 
 
 
@@ -43,5 +47,6 @@ function Start () {
 }
 
 function Update () {
+
 
 }

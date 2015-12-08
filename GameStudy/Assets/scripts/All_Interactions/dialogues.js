@@ -121,20 +121,20 @@ function Start () {
 	scene.Push(["Crator", "Milky- I have to talk to you.","normal"]);
 	scene.Push(["Milky", "I actually have to talk to you too…", "normal"]);
 	scene.Push(["Crator", "You first- please.","normal"]);
-	scene.Push(["Milky", "Sure, um. We didn’t do anything these last few weeks… did we?", "sad"]);
+	scene.Push(["Milky", "Sure, um, we didn’t do anything these last few weeks… did we?", "sad"]);
 	scene.Push(["Milky", "I really don’t remember how I could have gotten pregnant.", "sad"]);
 	scene.Push(["Crator", "No- We haven’t slept together.","surprise"]);
 	scene.Push(["Milky", "Oh! Ok- thank you.","normal"]);
-	scene.Push(["Crator", "I need to ask you something to. ", "normal"]);
+	scene.Push(["Crator", "I need to ask you something too. ", "normal"]);
 	scene.Push(["Crator", "Are you going to keep the baby?","sad"]);
 	scene.Push(["Milky", "I- I don’t know. At this point, I don’t even know where it came from.", "sad"]);
 	scene.Push(["Crator", "But you’ll keep it no matter what, right? It’s a living thing and your baby.","angry"]);
 	scene.Push(["Milky", "I don’t know.", "sad"]);
 	scene.Push(["Crator", " I’ll help you take care of it. I’ll -","angry"]);
 	scene.Push(["Milky", "CRATOR!", "angry"]);
-	scene.Push(["Crator", "-...","surprise"]);
+	scene.Push(["Crator", "...","surprise"]);
 	scene.Push(["Milky", "Really... I’ll decide for myself. I just need some time alone right now.", "sad"]);
-	scene.Push(["Crator", "...sure","sad"]);
+	scene.Push(["Crator", "...Sure","sad"]);
 	Set1.Add("milky_crator_anywhere",scene);
 
 
@@ -166,7 +166,7 @@ function Start () {
 	scene.Push(["Esther", "Maybe. But they can just as easily be terrible people.", "angry"]);
 	scene.Push(["Esther", "I just don’t want you to be hurt again. ", "normal"]);
 	scene.Push(["Esther", "Just stay away from them, ok? At least till we get all this figured out.", "normal"]);
-	scene.Push(["Milky", "… (I really don’t think that’s the case).", "sad"]);
+	scene.Push(["Milky", "….", "sad"]);
 	Set1.Add("esther_milky_alone_anywhere",scene);
 
 //ESTHER, ALUNA, and MILKY - Alone - Any Scene
@@ -176,9 +176,9 @@ function Start () {
 	scene.Push(["Esther", "I know you said it was a freak anomaly but that’s a little hard to swallow.", "sigh"]);
 	scene.Push(["Milky", "I don’t even know what happened. I just noticed I was pregnant.", "sad"]);
 	scene.Push(["Esther", "You didn’t have sex with anyone either…", "normal"]);
-	scene.Push(["Milky", "yeah…", "sad"]);
-	scene.Push(["Esther", "c’mon- that’s way too farfetched.", "angry"]);
-	scene.Push(["Aluna", "weirder stuff have happened. ", "normal"]);
+	scene.Push(["Milky", "Yeah…", "sad"]);
+	scene.Push(["Esther", "C’mon- that’s way too farfetched.", "angry"]);
+	scene.Push(["Aluna", "Weirder stuff have happened. ", "normal"]);
 	scene.Push(["Esther", "… ", "sad"]);
 	Set1.Add("aluna_esther_milky_alone_anywhere",scene);
 
@@ -230,7 +230,7 @@ function Start () {
 	scene.Push(["Aluna", "We’re being watched. ", "normal"]);
 	scene.Push(["Esther", "Aluna, what the heck?", "surprise"]);
 	scene.Push(["Aluna", "Sometimes, I feel like we’re being watched. Maybe everyone is telling the truth.", "normal"]);
-	scene.Push(["Esther", "… You’re not making sense. (I knew I shouldn’t have talked to Aluna about this…)", "sigh"]);
+	scene.Push(["Esther", "… You’re not making sense.", "sigh"]);
 	Set1.Add("aluna_esther_alone_anywhere",scene);
 	
 //ALUNA and KONSTAL and CRATOR - Alone - Anywhere
@@ -241,7 +241,7 @@ function Start () {
 	scene.Push(["Crator", "Nothing out of the usual", "normal"]);
 	scene.Push(["Konstal", "Nothing at all.", "normal"]);
 	scene.Push(["Aluna", "It’s just, Do you sometimes feel like we’re not alone here?", "normal"]);
-	scene.Push(["Konstal", "If you’re trying to help Milky sell her “I don’t who done it” story, it’s not going to work.", "normal"]);
+	scene.Push(["Konstal", "If you’re trying to help Milky sell her 'I don’t who did it' story, it’s not going to work.", "normal"]);
 	Set1.Add("aluna_crator_konstal_alone_anywhere",scene);
 	
 //ESTHER and KONSTAl and CRATOR - Alone - Anywhere
@@ -279,7 +279,7 @@ function Start () {
 	scene.Push(["Esther", "You think he drugged her?", "normal"]);
 	scene.Push(["Crator", "What?! Why would you say that?", "normal"]);
 	scene.Push(["Esther", "She said she didn’t remember what happened. It’s obviously foul play.", "normal"]);
-	scene.Push(["Crator", "… I don’t thinks so.", "normal"]);
+	scene.Push(["Crator", "… I don’t think he would drug her.", "normal"]);
 	Set1.Add("esther_crator_maybeAluna_anywhere",scene);
 	
 
@@ -1378,7 +1378,7 @@ if (storeVars.moved == true)
 		////////////////////////////////////////
 
 		////// MILKY & CRATOR - ALONE Anywhere
-		if ((milkySet == cratorSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != konstalSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Milky") || (storeVars.justClickedChar == "Crator")) && (milkySet == cratorSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != konstalSet) && isInConvo == false)
 		{
 				print ("milky_crator_anywhere");
 				
@@ -1395,7 +1395,7 @@ if (storeVars.moved == true)
 		}
 
 		////// MILKY & KONSTAL - ALONE Anywhere
-		if ((milkySet == konstalSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != cratorSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Milky")) && (milkySet == konstalSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != cratorSet) && isInConvo == false)
 		{
 				print ("konstal_milky_anywhere");
 				
@@ -1413,7 +1413,7 @@ if (storeVars.moved == true)
 
 
 		////// ALUNA & MILKY - ALONE Anywhere
-		if ((alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != estherSet) && (alunaSet != konstalSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky")) && (alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != estherSet) && (alunaSet != konstalSet) && isInConvo == false)
 		{
 				print ("aluna_milky_alone_anywhere");
 				
@@ -1430,7 +1430,7 @@ if (storeVars.moved == true)
 		}
 
 		//ESTHER and MILKY - Alone - Any Scene
-		if ((milkySet == estherSet) && (milkySet != alunaSet) && (milkySet != cratorSet) && (milkySet != konstalSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Milky") || (storeVars.justClickedChar == "Esther")) && (milkySet == estherSet) && (milkySet != alunaSet) && (milkySet != cratorSet) && (milkySet != konstalSet) && isInConvo == false)
 		{
 				print ("esther_milky_alone_anywhere");
 				
@@ -1446,7 +1446,7 @@ if (storeVars.moved == true)
 		}
 
 		////// ALUNA & ESTHER & MILKY - ALONE Anywhere
-		if ((alunaSet ==  estherSet) && (alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != konstalSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Milky")) && (alunaSet ==  estherSet) && (alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != konstalSet) && isInConvo == false)
 		{
 				print ("aluna_esther_milky_alone_anywhere");
 				
@@ -1463,7 +1463,7 @@ if (storeVars.moved == true)
 
 
 		////// KONSTAL & CRATOR - ALONE Anywhere
-		if ((konstalSet == cratorSet) && (konstalSet != alunaSet) && (konstalSet != estherSet) && (konstalSet != milkySet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Crator")) && (konstalSet == cratorSet) && (konstalSet != alunaSet) && (konstalSet != estherSet) && (konstalSet != milkySet) && isInConvo == false)
 		{
 				print ("crator_konstal_alone_anywhere");
 				
@@ -1481,7 +1481,7 @@ if (storeVars.moved == true)
 
 
 		////// ALUNA & ESTHER - ALONE Anywhere
-		if ((alunaSet == estherSet) && (alunaSet != konstalSet) && (alunaSet != cratorSet) && (alunaSet != milkySet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther")) && (alunaSet == estherSet) && (alunaSet != konstalSet) && (alunaSet != cratorSet) && (alunaSet != milkySet) && isInConvo == false)
 		{
 				print ("aluna_esther_alone_anywhere");
 				
@@ -1497,7 +1497,7 @@ if (storeVars.moved == true)
 		}
 
 		////// ALUNA & KONSTAL & CRATOR - ALONE Anywhere
-		if ((alunaSet == konstalSet) && (alunaSet == cratorSet) && (alunaSet != estherSet) && (alunaSet != milkySet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Crator")) && (alunaSet == konstalSet) && (alunaSet == cratorSet) && (alunaSet != estherSet) && (alunaSet != milkySet) && isInConvo == false)
 		{
 				print ("aluna_crator_konstal_alone_anywhere");
 				
@@ -1514,7 +1514,7 @@ if (storeVars.moved == true)
 
 
 		////// ESTHER & KONSTAL & CRATOR - alone Anywhere
-		if ((estherSet == konstalSet) && (estherSet == cratorSet) && (estherSet != milkySet) && (estherSet != alunaSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Crator")) && (estherSet == konstalSet) && (estherSet == cratorSet) && (estherSet != milkySet) && (estherSet != alunaSet) && isInConvo == false)
 		{
 				print ("crator_esther_konstal_alone_anywhere");
 				
@@ -1531,7 +1531,7 @@ if (storeVars.moved == true)
 
 
 		////// ESTHER & KONSTAL- maybeAluna Anywhere
-		if ((estherSet == konstalSet) && (estherSet != cratorSet) && (estherSet != milkySet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (estherSet == konstalSet) && (estherSet != cratorSet) && (estherSet != milkySet) && isInConvo == false)
 		{
 				print ("esther_konstal_maybeAluna_anywhere");
 				
@@ -1547,7 +1547,7 @@ if (storeVars.moved == true)
 		}
 
 		////// ESTHER & KONSTAL- maybeAluna Anywhere
-		if ((estherSet == cratorSet) && (estherSet != konstalSet) && (estherSet != milkySet) && isInConvo == false)
+		if (((storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (estherSet == cratorSet) && (estherSet != konstalSet) && (estherSet != milkySet) && isInConvo == false)
 		{
 				print ("esther_crator_maybeAluna_anywhere");
 				
@@ -1565,7 +1565,7 @@ if (storeVars.moved == true)
 
 
 		////// ESTHER & KONSTAL & ALUNA - esther is pregnant
-		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == cratorSet) && (estherSet == alunaSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == cratorSet) && (estherSet == alunaSet) && isInConvo == false)
 		{
 				print ("Esther_Pregnant_Aluna_Konstal");
 				
@@ -1582,7 +1582,7 @@ if (storeVars.moved == true)
 
 
 		////// ESTHER & KONSTAL - esther is pregnant
-		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == konstalSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == konstalSet) && isInConvo == false)
 		{
 				print ("Esther_Pregnant_Konstal");
 				
@@ -1598,7 +1598,7 @@ if (storeVars.moved == true)
 		}
 
 		////// ESTHER & CRATOR - esther is pregnant
-		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == cratorSet) && isInConvo == false)
+		if ((storeVars.allTalk_estherIsPreganant == false) &&( (storeVars.justClickedChar == "Crator") || (storeVars.justClickedChar == "Esther")) && (storeVars.estherIsPreganant == true) && (estherSet == cratorSet) && isInConvo == false)
 		{
 				print ("Esther_Pregnant_Crator");
 				
@@ -1615,7 +1615,7 @@ if (storeVars.moved == true)
 
 
 		////// ESTHER & MILKY - esther is pregnant
-		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == milkySet) && isInConvo == false)
+		if ((storeVars.allTalk_estherIsPreganant == false) && ( (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Milky")) && (storeVars.estherIsPreganant == true) && (estherSet == milkySet) && isInConvo == false)
 		{
 				print ("Esther_Pregnant_Milky");
 				
@@ -1631,7 +1631,7 @@ if (storeVars.moved == true)
 		}
 
 		////// ESTHER & ALUNA - esther is pregnant - aluna is not pregnant
-		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (storeVars.alunaIsPreganant == false) && (estherSet == alunaSet) && isInConvo == false)
+		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther") ) && (storeVars.alunaIsPreganant == false) && (estherSet == alunaSet) && isInConvo == false)
 		{
 				print ("Esther_Pregnant_Aluna");
 				
@@ -1648,7 +1648,7 @@ if (storeVars.moved == true)
 
 
 		////// ESTHER & KONSTAL - esther is pregnant - aluna is pregant
-		if ((storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (storeVars.alunaIsPreganant == true)  && (estherSet == alunaSet) && isInConvo == false)
+		if (((storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (storeVars.alunaIsPreganant == true)  && (estherSet == alunaSet) && isInConvo == false)
 		{
 				print ("Esther_Pregnant_Aluna_Pregnant");
 				
@@ -1665,7 +1665,7 @@ if (storeVars.moved == true)
 
 
 		////// KONSTAL & MILKY - konstal is pregnant 
-		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (konstalSet == milkySet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Konstal") ||  (storeVars.justClickedChar == "Milky")) && (storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (konstalSet == milkySet) && isInConvo == false)
 		{
 				print ("Konstal_Pregnant_Milky");
 				
@@ -1682,7 +1682,7 @@ if (storeVars.moved == true)
 
 
 		////// KONSTL: & ALUNA - konstal is pregnant 
-		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (konstalSet == alunaSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal")) && (storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (konstalSet == alunaSet) && isInConvo == false)
 		{
 				print ("Konstal_Pregnant_Aluna");
 				
@@ -1698,7 +1698,7 @@ if (storeVars.moved == true)
 		}
 
 		////// MILKY & ALUNA - konstal is pregnant
-		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (milkySet == alunaSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky")) && (storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (milkySet == alunaSet) && isInConvo == false)
 		{
 				print ("Konstal_Pregnant_Aluna_Milky_alone");
 				
@@ -1715,7 +1715,7 @@ if (storeVars.moved == true)
 
 
 		////// KONSTAL & MILKY & ALUNA - konstal is pregnant
-		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (milkySet == konstalSet) && (milkySet == alunaSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Milky")) && (storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (milkySet == konstalSet) && (milkySet == alunaSet) && isInConvo == false)
 		{
 				print ("Konstal_Pregnant_Aluna_Milky_confrontation");
 				
@@ -1733,7 +1733,7 @@ if (storeVars.moved == true)
 
 
 		////// KONSTAL & CRATOR - konstal is pregnant
-		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (cratorSet == konstalSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Crator")) && (storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (cratorSet == konstalSet) && isInConvo == false)
 		{
 				print ("Konstal_Pregnant_Crator");
 				
@@ -1749,7 +1749,7 @@ if (storeVars.moved == true)
 		}
 
 		////// KONSTAL & ESTHER - konstal is pregnant
-		if ((storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (estherSet == konstalSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Esther")) && (storeVars.allTalk_konstalIsPreganant == false) && (storeVars.konstalIsPreganant == true) && (estherSet == konstalSet) && isInConvo == false)
 		{
 				print ("Konstal_Pregnant_Esther");
 				
@@ -1765,7 +1765,7 @@ if (storeVars.moved == true)
 		}
 
 		////// ALUNA & ESTHER - Aluna is pregnant - esther is not pregnant
-		if ((storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (storeVars.estherIsPreganant == false) && (alunaSet == estherSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther")) && (storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (storeVars.estherIsPreganant == false) && (alunaSet == estherSet) && isInConvo == false)
 		{
 				print ("Aluna_Pregnant_esther");
 				
@@ -1781,7 +1781,7 @@ if (storeVars.moved == true)
 		}
 
 		////// ALUNA & ESTHER - Aluna is pregnant - esther is  pregnant
-		if ((storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (storeVars.estherIsPreganant == true) && (alunaSet == estherSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther")) && (storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (storeVars.estherIsPreganant == true) && (alunaSet == estherSet) && isInConvo == false)
 		{
 				print ("Aluna_Pregnant_Esther_Pregnant");
 				
@@ -1797,7 +1797,7 @@ if (storeVars.moved == true)
 		}
 
 		////// ALUNA & Milky - Aluna is pregnant
-		if ((storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (alunaSet == milkySet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky")) && (storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (alunaSet == milkySet) && isInConvo == false)
 		{
 				print ("Aluna_Pregnant_Milky");
 				
@@ -1814,7 +1814,7 @@ if (storeVars.moved == true)
 
 
 		////// ALUNA & KONSTAL - Aluna is pregnant
-		if ((storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (alunaSet == konstalSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal")) && (storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (alunaSet == konstalSet) && isInConvo == false)
 		{
 				print ("Aluna_Pregnant_Konstal");
 				
@@ -1831,7 +1831,7 @@ if (storeVars.moved == true)
 
 
 		////// ALUNA & CRATOR - Aluna is pregnant
-		if ((storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (alunaSet == cratorSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Crator")) && (storeVars.allTalk_alunaIsPreganant == false) && (storeVars.alunaIsPreganant == true) && (alunaSet == cratorSet) && isInConvo == false)
 		{
 				print ("Aluna_Pregnant_Crator");
 				
@@ -1848,7 +1848,7 @@ if (storeVars.moved == true)
 
 
 		////// CRATOR & ALUNA - crator is pregnant
-		if ((storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == alunaSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Crator")) && (storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == alunaSet) && isInConvo == false)
 		{
 				print ("Crator_Pregnant_aluna");
 				
@@ -1865,7 +1865,7 @@ if (storeVars.moved == true)
 
 
 		////// CRATOR & KONSTAL - crator is pregnant
-		if ((storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == konstalSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Crator") || (storeVars.justClickedChar == "Konstal")) && (storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == konstalSet) && isInConvo == false)
 		{
 				print ("Crator_Pregnant_konstal");
 				
@@ -1882,7 +1882,7 @@ if (storeVars.moved == true)
 
 
 		////// CRATOR & ESTHER - crator is pregnant
-		if ((storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == estherSet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Crator") || (storeVars.justClickedChar == "Esther") ) && (storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == estherSet) && isInConvo == false)
 		{
 				print ("Crator_Pregnant_esther");
 				
@@ -1899,7 +1899,7 @@ if (storeVars.moved == true)
 
 
 		////// CRATOR & ESTHER - crator is pregnant
-		if ((storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == milkySet) && isInConvo == false)
+		if (( (storeVars.justClickedChar == "Crator") || (storeVars.justClickedChar == "Esther")) && (storeVars.allTalk_cratorIsPreganant == false) && (storeVars.cratorIsPreganant == true) && (cratorSet == milkySet) && isInConvo == false)
 		{
 				print ("Crator_Pregnant_milky");
 				
@@ -1927,7 +1927,7 @@ if (storeVars.moved == true)
 		///////////  CHECK THE WOODS
 		////////////////////////////////////////
 
-			if ((alunaSet == "inWoods") && (milkySet == "inWoods") && isInConvo == false)
+			if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky")) && (alunaSet == "inWoods") && (milkySet == "inWoods") && isInConvo == false)
 			{
 				print ("milky_aluna_woods");
 				
@@ -1946,7 +1946,7 @@ if (storeVars.moved == true)
 
 
 
-			if ((alunaSet == "inWoods") && storeVars.startPart2 == true)
+			if ( ( (storeVars.justClickedChar == "Aluna")) && storeVars.startPart2 == true)
 			{
 				print ("aluna_woods_part2");
 				
@@ -1963,7 +1963,7 @@ if (storeVars.moved == true)
 
 			}
 
-		if ((cratorSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaLookedAtFootprints == true)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Crator") ) && (storeVars.startPart2 == true)&& (cratorSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaLookedAtFootprints == true)
 			{
 				print ("aluna_crator_woods_part2_talk1");
 				
@@ -1981,7 +1981,7 @@ if (storeVars.moved == true)
 			}
 
 
-		if ((milkySet == "inWoods") && (alunaSet == "inWoods") &&  (storeVars.alunaKnowsMilkyFootprints == true) )
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky"))&& (storeVars.startPart2 == true) && (milkySet == "inWoods") && (alunaSet == "inWoods") &&  (storeVars.alunaKnowsMilkyFootprints == true) )
 			{
 				print ("aluna_milky_woods_part2");
 				
@@ -1999,7 +1999,7 @@ if (storeVars.moved == true)
 			}
 			
 			
-		if ((konstalSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal")) && (storeVars.startPart2 == true)&& (konstalSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
 			{
 				print ("aluna_konstal_woods_part2");
 				
@@ -2016,7 +2016,7 @@ if (storeVars.moved == true)
 			}
 
 
-		if ((estherSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther"))&& (storeVars.startPart2 == true) && (estherSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
 			{
 				print ("aluna_esther_woods_part2");
 				
@@ -2034,7 +2034,7 @@ if (storeVars.moved == true)
 			}
 
 
-		if ((cratorSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
+		if (( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Crator")) && (storeVars.startPart2 == true)&& (cratorSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaKnowsMilkyFootprints == true)
 			{
 				print ("aluna_crator_woods_part2");
 				
@@ -2052,7 +2052,7 @@ if (storeVars.moved == true)
 			}
 
 
-		if ((cratorSet == "inWoods") && (konstalSet == "inWoods") &&  storeVars.cratorLookedAtFootprints == true)
+		if (( (storeVars.justClickedChar == "Crator") || (storeVars.justClickedChar == "Konstal")) && (storeVars.startPart2 == true)&& (cratorSet == "inWoods") && (konstalSet == "inWoods") &&  storeVars.cratorLookedAtFootprints == true)
 			{
 				print ("crator_konstal_woods_part2");
 				
@@ -2077,7 +2077,7 @@ if (storeVars.moved == true)
 		///////////  CHECK THE Hill
 		////////////////////////////////////////
 
-			if ((estherSet == "inHill") && (milkySet == "inHill") && isInConvo == false)
+			if (( (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Milky")) && (estherSet == "inHill") && (milkySet == "inHill") && isInConvo == false)
 			{
 				print ("milky_esther_hill");
 				
@@ -2098,7 +2098,7 @@ if (storeVars.moved == true)
 
 
 
-		if ((alunaSet == "inHill") && (konstalSet != "inHill")  && (estherSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.alunaShowedAllFootprints == false) )
+		if ( (storeVars.justClickedChar == "Aluna")&& (storeVars.startPart2 == true) && (alunaSet == "inHill") && (konstalSet != "inHill")  && (estherSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.alunaShowedAllFootprints == false) )
 			{
 				print ("aluna_hill_part2_beforeShowingFootprints");
 				
@@ -2115,7 +2115,7 @@ if (storeVars.moved == true)
 			}
 
 
-		if ((alunaSet == "inHill") && (konstalSet != "inHill")  && (estherSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.alunaShowedAllFootprints == true) )
+		if (( (storeVars.justClickedChar == "Aluna"))&& (storeVars.startPart2 == true) && (alunaSet == "inHill") && (konstalSet != "inHill")  && (estherSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.alunaShowedAllFootprints == true) )
 			{
 				print ("aluna_hill_part2");
 				
@@ -2133,7 +2133,7 @@ if (storeVars.moved == true)
 			}
 			
 			
-		if ((estherSet == "inHill") && (konstalSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.estherLookedAtFootprints == true) )
+		if (((storeVars.justClickedChar == "Esther"))&& (storeVars.startPart2 == true) && (estherSet == "inHill") && (konstalSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (cratorSet != "inHill") &&  (storeVars.estherLookedAtFootprints == true) )
 			{
 				print ("esther_hill_part2");
 				
@@ -2150,7 +2150,7 @@ if (storeVars.moved == true)
 
 			}
 
-		if ((cratorSet == "inHill") && (konstalSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (estherSet != "inHill") &&  (storeVars.cratorLookedAtFootprints == true) )
+		if (((storeVars.justClickedChar == "Crator"))&& (storeVars.startPart2 == true) && (cratorSet == "inHill") && (konstalSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (estherSet != "inHill") &&  (storeVars.cratorLookedAtFootprints == true) )
 			{
 				print ("crator_hill_part2");
 				
@@ -2167,7 +2167,7 @@ if (storeVars.moved == true)
 
 			}	
 
-		if ((konstalSet == "inHill") && (cratorSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (estherSet != "inHill") &&  (storeVars.konstalLookedAtFootprints == true) )
+		if (((storeVars.justClickedChar == "Konstal"))&& (storeVars.startPart2 == true) && (konstalSet == "inHill") && (cratorSet != "inHill")  && (alunaSet != "inHill") && (milkySet != "inHill") && (estherSet != "inHill") &&  (storeVars.konstalLookedAtFootprints == true) )
 			{
 				print ("konstal_hill_part2");
 				
@@ -2185,7 +2185,7 @@ if (storeVars.moved == true)
 			}
 			
 			
-		if ((storeVars.allTalk_konstalIsPreganant == true || storeVars.allTalk_cratorIsPreganant == true) && (konstalSet == "inHill") && (cratorSet == "inHill")  && (alunaSet == "inHill") && (milkySet == "inHill") && (estherSet == "inHill") )
+		if ((storeVars.allTalk_konstalIsPreganant == true || storeVars.allTalk_cratorIsPreganant == true) && (storeVars.startPart2 == true) && (konstalSet == "inHill") && (cratorSet == "inHill")  && (alunaSet == "inHill") && (milkySet == "inHill") && (estherSet == "inHill") )
 			{
 				print ("Hill_SeeMonster");
 				
@@ -2256,7 +2256,7 @@ if (storeVars.moved == true)
 		///////////  CHECK  ANYWERE
 		////////////////////////////////////////
 
-		if ( (storeVars.regrouped == true) && (decoyProgress == 0)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal")) &&(storeVars.regrouped == true) && (decoyProgress == 0)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
 			{
 				print ("Aluna_Konstal_beforeAlunaAndMilky_pillow0");
 				
@@ -2272,7 +2272,7 @@ if (storeVars.moved == true)
 
 			}
 		
-		if ( (storeVars.regrouped == true) && (decoyProgress == 0)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky")) && (storeVars.regrouped == true) && (decoyProgress == 0)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
 			{
 				print ("Aluna_Milky_pillow");
 				
@@ -2289,7 +2289,7 @@ if (storeVars.moved == true)
 			}
 		
 	
-		if ( (storeVars.regrouped == true) && (decoyProgress == 1)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal")) && (storeVars.regrouped == true) && (decoyProgress == 1)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
 			{
 				print ("Aluna_Konstal_pillow1");
 				
@@ -2306,7 +2306,7 @@ if (storeVars.moved == true)
 			}
 			
 		
-		if ( (storeVars.regrouped == true) && (decoyProgress == 2)  && (alunaSet != "inHill") && (alunaSet == cratorSet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Crator")) && (storeVars.regrouped == true) && (decoyProgress == 2)  && (alunaSet != "inHill") && (alunaSet == cratorSet) )
 			{
 				print ("Aluna_Crator_pillow");
 				
@@ -2322,7 +2322,7 @@ if (storeVars.moved == true)
 		    	}
 			}
 		
-		if ( (storeVars.regrouped == true) && (decoyProgress == 3)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky")) && (storeVars.regrouped == true) && (decoyProgress == 3)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
 			{
 				print ("Aluna_Milky_pillow2");
 				
@@ -2340,7 +2340,7 @@ if (storeVars.moved == true)
 			
 			
 		
-		if ( (storeVars.regrouped == true) && (decoyProgress == 4)  && (milkySet != "inHill") && (milkySet == cratorSet) )
+		if ( ((storeVars.justClickedChar == "Crator") || (storeVars.justClickedChar == "Milky")) && (storeVars.regrouped == true) && (decoyProgress == 4)  && (milkySet != "inHill") && (milkySet == cratorSet) )
 			{
 				print ("Crator_Milky_pillow");
 				
@@ -2357,7 +2357,7 @@ if (storeVars.moved == true)
 			}
 			
 		
-		if ( (storeVars.regrouped == true) && (decoyProgress == 5)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
+		if (((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky")) &&  (storeVars.regrouped == true) && (decoyProgress == 5)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
 			{
 				print ("Aluna_Milky_pillow3");
 				
@@ -2374,7 +2374,7 @@ if (storeVars.moved == true)
 			}
 		
 		
-		if ( (storeVars.regrouped == true) && (decoyProgress == 6)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal")) && (storeVars.regrouped == true) && (decoyProgress == 6)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
 			{
 				print ("Aluna_Konstal_pillow2");
 				
@@ -2391,7 +2391,7 @@ if (storeVars.moved == true)
 			}
 		
 
-		if ( (storeVars.regrouped == true) && (decoyProgress == 7)  && (alunaSet != "inHill") && (alunaSet == estherSet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther")) && (storeVars.regrouped == true) && (decoyProgress == 7)  && (alunaSet != "inHill") && (alunaSet == estherSet) )
 			{
 				print ("Aluna_Esther_pillow");
 				
@@ -2408,7 +2408,7 @@ if (storeVars.moved == true)
 			}
 			
 		
-		if ( (storeVars.regrouped == true) && (weaponProgress == 0)  && (alunaSet != "inHill") && (alunaSet == cratorSet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Crator")) && (storeVars.regrouped == true) && (weaponProgress == 0)  && (alunaSet != "inHill") && (alunaSet == cratorSet) )
 			{
 				print ("Aluna_Crator_weapon1");
 				
@@ -2423,7 +2423,7 @@ if (storeVars.moved == true)
 		    	}
 			}	
 		
-		if ( (storeVars.regrouped == true) && (weaponProgress == 0)  && (alunaSet != "inHill") && (alunaSet == estherSet) )
+		if (((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther")) &&  (storeVars.regrouped == true) && (weaponProgress == 0)  && (alunaSet != "inHill") && (alunaSet == estherSet) )
 			{
 				print ("Aluna_Esther_weapon1");
 				
@@ -2439,7 +2439,7 @@ if (storeVars.moved == true)
 		    	}
 			}
 			
-		if ( (storeVars.regrouped == true) && (weaponProgress == 0)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal")) && (storeVars.regrouped == true) && (weaponProgress == 0)  && (alunaSet != "inHill") && (alunaSet == konstalSet) )
 			{
 				print ("Aluna_Konstal_weapon");
 				
@@ -2454,7 +2454,7 @@ if (storeVars.moved == true)
 		    	}
 			}
 
-		if ( (storeVars.regrouped == true) && (weaponProgress == 1)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky")) && (storeVars.regrouped == true) && (weaponProgress == 1)  && (alunaSet != "inHill") && (alunaSet == milkySet) )
 			{
 				print ("Aluna_Milky_weapon");
 				
@@ -2469,7 +2469,7 @@ if (storeVars.moved == true)
 		    	}
 			}
 
-		if ( (storeVars.regrouped == true) && (weaponProgress == 1)  && (alunaSet != "inHill") && (alunaSet == cratorSet) )
+		if ( ((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Crator")) && (storeVars.regrouped == true) && (weaponProgress == 1)  && (alunaSet != "inHill") && (alunaSet == cratorSet) )
 			{
 				print ("Aluna_Crator_weapon2");
 				
@@ -2486,7 +2486,7 @@ if (storeVars.moved == true)
 			}
 			
 
-		if ( (storeVars.regrouped == true) && (weaponProgress == 2)  && (alunaSet == "inHill") )
+		if ( ((storeVars.justClickedChar == "Aluna")) && (storeVars.regrouped == true) && (weaponProgress == 2)  && (alunaSet == "inHill") )
 			{
 				print ("Aluna_weapon_OnHill");
 				
@@ -2503,7 +2503,7 @@ if (storeVars.moved == true)
 			}
 			
 
-		if ( (storeVars.regrouped == true) && (weaponProgress == 3)  && (alunaSet != "inHill")&& (alunaSet == estherSet) )
+		if (((storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther")) &&  (storeVars.regrouped == true) && (weaponProgress == 3)  && (alunaSet != "inHill")&& (alunaSet == estherSet) )
 			{
 				print ("Aluna_Esther_Weapon2");
 				
@@ -2519,7 +2519,7 @@ if (storeVars.moved == true)
 		    	}
 			}
 		
-		if ( (storeVars.regrouped == true) && (weaponProgress == 4) && (decoyProgress == 8) )
+		if ((storeVars.justClickedChar == "Aluna") &&  (storeVars.regrouped == true) && (weaponProgress == 4) && (decoyProgress == 8) )
 			{
 				print ("Aluna_weapon_decoy_Done");
 				

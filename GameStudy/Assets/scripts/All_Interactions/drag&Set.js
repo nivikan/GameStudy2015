@@ -80,6 +80,8 @@ function OnMouseDrag()
       	transform.position = vec;
       	//anim.Play("inHold");
       	
+      	storeVars.heldChar = objName;
+      	
       	
       	//}
       	//transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(0,0,0,1);
@@ -246,5 +248,6 @@ function OnMouseUp () {
 	{
 		storeVars.moved = true;  //Tell game that a significant move has been made.
 	}
-		
+	
+	storeVars.justClickedChar = objName;
 }

@@ -2,15 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/drag&amp;Set.js">
     <Files>
-      <File FileName="Assets/Standard Assets/Scripts/General Scripts/ActivateTrigger.cs" Line="50" Column="1" />
-      <File FileName="Assets/scripts/Intro/AfterAnimNextScene.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/RestartScript.js" Line="1" Column="1" />
-      <File FileName="Assets/NewScene.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/buttonScript.js" Line="1" Column="1" />
-      <File FileName="Assets/startConvo.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/People/UIOnTopOfCharacter.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="2188" Column="128" />
+      <File FileName="Assets/scripts/Bubble/CutsceneControls/ScenesScript.js" Line="1" Column="1" />
       <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="39" Column="3" />
+      <File FileName="Assets/scripts/storeVars.js" Line="11" Column="20" />
+      <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="83" Column="36" />
+      <File FileName="Assets/scripts/All_Interactions/KeepTrackOfAnims.js" Line="12" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
