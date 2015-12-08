@@ -26,6 +26,8 @@ function Start () {
 	
 	//find the universal script withing objects and set variable
 	storeVars = game.GetComponent("storeVars");
+	transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(0,0,0,0);
+	transform.GetChild(1).GetComponent.<Renderer>().material.color = Color(0,0,0,0);
 
 }
 
@@ -35,6 +37,7 @@ function Start () {
 
 
 function Update () {
+//transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(0,0,0,0);
 
 }
 
@@ -53,6 +56,21 @@ function OnMouseDown()
 
 }
 
+function OnMouseOver()
+{
+    //print ("click!");
+    transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(1,1,1,1);
+    transform.GetChild(1).GetComponent.<Renderer>().material.color = Color(1,1,1,1);
+
+}
+function OnMouseExit()
+{
+    //print ("click!");
+    transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(0,0,0,0);
+    transform.GetChild(1).GetComponent.<Renderer>().material.color = Color(0,0,0,0);
+
+}
+
 function OnMouseDrag()
 {
     //if(game.GetComponent(GameState).gamestate == "player"){
@@ -64,6 +82,7 @@ function OnMouseDrag()
       	
       	
       	//}
+      	//transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(0,0,0,1);
 
 }
 
@@ -74,7 +93,8 @@ function OnMouseUp () {
 	var oldEstherPos = storeVars.estherSet;
 	var oldKonstalPos = storeVars.konstalSet;
 	var oldCratorPos = storeVars.cratorSet;
-
+	//transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(0,0,0,0);
+	
 	if (objName == "Aluna")
 	{
 		if (transform.position.x < -4.4 )

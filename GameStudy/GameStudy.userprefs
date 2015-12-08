@@ -1,9 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Bubble/MakeBubble.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/drag&amp;Set.js">
     <Files>
-      <File FileName="Assets/scripts/Bubble/CutsceneControls/ScenesScript.js" Line="115" Column="56" />
-      <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="279" Column="67" />
+      <File FileName="Assets/Standard Assets/Scripts/General Scripts/ActivateTrigger.cs" Line="50" Column="1" />
+      <File FileName="Assets/scripts/Intro/AfterAnimNextScene.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/RestartScript.js" Line="1" Column="1" />
+      <File FileName="Assets/NewScene.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/buttonScript.js" Line="1" Column="1" />
+      <File FileName="Assets/startConvo.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/People/UIOnTopOfCharacter.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="39" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
