@@ -75,7 +75,7 @@ function Update () {
 
 function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, Char, emotion)
 {
-	print (Char);
+	//print (Char);
 	if(gamestate.characterSpeaking == "1" && Char != "none")
 	{
 		x = -2.209999;
@@ -83,8 +83,8 @@ function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, 
 	if(gamestate.characterSpeaking == "2" && Char != "none"){
 		x = 2.200001;
 	}
-	print ("INSTANTIATE X");
-	print ( instantiatex);
+	//print ("INSTANTIATE X");
+	//print ( instantiatex);
 	newBubble = Instantiate(prefab, new Vector3(x, 2.63, 0), transform.rotation);
 	newBubble.transform.GetChild(0).GetComponent.<UnityEngine.UI.Text>().text = speech;
 	newBubble.transform.GetChild(0).GetComponent.<UnityEngine.UI.Text>().color = textColor;

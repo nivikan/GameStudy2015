@@ -2,6 +2,10 @@
 
 public var currentSet = 1;
 
+var NotDestroyedObject : NotDestroyedObject;
+
+
+
 public var cratorSet = "inCamp";
 public var konstalSet = "inCamp";
 public var alunaSet = "inTent";
@@ -28,7 +32,7 @@ public var startPart2 = false;
 	public var alunaKnowsMilkyFootprints = false;
 	public var estherLookedAtFootprints = false;
 	public var milkyLookedAtFootprints = false;
-	public var konstaLookedAtFootprints = false;
+	public var konstalLookedAtFootprints = false;
 	public var cratorLookedAtFootprints = false;
 	public var alunaShowedAllFootprints = false;
 	
@@ -44,11 +48,27 @@ public var startPart2 = false;
 	public var allTalk_konstalIsPreganant = false;
 	
 	public var milkyAlunaTalkAboutKonstalPreg = true;
+	public var regrouped = false;
+	
+	public var clicked = false;
 	
 
 
 
 function Start () {
+	
+	//IF THIS IS THE SECOND PART OF THE GAME, THIS WILL PULL VARIABLES FROM THE NOT DESTROYED OBJ
+	if (Application.loadedLevelName == "MainScene_Part2" )
+	{	
+		var obj = GameObject.Find("notDestroyedObject");
+		NotDestroyedObject = obj.GetComponent("NotDestroyedObject");
+		
+		alunaIsPreganant = NotDestroyedObject.alunaIsPreganant;
+		konstalIsPreganant = NotDestroyedObject.konstalIsPreganant;
+		cratorIsPreganant = NotDestroyedObject.cratorIsPreganant;
+		estherIsPreganant = NotDestroyedObject.estherIsPreganant;
+	
+	}
 
 }
 

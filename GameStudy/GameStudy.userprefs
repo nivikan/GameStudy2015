@@ -1,6 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/dialogues.js">
+    <Files>
+      <File FileName="Assets/scripts/All_Interactions/startCutscene.js" Line="123" Column="3" />
+      <File FileName="Assets/scripts/buttonScript.js" Line="1" Column="1" />
+      <File FileName="Assets/endDiscovery.cs" Line="1" Column="1" />
+      <File FileName="Assets/NewScene.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/All_Interactions/NotDestroyedObject.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="2297" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
