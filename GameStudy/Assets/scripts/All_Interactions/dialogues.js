@@ -5,6 +5,8 @@ var DarkenScene2 : GameObject;
 var DarkenScene3 : GameObject;
 var DarkenScene4 : GameObject;
 
+
+var clickHere: GameObject;
 var SpeakingChar1: GameObject;
 var SpeakingChar2: GameObject;
 var blank: Sprite;
@@ -90,6 +92,7 @@ function Start () {
 	DarkenScene4 = GameObject.Find("DarkenScene4");
 	SpeakingChar1 = GameObject.Find("SpeakingChar1");
 	SpeakingChar2 = GameObject.Find("SpeakingChar2");
+	clickHere = GameObject.Find("clickHere");
 
 
 
@@ -2712,7 +2715,6 @@ if (storeVars.moved == true)
 	
 
 
-
 } // end to isMoved check statement
 
 //Continue the current conversation
@@ -2722,7 +2724,20 @@ if (isInConvo == true)
 }
 
 
+if(Input.GetMouseButtonDown(0))
+			Debug.Log("Pressed left click.");
+			
 
+if(isInConvo == false)
+{
+		clickHere.collider2D.enabled=false;
+}
+else
+{
+		clickHere.collider2D.enabled=true;
+}
+
+print("end update");
 }
 
 
