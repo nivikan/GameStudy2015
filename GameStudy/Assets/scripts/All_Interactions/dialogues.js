@@ -2730,11 +2730,11 @@ if(Input.GetMouseButtonDown(0))
 
 if(isInConvo == false)
 {
-		clickHere.collider2D.enabled=false;
+		clickHere.GetComponent.<Collider2D>().enabled=false;
 }
 else
 {
-		clickHere.collider2D.enabled=true;
+		clickHere.GetComponent.<Collider2D>().enabled=true;
 }
 
 print("end update");

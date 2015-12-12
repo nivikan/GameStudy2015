@@ -59,13 +59,16 @@ function OnMouseDown()
 function OnMouseOver()
 {
     //print ("click!");
+    if(game.GetComponent.<dialogues>().isInConvo == false){
     transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(1,1,1,1);
     transform.GetChild(1).GetComponent.<Renderer>().material.color = Color(1,1,1,1);
+    }
 
 }
 function OnMouseExit()
 {
     //print ("click!");
+
     transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(0,0,0,0);
     transform.GetChild(1).GetComponent.<Renderer>().material.color = Color(0,0,0,0);
 
@@ -74,14 +77,14 @@ function OnMouseExit()
 function OnMouseDrag()
 {
     //if(game.GetComponent(GameState).gamestate == "player"){
-
+	if(game.GetComponent.<dialogues>().isInConvo == false){
       	var vec : Vector3 = myCamera.ScreenToWorldPoint(Input.mousePosition);
       	vec.z = 0; 
       	transform.position = vec;
       	//anim.Play("inHold");
       	
       	storeVars.heldChar = objName;
-      	
+      	}
       	
       	//}
       	//transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(0,0,0,1);
@@ -90,6 +93,7 @@ function OnMouseDrag()
 
 
 function OnMouseUp () {
+if(game.GetComponent.<dialogues>().isInConvo == false){
 	var oldAlunaPos = storeVars.alunaSet;
 	var oldMilkyPos = storeVars.milkySet;
 	var oldEstherPos = storeVars.estherSet;
@@ -251,4 +255,6 @@ function OnMouseUp () {
 	
 	storeVars.justClickedChar = objName;
 	storeVars.heldChar = "None";
+	
+	}
 }
