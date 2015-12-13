@@ -30,6 +30,7 @@ function Update () {
 
 function makeCharacterSpeak(character, text, emotion){
 
+
 var makeBubbleScript : MakeBubble = GetComponent(MakeBubble);
 
 	

@@ -1,4 +1,4 @@
-﻿//#pragma strict
+//#pragma strict
 
 var DarkenScene1 : GameObject;
 var DarkenScene2 : GameObject;
@@ -49,6 +49,7 @@ var line;
 
 //get the universal script to store values
 var storeVars : storeVars;
+
 
 
 
@@ -356,7 +357,8 @@ scene.Push(["Aluna", "Hey, look at those footprints. I heard they were Milky’s
 scene.Push(["Esther", "Huh, why, was she here before?", "normal"]);
 scene.Push(["Aluna", "I think these were from last night.", "normal"]);
 scene.Push(["Aluna", "I think if we follow them, we can find out exactly how she got pregnant.", "normal"]);
-scene.Push(["Esther", "...Maybe we can see other footprints. Then we’ll know which one of the guys did it.", "angry"]);
+scene.Push(["Esther", "...Maybe we can see other footprints.", "angry"]);
+scene.Push(["Esther", "Then we’ll know which one of the guys did it.", "angry"]);
 scene.Push(["Aluna", "Or We’ll be able to how she got pregnant without having sex.", "normal"]);
 scene.Push(["Esther", "Um, or that.", "normal"]);
 scene.Push(["Aluna", "It looks like it’s leading to the hill.", "normal"]);
@@ -950,7 +952,8 @@ Set1.Add("Crator_Pregnant_konstal",scene);
 //IF CRATOR IS PREGNANT and all camp scene did not happen
 //CRATOR and ESTHER:
 scene = new Array();
-scene.Push(["Crator", "I feel it in my gut... Oh god, it’s moving! I’m going to fuck up whatever did this to me!", "angry"]);
+scene.Push(["Crator", "I feel it in my gut... Oh god, it’s moving!", "angry"]);
+scene.Push(["Crator", "I’m going to fuck up whatever did this to me!", "angry"]);
 scene.Push(["Esther", "Quit mumbling to yourself.", "angry"]);
 scene.Push(["Crator", "…", "normal"]);
 Set1.Add("Crator_Pregnant_esther",scene);
@@ -1035,7 +1038,8 @@ scene.Push(["Crator", "I don’t know.", "normal"]);
 scene.Push(["Konstal", "Seems like a good plan. But it won’t come down unless we have some bait. ", "normal"]);
 scene.Push(["Aluna", "I could- ", "normal"]);
 scene.Push(["Milky", "You are NOT acting as our bait! Now that I saw that monster I cannot let you.", "angry"]) ;
-scene.Push(["Milky", "Oh god, we’ve all been sleeping so close to that thing… I have that thing’s babies in me!", "angry"]);
+scene.Push(["Milky", "Oh god, we’ve all been sleeping so close to that thing…", "angry"]);
+scene.Push(["Milky", "I have that thing’s babies in me!", "surprise"]);
 scene.Push(["Aluna", "So we need some sort of decoy, huh?", "normal"]);
 scene.Push(["Crator", "... I can’t think of anything.", "normal"]);
 scene.Push(["Esther", "Guys, we’ve been up all night. Let’s just take it easy for now.", "normal"]);
@@ -1051,10 +1055,11 @@ Set2.Add("Regroup_KonstalIsPregnant",scene);
 //ALL in CAMP if konstal is not pregnant
 scene = new Array();
 scene.Push(["Aluna", "That was messed up.", "normal"]);
-scene.Push(["Esther", "What do we do now. It’s only a matter of time before that things starts eating us.", "angry"]);
+scene.Push(["Esther", "What do we do now? It’s only a matter of time before that things starts eating us.", "angry"]);
 scene.Push(["Milky", "I’m scared, you guys…", "sad"]);
 scene.Push(["Crator", "Don’t worry, Milky, I’m here for you.", "normal"]);
 scene.Push(["Milky", "Oh god, we’ve all been sleeping so close to that thing… I have that thing’s babies in me!", "angry"]);
+scene.Push(["Milky", "I have that thing’s babies in me!", "surprise"]);
 scene.Push(["Crator", "It seems to be a species that needs hosts to incubate its eggs.", "normal"]); 
 scene.Push(["Crator", "You're not pregnant in the traditional sense of the word.", "normal"]); 
 scene.Push(["Crator", "It's mor elike you're incubating eggs in your body.", "normal"]);
@@ -1119,7 +1124,8 @@ scene.Push(["Aluna", "Seriously, Konstal-", "normal"]);
 scene.Push(["Konstal", "I’m not in the mood, Aluna. Just go make me a sandwhich or something.", "angry"]);
 scene.Push(["Aluna", "...", "normal"]);
 scene.Push(["Konstal", " See you.", "normal"]);
-scene.Push(["Aluna", "… he’ll probably feel bad for saying that to me. Maybe I can use that to my advantage.", "normal"]);
+scene.Push(["Aluna", "… he’ll probably feel bad for saying that to me.", "normal"]);
+scene.Push(["Aluna", "Maybe I can use that to my advantage.", "normal"]);
 scene.Push(["Aluna", " I think I will go make him that sandwich.", "normal"]);
 scene.Push(["Aluna", "A sandwich, a sandwich…. ", "normal"]);
 scene.Push(["Aluna", "I need bread, and maybe some peanut butter. ", "normal"]);
@@ -1213,7 +1219,8 @@ scene.Push(["Aluna", "I need you to help me turn this body pillow into a good de
 scene.Push(["Esther", "Aluna! That’s perfect! Where did you even find a body pillow?", "surprise"]);
 scene.Push(["Aluna", "It’s a secret. Will you help?", "normal"]);
 scene.Push(["Esther", "Of course! Let me just get out my make up. ", "happy"]);
-scene.Push(["Esther", "Add some red over here… some blush over there… some mascara… eyeliner… and Viola!", "happy"]);
+scene.Push(["Esther", "Add some red over here… some blush over there…", "happy"]);
+scene.Push(["Esther", "some mascara… eyeliner… and Viola!", "happy"]);
 scene.Push(["Esther", "There you go. I think it’s pretty convincing.", "happy"]);
 scene.Push(["Aluna", "Thank you Esther! I’ll put this under the tree once it’s time.", "happy"]);
 scene.Push(["Esther", "Great going, Aluna!", "happy"]);
@@ -1224,7 +1231,8 @@ Set2.Add("Aluna_Esther_pillow",scene);
 //ALUNA and CRATOR anywhere but hill before #56
 scene = new Array();
 scene.Push(["Aluna", "Any ideas for a weapon? ", "normal"]);
-scene.Push(["Crator", "I’m not sure… Esther is pretty good at fabricating things, isn’t she? Why don’t you ask her?", "normal"]);
+scene.Push(["Crator", "I’m not sure… Esther is pretty good at fabricating things, isn’t she?", "normal"]);
+scene.Push(["Crator", " Why don’t you ask her?", "normal"]);
 scene.Push(["Crator", "Why don’t you ask her?", "normal"]);
 scene.Push(["Aluna", "Yeah… She is pretty good at stuff like that. I’ll go ask.", "normal"]);
 Set2.Add("Aluna_Crator_weapon1",scene);
@@ -1319,6 +1327,28 @@ Set2.Add("Aluna_Esther_Weapon2",scene);
 scene = new Array();
 scene.Push(["Aluna", "We’re done! We have all the things we need to face that monster!.", "normal"]);
 Set2.Add("Aluna_weapon_decoy_Done",scene);
+
+
+//All_Done
+//62.
+//EVERYTHINGS IS DONE _ FINAl CONFRONTATION
+scene = new Array();
+scene.Push(["Aluna", "This is it, guys. We're going in.", "normal"]);
+scene.Push(["Esther", "Is everyone ready for this?", "angry"]);
+scene.Push(["Milky", "Yes! At least if we get rid of it I can sleep properly...", "angry"]);
+scene.Push(["Crator", "Even if we weren't ready there isn't any choice.", "sigh"]);
+scene.Push(["Crator", "It's it or us.", "angry"]);
+scene.Push(["Konstal", "Down with the monster!!", "angry"]);
+scene.Push(["Aluna", "Wow... what a violent group of people.", "surprise"]);
+scene.Push(["Aluna", "Not that I'm not the same.", "sigh"]);
+scene.Push(["Aluna", "C'mon, guys. Let's do this.", "smirk"]);
+scene.Push(["Esther", "Right! Descoy in place?", "smirk"]);
+scene.Push(["Konstal", "Check.", "smirk"]);
+scene.Push(["Crator", "Do we have our weapon?", "smirk"]);
+scene.Push(["Milky", "Check!", "surprise"]);
+scene.Push(["Aluna", "And the Sun's coming down. Perfect timing...", "smirk"]);
+Set2.Add("All_Done",scene);
+
 //overHere///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 currentSet = Set1;
@@ -1346,12 +1376,20 @@ function Update () {
 		storeVars.startPart2 = true;
 	}
 	
-	if ( (storeVars.alunaShowedAllFootprints == false) && (Set1.Contains("aluna_milky_woods_part2") == false) &&  (Set1.Contains("aluna_konstal_woods_part2") == false)  && (Set1.Contains("aluna_esther_woods_part2") == false) && (Set1.Contains("aluna_crator_woods_part2") == false) )
+	if ( (storeVars.alunaShowedAllFootprints == false) && (storeVars.estherLookedAtFootprints == true) &&  (storeVars.cratorLookedAtFootprints == true) &&  (storeVars.konstalLookedAtFootprints == true))
 	{
 		storeVars.alunaShowedAllFootprints = true;
 	}
 
-
+	if (Set1 == null)
+	{
+		print ("Set1 is null");
+	}
+	Debug.Log (Set2.Count);
+	if (Set2 == null)
+	{
+		print ("Set2 is null");
+	}
 
 if (storeVars.moved == true)
 {
@@ -1480,204 +1518,8 @@ if (storeVars.moved == true)
 		////////////////////////////////////////
 		///////////  CHECK  ANYWERE
 		////////////////////////////////////////
-
-		////// MILKY & CRATOR - ALONE Anywhere
-		if ((storeVars.moved == true) &&( (storeVars.justClickedChar == "Milky") || (storeVars.justClickedChar == "Crator")) && (milkySet == cratorSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != konstalSet) && isInConvo == false)
-		{
-				print ("milky_crator_anywhere");
-				
-				//anim.Play("scene1_milky_aluna_woods");
-				
-		    	if(Set1.Contains("milky_crator_anywhere"))
-		    	{
-		    		currentConvo = Set1["milky_crator_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="milky_crator_anywhere";
-		    		makeConvo("milky_crator_anywhere", Set1);
-		    		storeVars.moved = false;
-		    	}
-		}
-
-		////// MILKY & KONSTAL - ALONE Anywhere
-		if ((storeVars.moved == true) &&( (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Milky")) && (milkySet == konstalSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != cratorSet) && isInConvo == false)
-		{
-				print ("konstal_milky_anywhere");
-				
-				//anim.Play("scene1_milky_aluna_woods");
-				
-		    	if(Set1.Contains("konstal_milky_anywhere"))
-		    	{
-		    		currentConvo = Set1["konstal_milky_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="konstal_milky_anywhere";
-		    		makeConvo("konstal_milky_anywhere", Set1);
-		    		storeVars.moved = false;
-		    	}
-		}
-
-
-		////// ALUNA & MILKY - ALONE Anywhere
-		if ((storeVars.moved == true) &&( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky")) && (alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != estherSet) && (alunaSet != konstalSet) && isInConvo == false)
-		{
-				print ("aluna_milky_alone_anywhere");
-				
-				//anim.Play("scene1_milky_aluna_woods");
-				
-		    	if(Set1.Contains("aluna_milky_alone_anywhere"))
-		    	{
-		    		currentConvo = Set1["aluna_milky_alone_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="aluna_milky_alone_anywhere";
-		    		makeConvo("aluna_milky_alone_anywhere", Set1);
-		    		storeVars.moved = false;
-
-		    	}
-		}
-
-		//ESTHER and MILKY - Alone - Any Scene
-		if ((storeVars.moved == true) &&( (storeVars.justClickedChar == "Milky") || (storeVars.justClickedChar == "Esther")) && (milkySet == estherSet) && (milkySet != alunaSet) && (milkySet != cratorSet) && (milkySet != konstalSet) && isInConvo == false)
-		{
-				print ("esther_milky_alone_anywhere");
-				
-				//anim.Play("scene1_milky_aluna_woods");
-				
-		    	if(Set1.Contains("esther_milky_alone_anywhere"))
-		    	{
-		    		currentConvo = Set1["esther_milky_alone_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="esther_milky_alone_anywhere";
-		    		makeConvo("esther_milky_alone_anywhere", Set1);
-		    		storeVars.moved = false;
-		    	}
-		}
-
-		////// ALUNA & ESTHER & MILKY - ALONE Anywhere
-		if ((storeVars.moved == true) &&( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Milky")) && (alunaSet ==  estherSet) && (alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != konstalSet) && isInConvo == false)
-		{
-				print ("aluna_esther_milky_alone_anywhere");
-				
-				//anim.Play("scene1_milky_aluna_woods");
-				
-		    	if(Set1.Contains("aluna_esther_milky_alone_anywhere"))
-		    	{
-		    		currentConvo = Set1["aluna_esther_milky_alone_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="aluna_esther_milky_alone_anywhere";
-		    		makeConvo("aluna_esther_milky_alone_anywhere", Set1);
-		    		storeVars.moved = false;
-		    	}
-		}
-
-
-		////// KONSTAL & CRATOR - ALONE Anywhere
-		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Crator")) && (konstalSet == cratorSet) && (konstalSet != alunaSet) && (konstalSet != estherSet) && (konstalSet != milkySet) && isInConvo == false)
-		{
-				print ("crator_konstal_alone_anywhere");
-				
-				//anim.Play("scene1_milky_aluna_woods");
-				
-		    	if (Set1.Contains("crator_konstal_alone_anywhere"))
-		    	{
-		    		currentConvo = Set1["crator_konstal_alone_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="crator_konstal_alone_anywhere";
-		    		makeConvo("crator_konstal_alone_anywhere", Set1);
-		    		storeVars.moved = false;
-		    	}
-		}
-
-
-
-		////// ALUNA & ESTHER - ALONE Anywhere
-		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther")) && (alunaSet == estherSet) && (alunaSet != konstalSet) && (alunaSet != cratorSet) && (alunaSet != milkySet) && isInConvo == false)
-		{
-				print ("aluna_esther_alone_anywhere");
-				
-				//anim.Play("scene1_milky_aluna_woods");
-				
-		    	if ((Set1.Contains("aluna_esther_alone_anywhere")) && (Set1.Contains("aluna_esther_milky_alone_anywhere") == false))
-		    	{
-		    		currentConvo = Set1["aluna_esther_alone_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="aluna_esther_alone_anywhere";
-		    		makeConvo("aluna_esther_alone_anywhere", Set1);
-		    		storeVars.moved = false;
-		    	}
-		}
-
-		////// ALUNA & KONSTAL & CRATOR - ALONE Anywhere
-		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Crator")) && (alunaSet == konstalSet) && (alunaSet == cratorSet) && (alunaSet != estherSet) && (alunaSet != milkySet) && isInConvo == false)
-		{
-				print ("aluna_crator_konstal_alone_anywhere");
-				
-				//anim.Play("scene1_milky_aluna_woods");
-				
-		    	if (Set1.Contains("aluna_crator_konstal_alone_anywhere")) 
-		    	{
-		    		currentConvo = Set1["aluna_crator_konstal_alone_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="aluna_crator_konstal_alone_anywhere";
-		    		makeConvo("aluna_crator_konstal_alone_anywhere", Set1);
-		    		storeVars.moved = false;
-		    	}
-		}
-
-
-		////// ESTHER & KONSTAL & CRATOR - alone Anywhere
-		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Crator")) && (estherSet == konstalSet) && (estherSet == cratorSet) && (estherSet != milkySet) && (estherSet != alunaSet) && isInConvo == false)
-		{
-				print ("crator_esther_konstal_alone_anywhere");
-				
-				//anim.Play("scene1_milky_aluna_woods");
-				
-		    	if (Set1.Contains("crator_esther_konstal_alone_anywhere")) 
-		    	{
-		    		currentConvo = Set1["crator_esther_konstal_alone_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="crator_esther_konstal_alone_anywhere";
-		    		makeConvo("crator_esther_konstal_alone_anywhere", Set1);
-		    		storeVars.moved = false;
-		    	}
-		}
-
-
-		////// ESTHER & KONSTAL- maybeAluna Anywhere
-		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (estherSet == konstalSet) && (estherSet != cratorSet) && (estherSet != milkySet) && isInConvo == false)
-		{
-				print ("esther_konstal_maybeAluna_anywhere");
-				
-				//anim.Play("esther_konstal_maybeAluna_anywhere");
-				
-		    	if (Set1.Contains("esther_konstal_maybeAluna_anywhere")) 
-		    	{
-		    		currentConvo = Set1["esther_konstal_maybeAluna_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="esther_konstal_maybeAluna_anywhere";
-		    		makeConvo("esther_konstal_maybeAluna_anywhere", Set1);
-		    		storeVars.moved = false;
-		    	}
-		}
-
-		////// ESTHER & KONSTAL- maybeAluna Anywhere
-		if ((storeVars.moved == true) && ((storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (estherSet == cratorSet) && (estherSet != konstalSet) && (estherSet != milkySet) && isInConvo == false)
-		{
-				print ("esther_crator_maybeAluna_anywhere");
-				
-				//anim.Play("esther_crator_maybeAluna_anywhere");
-				
-		    	if (Set1.Contains("esther_crator_maybeAluna_anywhere")) 
-		    	{
-		    		currentConvo = Set1["esther_crator_maybeAluna_anywhere"];
-		    		isInConvo = true;
-		    		currentConvoName ="esther_crator_maybeAluna_anywhere";
-		    		makeConvo("esther_crator_maybeAluna_anywhere", Set1);
-		    		storeVars.moved = false;
-		    	}
-		}
-
-
-
-		////// ESTHER & KONSTAL & ALUNA - esther is pregnant
+		
+			////// ESTHER & KONSTAL & ALUNA - esther is pregnant
 		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == cratorSet) && (estherSet == alunaSet) && isInConvo == false)
 		{
 				print ("Esther_Pregnant_Aluna_Konstal");
@@ -2049,6 +1891,206 @@ if (storeVars.moved == true)
 		}
 
 
+
+
+		////// MILKY & CRATOR - ALONE Anywhere
+		if ((storeVars.moved == true) &&( (storeVars.justClickedChar == "Milky") || (storeVars.justClickedChar == "Crator")) && (milkySet == cratorSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != konstalSet) && isInConvo == false)
+		{
+				print ("milky_crator_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("milky_crator_anywhere"))
+		    	{
+		    		currentConvo = Set1["milky_crator_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="milky_crator_anywhere";
+		    		makeConvo("milky_crator_anywhere", Set1);
+		    		storeVars.moved = false;
+		    	}
+		}
+
+		////// MILKY & KONSTAL - ALONE Anywhere
+		if ((storeVars.moved == true) &&( (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Milky")) && (milkySet == konstalSet) && (milkySet != alunaSet) && (milkySet != estherSet) && (milkySet != cratorSet) && isInConvo == false)
+		{
+				print ("konstal_milky_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("konstal_milky_anywhere"))
+		    	{
+		    		currentConvo = Set1["konstal_milky_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="konstal_milky_anywhere";
+		    		makeConvo("konstal_milky_anywhere", Set1);
+		    		storeVars.moved = false;
+		    	}
+		}
+
+
+		////// ALUNA & MILKY - ALONE Anywhere
+		if ((storeVars.moved == true) &&( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky")) && (alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != estherSet) && (alunaSet != konstalSet) && isInConvo == false)
+		{
+				print ("aluna_milky_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("aluna_milky_alone_anywhere"))
+		    	{
+		    		currentConvo = Set1["aluna_milky_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_milky_alone_anywhere";
+		    		makeConvo("aluna_milky_alone_anywhere", Set1);
+		    		storeVars.moved = false;
+
+		    	}
+		}
+
+		//ESTHER and MILKY - Alone - Any Scene
+		if ((storeVars.moved == true) &&( (storeVars.justClickedChar == "Milky") || (storeVars.justClickedChar == "Esther")) && (milkySet == estherSet) && (milkySet != alunaSet) && (milkySet != cratorSet) && (milkySet != konstalSet) && isInConvo == false)
+		{
+				print ("esther_milky_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("esther_milky_alone_anywhere"))
+		    	{
+		    		currentConvo = Set1["esther_milky_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="esther_milky_alone_anywhere";
+		    		makeConvo("esther_milky_alone_anywhere", Set1);
+		    		storeVars.moved = false;
+		    	}
+		}
+
+		////// ALUNA & ESTHER & MILKY - ALONE Anywhere
+		if ((storeVars.moved == true) &&( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Milky")) && (alunaSet ==  estherSet) && (alunaSet == milkySet) && (alunaSet != cratorSet) && (alunaSet != konstalSet) && isInConvo == false)
+		{
+				print ("aluna_esther_milky_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if(Set1.Contains("aluna_esther_milky_alone_anywhere"))
+		    	{
+		    		currentConvo = Set1["aluna_esther_milky_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_esther_milky_alone_anywhere";
+		    		makeConvo("aluna_esther_milky_alone_anywhere", Set1);
+		    		storeVars.moved = false;
+		    	}
+		}
+
+
+		////// KONSTAL & CRATOR - ALONE Anywhere
+		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Crator")) && (konstalSet == cratorSet) && (konstalSet != alunaSet) && (konstalSet != estherSet) && (konstalSet != milkySet) && isInConvo == false)
+		{
+				print ("crator_konstal_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if (Set1.Contains("crator_konstal_alone_anywhere"))
+		    	{
+		    		currentConvo = Set1["crator_konstal_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="crator_konstal_alone_anywhere";
+		    		makeConvo("crator_konstal_alone_anywhere", Set1);
+		    		storeVars.moved = false;
+		    	}
+		}
+
+
+
+		////// ALUNA & ESTHER - ALONE Anywhere
+		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther")) && (alunaSet == estherSet) && (alunaSet != konstalSet) && (alunaSet != cratorSet) && (alunaSet != milkySet) && isInConvo == false)
+		{
+				print ("aluna_esther_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if ((Set1.Contains("aluna_esther_alone_anywhere")) && (Set1.Contains("aluna_esther_milky_alone_anywhere") == false))
+		    	{
+		    		currentConvo = Set1["aluna_esther_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_esther_alone_anywhere";
+		    		makeConvo("aluna_esther_alone_anywhere", Set1);
+		    		storeVars.moved = false;
+		    	}
+		}
+
+		////// ALUNA & KONSTAL & CRATOR - ALONE Anywhere
+		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Crator")) && (alunaSet == konstalSet) && (alunaSet == cratorSet) && (alunaSet != estherSet) && (alunaSet != milkySet) && isInConvo == false)
+		{
+				print ("aluna_crator_konstal_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if (Set1.Contains("aluna_crator_konstal_alone_anywhere")) 
+		    	{
+		    		currentConvo = Set1["aluna_crator_konstal_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_crator_konstal_alone_anywhere";
+		    		makeConvo("aluna_crator_konstal_alone_anywhere", Set1);
+		    		storeVars.moved = false;
+		    	}
+		}
+
+
+		////// ESTHER & KONSTAL & CRATOR - alone Anywhere
+		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal") || (storeVars.justClickedChar == "Crator")) && (estherSet == konstalSet) && (estherSet == cratorSet) && (estherSet != milkySet) && (estherSet != alunaSet) && isInConvo == false)
+		{
+				print ("crator_esther_konstal_alone_anywhere");
+				
+				//anim.Play("scene1_milky_aluna_woods");
+				
+		    	if (Set1.Contains("crator_esther_konstal_alone_anywhere")) 
+		    	{
+		    		currentConvo = Set1["crator_esther_konstal_alone_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="crator_esther_konstal_alone_anywhere";
+		    		makeConvo("crator_esther_konstal_alone_anywhere", Set1);
+		    		storeVars.moved = false;
+		    	}
+		}
+
+
+		////// ESTHER & KONSTAL- maybeAluna Anywhere
+		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (estherSet == konstalSet) && (estherSet != cratorSet) && (estherSet != milkySet) && (isInConvo == false))
+		{
+				print ("esther_konstal_maybeAluna_anywhere");
+				
+				//anim.Play("esther_konstal_maybeAluna_anywhere");
+				
+		    	if (Set1.Contains("esther_konstal_maybeAluna_anywhere")) 
+		    	{
+		    		currentConvo = Set1["esther_konstal_maybeAluna_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="esther_konstal_maybeAluna_anywhere";
+		    		makeConvo("esther_konstal_maybeAluna_anywhere", Set1);
+		    		storeVars.moved = false;
+		    	}
+		}
+
+		////// ESTHER & KONSTAL- maybeAluna Anywhere
+		if ((storeVars.moved == true) && ((storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Crator")) && (estherSet == cratorSet) && (estherSet != konstalSet) && (estherSet != milkySet) && isInConvo == false)
+		{
+				print ("esther_crator_maybeAluna_anywhere");
+				
+				//anim.Play("esther_crator_maybeAluna_anywhere");
+				
+		    	if (Set1.Contains("esther_crator_maybeAluna_anywhere")) 
+		    	{
+		    		currentConvo = Set1["esther_crator_maybeAluna_anywhere"];
+		    		isInConvo = true;
+		    		currentConvoName ="esther_crator_maybeAluna_anywhere";
+		    		makeConvo("esther_crator_maybeAluna_anywhere", Set1);
+		    		storeVars.moved = false;
+		    	}
+		}
+
+
+
+	
+
 		////////////////////////////////////////
 		///////////  CHECK THE TENT
 		////////////////////////////////////////
@@ -2100,7 +2142,7 @@ if (storeVars.moved == true)
 
 			}
 
-		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Crator") ) && (storeVars.startPart2 == true)&& (cratorSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaLookedAtFootprints == true)
+		if ((storeVars.moved == true) && (storeVars.alunaKnowsMilkyFootprints == false) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Crator") ) && (storeVars.startPart2 == true)&& (cratorSet == "inWoods") && (alunaSet == "inWoods") &&  storeVars.alunaLookedAtFootprints == true)
 			{
 				print ("aluna_crator_woods_part2_talk1");
 				
@@ -2119,7 +2161,7 @@ if (storeVars.moved == true)
 			}
 
 
-		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky"))&& (storeVars.startPart2 == true) && (milkySet == "inWoods") && (alunaSet == "inWoods") &&  (storeVars.alunaKnowsMilkyFootprints == true) )
+		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Milky"))&& (storeVars.startPart2 == true) && (milkySet == "inWoods") && (alunaSet == "inWoods") &&  (storeVars.alunaLookedAtFootprints == true) )
 			{
 				print ("aluna_milky_woods_part2");
 				
@@ -2132,6 +2174,7 @@ if (storeVars.moved == true)
 		    		currentConvoName ="aluna_milky_woods_part2";
 		    		makeConvo("aluna_milky_woods_part2", Set1);
 		    		storeVars.milkyLookedAtFootprints = true;
+		    		storeVars.alunaKnowsMilkyFootprints= true;
 		    		storeVars.moved = false;
 		    	}
 
@@ -2168,7 +2211,7 @@ if (storeVars.moved == true)
 		    		isInConvo = true;
 		    		currentConvoName ="aluna_esther_woods_part2";
 		    		makeConvo("aluna_esther_woods_part2", Set1);
-		    		storeVars.milkyLookedAtFootprints = true;
+		    		storeVars.estherLookedAtFootprints = true;
 		    		storeVars.moved = false;
 		    	}
 
@@ -2703,7 +2746,21 @@ if (storeVars.moved == true)
 		///////////  CHECK THE Hill
 		////////////////////////////////////////
 
-
+		if ((storeVars.moved == true) &&  (storeVars.regrouped == true) && (weaponProgress >= 4) && (decoyProgress >= 8) && (alunaSet == "inHill") && (cratorSet == "inHill")&& (estherSet == "inHill")&& (milkySet == "inHill") && (konstalSet == "inHill"))
+			{
+				print ("All_Done");
+				
+				//anim.Play("All_Done");
+				
+		    	if(Set2.Contains("All_Done"))
+		    	{
+		    		currentConvo = Set2["All_Done"];
+		    		isInConvo = true;
+		    		currentConvoName ="All_Done";
+		    		makeConvo("All_Done", Set2);	
+		    		storeVars.moved = false;
+		    	}
+			}
 
 
 
@@ -2724,9 +2781,6 @@ if (isInConvo == true)
 }
 
 
-if(Input.GetMouseButtonDown(0))
-			Debug.Log("Pressed left click.");
-			
 
 if(isInConvo == false)
 {
@@ -2737,7 +2791,7 @@ else
 		clickHere.GetComponent.<Collider2D>().enabled=true;
 }
 
-print("end update");
+//print("end update");
 }
 
 
@@ -2762,6 +2816,7 @@ function makeConvo(stringName,hashtableName)
 			if (mouseDownNumber == currentConvo.length)
 			{
 				//THIS IS WHERE CONVO ENDS!!!1
+				print("Hit mouseDownNumber == currentConvo.length");
 				gamestate.characterSpeaking = "none";
 				SpeakingChar1.GetComponent.<UnityEngine.UI.Image>().sprite = blank;
 				SpeakingChar2.GetComponent.<UnityEngine.UI.Image>().sprite = blank;
@@ -2769,6 +2824,7 @@ function makeConvo(stringName,hashtableName)
 				//mouseDownNumber = 0;
 				isInConvo = false;
 				mouseDownNumber = 0;
+				Debug.Log(hashtableName, stringName);
 				hashtableName.Remove(stringName);
 				storeVars.moved = false;
 			
@@ -2780,8 +2836,9 @@ function makeConvo(stringName,hashtableName)
 				chara = currentConvo[mouseDownNumber][0];
 		        dialoque = currentConvo[mouseDownNumber][1];
 		        emotion = currentConvo[mouseDownNumber][2];
-		 	    scenes.makeCharacterSpeak( chara , dialoque, emotion);
+		 	    scenes.makeCharacterSpeak( chara, dialoque, emotion);
 		 	    mouseDownNumber ++;
+		 	    //print("this should be first");
 	 	    }
 		}
 	
@@ -2791,7 +2848,11 @@ function makeConvo(stringName,hashtableName)
 		
 		if (isInConvo == true)
 		{
-			if (mouseDownNumber == currentConvo.length)
+			if (currentConvo == null)
+			{
+				print ("currentCovo equals null!"); //NEWLY ADDED
+			}
+			if ((currentConvo == null) || (mouseDownNumber == currentConvo.length)) //END THE CONVERSATION  //'(currentConvo == null)' NEWLY ADDED
 			{
 				gamestate.characterSpeaking = "none";
 				SpeakingChar1.GetComponent.<UnityEngine.UI.Image>().sprite = blank;
@@ -2802,10 +2863,17 @@ function makeConvo(stringName,hashtableName)
 				mouseDownNumber = 0;
 				hashtableName.Remove(stringName);
 				storeVars.moved = false;
+				scenes.selectedChar = SpeakingChar1; //NEWLY ADDED
 				
 				if ( stringName == "Hill_SeeMonster")
 				{
+					print ("Hit Here");
 					Application.LoadLevel ("DiscoveryScene");
+				}
+				if ( stringName == "All_Done")
+				{
+					print ("Hit Here");
+					Application.LoadLevel ("MainScene_Part3");
 				}
 			
 			}

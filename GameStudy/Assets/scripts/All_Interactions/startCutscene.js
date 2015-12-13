@@ -47,7 +47,7 @@ function Update () {
 			blackFlash.Play("fadeIn-fadeOut");
 			kostalPregScene.SetActive(true);
 			
-			if (currentAnim.GetCurrentAnimatorStateInfo(0).IsName("Empty"))
+			if (currentAnim.GetCurrentAnimatorStateInfo(0).IsName("EndPreg"))
  			{
     			// Avoid any reload.
     			blackFlash.Play("fadeIn-fadeOut");
@@ -66,7 +66,7 @@ function Update () {
 			blackFlash.Play("fadeIn-fadeOut");
 			cratorPregScene.SetActive(true);
 			
-			if (currentAnim.GetCurrentAnimatorStateInfo(0).IsName("Empty"))
+			if (currentAnim.GetCurrentAnimatorStateInfo(0).IsName("EndPreg"))
  			{
  				print ("Hit Empty");
     			// Avoid any reload.
@@ -86,7 +86,7 @@ function Update () {
 			blackFlash.Play("fadeIn-fadeOut");
 			estherPregScene.SetActive(true);
 			
-			if (currentAnim.GetCurrentAnimatorStateInfo(0).IsName("Empty"))
+			if (currentAnim.GetCurrentAnimatorStateInfo(0).IsName("EndPreg"))
  			{
  				
     			// Avoid any reload.
@@ -105,7 +105,7 @@ function Update () {
 			blackFlash.Play("fadeIn-fadeOut");
 			alunaPregScene.SetActive(true);
 			
-			if (currentAnim.GetCurrentAnimatorStateInfo(0).IsName("Empty"))
+			if (currentAnim.GetCurrentAnimatorStateInfo(0).IsName("EndPreg"))
  			{
     			// Avoid any reload.
     			blackFlash.Play("fadeIn-fadeOut");
