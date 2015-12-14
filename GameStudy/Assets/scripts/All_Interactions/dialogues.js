@@ -1385,7 +1385,7 @@ function Update () {
 	{
 		print ("Set1 is null");
 	}
-	Debug.Log (Set2.Count);
+//	Debug.Log (Set2.Count);
 	if (Set2 == null)
 	{
 		print ("Set2 is null");

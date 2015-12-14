@@ -1,14 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/dialogues.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/drag&amp;Set.js">
     <Files>
-      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="1222" Column="70" />
-      <File FileName="Assets/scripts/Bubble/CutsceneControls/ScenesScript.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/GameState.js" Line="1" Column="1" />
-      <File FileName="Assets/endDiscovery.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/storeVars.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="47" Column="21" />
+      <File FileName="Assets/NewScene.cs" Line="1" Column="1" />
+      <File FileName="Assets/StartCredits.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/buttonClick.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

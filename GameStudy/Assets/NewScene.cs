@@ -30,7 +30,7 @@ public class NewScene : StateMachineBehaviour {
 		//
 		//}
 
-		Application.LoadLevel ("MainGame");
+		Application.LoadLevel ("MainScene_Part1");
 
 	}
 }

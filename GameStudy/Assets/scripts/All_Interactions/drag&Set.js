@@ -5,10 +5,12 @@
 var game : GameObject;
 var myCamera : Camera;
 var anim : Animator;
+var inConvo = false;
 
 //get the universal script to store values
 var storeVars : storeVars;
 var dialogue : dialogues;
+var IAmOnFloor= false;
 
 //MUST DEFINE THIS VARIABLE OUTSIDE AS THE CHARACTER'S NAME
 var objName= "";
@@ -39,6 +41,17 @@ function Start () {
 
 
 function Update () {
+if( game.GetComponent.<dialogues>().isInConvo == true)
+{
+if(IAmOnFloor== true){
+GetComponent.<Collider2D>().enabled=false;
+GetComponent.<Rigidbody2D>().isKinematic = true;}
+}
+else{
+GetComponent.<Collider2D>().enabled=true;
+GetComponent.<Rigidbody2D>().isKinematic = false;
+
+}
 //transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(0,0,0,0);
 
 }
@@ -101,6 +114,7 @@ function OnMouseDrag()
 
 
 function OnMouseUp () {
+print("CLICK");
 if(game.GetComponent.<dialogues>().isInConvo == false){
 	var oldAlunaPos = storeVars.alunaSet;
 	var oldMilkyPos = storeVars.milkySet;
@@ -108,7 +122,7 @@ if(game.GetComponent.<dialogues>().isInConvo == false){
 	var oldKonstalPos = storeVars.konstalSet;
 	var oldCratorPos = storeVars.cratorSet;
 	//transform.GetChild(0).GetComponent.<Renderer>().material.color = Color(0,0,0,0);
-	
+	print("CLICK");
 	if (objName == "Aluna")
 	{
 		if (transform.position.x < -8.2 )
@@ -475,4 +489,13 @@ if(game.GetComponent.<dialogues>().isInConvo == false){
 	storeVars.heldChar = "None";
 	
 	}
+}
+
+function OnCollisionEnter2D(coll: Collision2D) {
+	if (coll.gameObject.name == "Floor")
+		IAmOnFloor= true;
+}
+function OnCollisionExit2D(coll: Collision2D) {
+	if (coll.gameObject.name == "Floor")
+		IAmOnFloor= false;
 }
