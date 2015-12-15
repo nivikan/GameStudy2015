@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/drag&amp;Set.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/dialogues.js">
     <Files>
-      <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="47" Column="21" />
+      <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="1" Column="1" />
       <File FileName="Assets/NewScene.cs" Line="1" Column="1" />
       <File FileName="Assets/StartCredits.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/buttonClick.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="375" Column="54" />
+      <File FileName="Assets/scripts/RestartScript.js" Line="1" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

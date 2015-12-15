@@ -359,7 +359,7 @@ scene.Push(["Aluna", "I think these were from last night.", "normal"]);
 scene.Push(["Aluna", "I think if we follow them, we can find out exactly how she got pregnant.", "normal"]);
 scene.Push(["Esther", "...Maybe we can see other footprints.", "angry"]);
 scene.Push(["Esther", "Then we’ll know which one of the guys did it.", "angry"]);
-scene.Push(["Aluna", "Or We’ll be able to how she got pregnant without having sex.", "normal"]);
+scene.Push(["Aluna", "Or We’ll be able to find out how she got pregnant without having sex.", "normal"]);
 scene.Push(["Esther", "Um, or that.", "normal"]);
 scene.Push(["Aluna", "It looks like it’s leading to the hill.", "normal"]);
 scene.Push(["Esther", "I’ll check it out when I’m over there next. Thanks, Aluna.", "happy"]);
