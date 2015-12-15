@@ -408,7 +408,9 @@ scene = new Array();
 scene.Push(["Aluna", "I guess it’s up to me to investigate the Hill.", "normal"]);	
 scene.Push(["Aluna", "Nothing here-", "normal"]);	
 scene.Push(["Aluna", "Not here either.", "normal"]);	
-scene.Push(["Aluna", "This is going to take longer than I thought.", "sigh"]);		
+scene.Push(["Aluna", "This is going to take longer than I thought.", "sigh"]);	
+scene.Push(["Aluna", "It's getting pretty dark.", "normal"]);	
+scene.Push(["Aluna", "Maybe I should just sleep here for today.", "normal"]);		
 //>CUTSCENE: GET PREGNANT<	
 Set1.Add("aluna_hill_part2",scene);	
 
@@ -416,7 +418,7 @@ Set1.Add("aluna_hill_part2",scene);
 // ESTHER -  Hill  -alone -After #14
 scene = new Array();
 scene.Push(["Esther", "So the footprints lead here.", "normal"]);	
-scene.Push(["Esther", "there has to be some clue here… we can find out which one of the guys in a lying sick.", "normal"]);	
+scene.Push(["Esther", "There has to be some clue here… we can find out which one of the guys is lying.", "normal"]);	
 scene.Push(["Esther", "Hmmm…..", "normal"]);	
 scene.Push(["Esther", "Still looking.", "angry"]);	
 scene.Push(["Esther", "I’m starting to think this was a bad idea…", "sigh"]);	
@@ -437,6 +439,7 @@ scene.Push(["Crator", "What am I even supposed to be looking for?", "normal"]);
 scene.Push(["Crator", "Damn, the suns getting low. No point looking now, I guess.", "normal"]);	
 scene.Push(["Crator", "It’s a little bit too dark to get back to camp…", "normal"]);	
 scene.Push(["Crator", "I’ll just lay down here and get going in the morning.", "normal"]);	
+//>CUTSCENE: GET PREGNANT<
 Set1.Add("crator_hill_part2",scene);
 
 //KONSTAL Hill  -After #16 - alone
@@ -597,7 +600,7 @@ scene.Push(["Aluna", "Yeah? ", "normal"]);
 scene.Push(["Esther", "I think I’m pregnant.", "normal"]);
 scene.Push(["Aluna", "What?", "normal"]);
 scene.Push(["Esther", "I know- this sounds crazy. But last night I think I got pregnant. It’s weird.", "normal"]); 
-scene.Push(["Esther", "You’re not supposed to be able to tell if you’re pregnant for a few weeks after conception.", "normal"]);
+scene.Push(["Esther", "You’re not supposed to be able to tell if you’re pregnant for a few weeks.", "normal"]);
 scene.Push(["Esther", "But I just feel it. i know I got pregnant last night. ", "normal"]);
 scene.Push(["Aluna", "It’s just like Milky and I…", "normal"]);
 scene.Push(["Esther", "Exactly, I think so too. We all got pregnant through similar means. ", "normal"]);
@@ -647,7 +650,7 @@ scene.Push(["Konstal", "...", "normal"]);
 scene.Push(["Milky", "Where were you last night?", "normal"]);
 scene.Push(["Konstal", "Ugghhhhh.", "normal"]);
 scene.Push(["Milky", "...Sorry.", "normal"]);
-scene.Push(["Konstal", "… I was at the Hill. Took a nap.", "normal"]);
+scene.Push(["Konstal", "… I was at the hill. Took a nap.", "normal"]);
 scene.Push(["Milky", "That’s cool. Did you see anything weird there? I was there when I got pregnant, y’know?", "normal"]);
 scene.Push(["Konstal", " …", "normal"]);
 scene.Push(["Konstal", "…", "normal"]);
@@ -765,7 +768,8 @@ scene.Push(["Aluna", "A weird type of preganncy that shows symptoms the next day
 scene.Push(["Crator", "Excuse me?", "normal"]);
 scene.Push(["Konstal", "Oh my god- here we go again.", "angry"]);
 scene.Push(["Aluna", "You don’t believe me? The proof is right in front of you.", "normal"]);
-scene.Push(["Konstal", "The only proof here is that, like Milky, you're pretty slow. No one just wakes up pregnant. ", "normal"]);
+scene.Push(["Konstal", "The only proof here is that, like Milky, you're pretty slow.", "normal"]);
+scene.Push(["Konstal", "No one just wakes up pregnant. ", "normal"]);
 scene.Push(["Aluna", "Well that was uncalled for.", "normal"]);
 scene.Push(["Milky", "It happened to me too! You have to believe us!", "angry"]);
 scene.Push(["Konstal", "AUGH! I can’t take this! C’mon, Crator, let’s get out of here.", "angry"]);
@@ -793,7 +797,8 @@ scene.Push(["Aluna", "A weird type of preganncy that shows symptoms the next day
 scene.Push(["Crator", "Excuse me?", "normal"]);
 scene.Push(["Konstal", "Oh my god- here we go again.", "angry"]);
 scene.Push(["Aluna", "You don’t believe me? The proof is right in front of you.", "normal"]);
-scene.Push(["Konstal", "The only proof here is that, like Milky, you're pretty slow. No one just wakes up pregnant. ", "normal"]);
+scene.Push(["Konstal", "The only proof here is that, like Milky, you're pretty slow.", "normal"]);
+scene.Push(["Konstal", "No one just wakes up pregnant. ", "normal"]);
 scene.Push(["Aluna", "Well that was uncalled for.", "normal"]);
 scene.Push(["Milky", "It happened to me too! You have to believe us!", "angry"]);
 scene.Push(["Esther", "I’m pregnant too! You guys can’t seriously not believe all three of us, can you?", "angry"]);
@@ -810,7 +815,8 @@ Set1.Add("Aluna_Pregnant_Esther_pregnant_All_inCamp",scene);
 //IF ALUNA IS PREGNANT AND NO ONE ELSE and all camp scene did not happen
 //ALUNA and ESTHER
 scene = new Array();
-scene.Push(["Aluna", "I feel so weird. Something crazy happened last night. Something- extraterrestrial.", "normal"]);
+scene.Push(["Aluna", "I feel so weird. Something crazy happened last night.", "normal"]);
+scene.Push(["Aluna", "Something- extraterrestrial.", "normal"]);
 scene.Push(["Esther", "Hey, Aluna. What’s going on? You look a bit spooked.", "normal"]);
 scene.Push(["Aluna", "Oh. It’s just that something really weird happened last night.", "normal"]);
 scene.Push(["Esther", "Weird? How?", "normal"]);
@@ -1058,11 +1064,11 @@ scene.Push(["Aluna", "That was messed up.", "normal"]);
 scene.Push(["Esther", "What do we do now? It’s only a matter of time before that things starts eating us.", "angry"]);
 scene.Push(["Milky", "I’m scared, you guys…", "sad"]);
 scene.Push(["Crator", "Don’t worry, Milky, I’m here for you.", "normal"]);
-scene.Push(["Milky", "Oh god, we’ve all been sleeping so close to that thing… I have that thing’s babies in me!", "angry"]);
-scene.Push(["Milky", "I have that thing’s babies in me!", "surprise"]);
+scene.Push(["Milky", "Oh god, we’ve all been sleeping so close to that thing…", "angry"]);
+scene.Push(["Milky", "I have that thing’s babies in me!", "angry"]);
 scene.Push(["Crator", "It seems to be a species that needs hosts to incubate its eggs.", "normal"]); 
 scene.Push(["Crator", "You're not pregnant in the traditional sense of the word.", "normal"]); 
-scene.Push(["Crator", "It's mor elike you're incubating eggs in your body.", "normal"]);
+scene.Push(["Crator", "It's more like you're incubating eggs in your body.", "normal"]);
 scene.Push(["Milky", "Ew...", "sad"]);
 scene.Push(["Crator", "Guys- how are we going to solve this?", "normal"]);
 scene.Push(["Milky", "… Will we have to fight it?", "sad"]);
@@ -1143,7 +1149,8 @@ scene.Push(["Aluna", "I just need one. I have a reason. I promise. ", "normal"])
 scene.Push(["Crator", "I don’t know, Aluna, I need to save our rations", "normal"]);
 scene.Push(["Crator", "especially with the situation we’re in right now…", "normal"]);
 scene.Push(["Aluna", "It’s ok, I’ll skip my next meal for it. I promise.", "normal"]);
-scene.Push(["Crator", "Aluna, you’re a skinny twig. I can’t let you skip your next meal. Sorry Aluna.", "sad"]);
+scene.Push(["Crator", "Aluna, you’re a skinny twig. I can’t let you skip your next meal.", "sad"]);
+scene.Push(["Crator", "Sorry Aluna.", "sad"]);
 scene.Push(["Aluna", "If Milky asked, I bet you’d say ok…", "normal"]);
 scene.Push(["Crator", "What was that?", "normal"]);
 scene.Push(["Aluna", "Nothing! Just thought of another plan.", "normal"]);
@@ -1520,7 +1527,7 @@ if (storeVars.moved == true)
 		////////////////////////////////////////
 		
 			////// ESTHER & KONSTAL & ALUNA - esther is pregnant
-		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == cratorSet) && (estherSet == alunaSet) && isInConvo == false)
+		if ((storeVars.moved == true) && ( (storeVars.justClickedChar == "Aluna") || (storeVars.justClickedChar == "Esther") || (storeVars.justClickedChar == "Konstal")) && (storeVars.allTalk_estherIsPreganant == false) && (storeVars.estherIsPreganant == true) && (estherSet == konstalSet) && (estherSet == alunaSet) && isInConvo == false)
 		{
 				print ("Esther_Pregnant_Aluna_Konstal");
 				
@@ -2292,11 +2299,18 @@ if (storeVars.moved == true)
 				
 		    	if(Set1.Contains("aluna_hill_part2"))
 		    	{
+		    		currentConvo = Set1["aluna_hill_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="aluna_hill_part2";
+		    		makeConvo("aluna_hill_part2", Set1);
+		    		storeVars.moved = false;
+		    		/*
 		    		print ("aluna_hill_PREG CUTSCENE");
 		    		storeVars.alunaIsPreganant = true;
 		    		storeVars.currentCutscene = "alunaPreg";
 		    		storeVars.inCutscene = true;
 		    		Set1.Remove("aluna_hill_part2");
+		    		*/
 		    	}
 
 			}
@@ -2311,10 +2325,11 @@ if (storeVars.moved == true)
 		    	if(Set1.Contains("esther_hill_part2"))
 		    	{
 		    		print ("esther_hill_PREG CUTSCENE");
-		    		storeVars.estherIsPreganant = true;
-		    		storeVars.currentCutscene = "estherPreg";
-		    		storeVars.inCutscene = true;
-		    		Set1.Remove("esther_hill_part2");
+		    		currentConvo = Set1["esther_hill_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="esther_hill_part2";
+		    		makeConvo("esther_hill_part2", Set1);
+		    		storeVars.moved = false;
 		    	}
 
 			}
@@ -2328,10 +2343,11 @@ if (storeVars.moved == true)
 		    	if(Set1.Contains("crator_hill_part2"))
 		    	{
 		    		print ("crator_hill_PREG CUTSCENE");
-		    		storeVars.cratorIsPreganant = true;
-		    		storeVars.currentCutscene = "cratorPreg";
-		    		storeVars.inCutscene = true;
-		    		Set1.Remove("crator_hill_part2");
+		    		currentConvo = Set1["crator_hill_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="crator_hill_part2";
+		    		makeConvo("crator_hill_part2", Set1);
+		    		storeVars.moved = false;
 		    	}
 
 			}	
@@ -2343,10 +2359,11 @@ if (storeVars.moved == true)
 		    	if(Set1.Contains("konstal_hill_part2"))
 		    	{
 		    		print ("konstal_hill_PREG CUTSCENE");
-		    		storeVars.konstalIsPreganant = true;
-		    		storeVars.currentCutscene = "konstalPreg";
-		    		storeVars.inCutscene = true;
-		    		Set1.Remove("konstal_hill_part2");
+		    		currentConvo = Set1["konstal_hill_part2"];
+		    		isInConvo = true;
+		    		currentConvoName ="konstal_hill_part2";
+		    		makeConvo("konstal_hill_part2", Set1);
+		    		storeVars.moved = false;
 		    	}
 
 			}
@@ -2701,7 +2718,7 @@ if (storeVars.moved == true)
 		    		isInConvo = true;
 		    		currentConvoName ="Aluna_Esther_Weapon2";
 		    		makeConvo("Aluna_Esther_Weapon2", Set2);	
-		    		weaponProgress = 3;
+		    		weaponProgress = 4;
 		    		storeVars.moved = false;
 		    	}
 			}
@@ -2875,14 +2892,50 @@ function makeConvo(stringName,hashtableName)
 					print ("Hit Here");
 					Application.LoadLevel ("MainScene_Part3");
 				}
+				if (stringName == "aluna_hill_part2")
+				{
+					print ("ALUNA PREGNANCY SCENE");
+					
+		    		storeVars.alunaIsPreganant = true;
+		    		storeVars.currentCutscene = "alunaPreg";
+		    		storeVars.inCutscene = true;
+				}
+				if (stringName == "esther_hill_part2")
+				{
+					print ("ESTHER PREGNANCY SCENE");
+					
+		    		storeVars.estherIsPreganant = true;
+		    		storeVars.currentCutscene = "estherPreg";
+		    		storeVars.inCutscene = true;
+				}
+				
+				if (stringName == "konstal_hill_part2")
+				{
+					print ("KONSTAL PREGNANCY SCENE");
+					
+		    		storeVars.konstalIsPreganant = true;
+		    		storeVars.currentCutscene = "konstalPreg";
+		    		storeVars.inCutscene = true;
+				}
+				if (stringName == "crator_hill_part2")
+				{
+					print ("CRATOR PREGNANCY SCENE");
+					
+		    		storeVars.cratorIsPreganant = true;
+		    		storeVars.currentCutscene = "cratorPreg";
+		    		storeVars.inCutscene = true;
+				}
 			
 			}
 			else
 			{
 				//print (currentConvo);
-				chara = currentConvo[mouseDownNumber][0];
-		        dialoque = currentConvo[mouseDownNumber][1];
-		        emotion = currentConvo[mouseDownNumber][2];
+				if (currentConvo[mouseDownNumber][0] != null)
+					chara = currentConvo[mouseDownNumber][0];
+				if (currentConvo[mouseDownNumber][1] != null)
+		        	dialoque = currentConvo[mouseDownNumber][1];
+		        if (currentConvo[mouseDownNumber][2] != null)
+		        	emotion = currentConvo[mouseDownNumber][2];
 		 	    scenes.makeCharacterSpeak( chara , dialoque, emotion);
 		 	    mouseDownNumber ++;
 	 	    }
