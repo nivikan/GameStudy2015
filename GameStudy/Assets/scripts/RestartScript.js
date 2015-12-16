@@ -16,6 +16,11 @@ if(Input.GetKeyDown("a")){
 Application.LoadLevel("MainScene_Part1");
 
 }
+if(Input.GetKeyDown("b")){
+
+Application.LoadLevel("MainScene_Part2");
+
+}
 
 
 }
