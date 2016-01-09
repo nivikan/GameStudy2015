@@ -412,6 +412,8 @@ scene.Push(["Aluna", "Nothing here-", "normal"]);
 scene.Push(["Aluna", "Not here either.", "normal"]);	
 scene.Push(["Aluna", "This is going to take longer than I thought.", "sigh"]);	
 scene.Push(["Aluna", "It's getting pretty dark.", "normal"]);	
+scene.Push(["Aluna", "Why do I feel so sleepy all of a sudden?", "sigh"]);
+scene.Push(["Aluna", "It's like I can't even keep my head up...", "sigh"]);
 scene.Push(["Aluna", "Maybe I should just sleep here for today.", "normal"]);		
 //>CUTSCENE: GET PREGNANT<	
 Set1.Add("aluna_hill_part2",scene);	
@@ -420,13 +422,15 @@ Set1.Add("aluna_hill_part2",scene);
 // ESTHER -  Hill  -alone -After #14
 scene = new Array();
 scene.Push(["Esther", "So the footprints lead here.", "normal"]);	
-scene.Push(["Esther", "There has to be some clue here… we can find out which one of the guys is lying.", "normal"]);	
+scene.Push(["Esther", "There has to be some clue here…", "normal"]);	
+scene.Push(["Esther", "we can find out which one of the guys is lying.", "angry"]);	
 scene.Push(["Esther", "Hmmm…..", "normal"]);	
 scene.Push(["Esther", "Still looking.", "angry"]);	
 scene.Push(["Esther", "I’m starting to think this was a bad idea…", "sigh"]);	
-scene.Push(["Esther", "Huh, It’s starting to get dark. I’ll have to call it a day.", "sigh"]);	
-scene.Push(["Esther", "Not sure about walking back through the woods in the dark.", "normal"]);	
-scene.Push(["Esther", "I’ll just settle down here for the night.", "normal"]);	
+scene.Push(["Esther", "It's getting dark and I still haven't found anything.", "sigh"]);	
+scene.Push(["Esther", "Ugh... I just got dizzy all of a sudden.", "angry"]);
+scene.Push(["Esther", "Why am I getting so tired...?", "sigh"]);	
+scene.Push(["Esther", "I’ll just settle down here for the night.", "sigh"]);	
 //>CUTSCENE: GET PREGNANT<
 Set1.Add("esther_hill_part2",scene);	
 
@@ -439,7 +443,9 @@ scene.Push(["Crator", "Nothing here.", "normal"]);
 scene.Push(["Crator", "Nothing over here, either.", "normal"]);	
 scene.Push(["Crator", "What am I even supposed to be looking for?", "normal"]);	
 scene.Push(["Crator", "Damn, the suns getting low. No point looking now, I guess.", "normal"]);	
-scene.Push(["Crator", "It’s a little bit too dark to get back to camp…", "normal"]);	
+scene.Push(["Crator", "Ugh... that's weird...", "angry"]);	
+scene.Push(["Crator", "Why am I all of a sudden falling asleep on my feet?", "sigh"]);	
+scene.Push(["Crator", "I'm so tired...", "sad"]);	
 scene.Push(["Crator", "I’ll just lay down here and get going in the morning.", "normal"]);	
 //>CUTSCENE: GET PREGNANT<
 Set1.Add("crator_hill_part2",scene);
@@ -452,7 +458,9 @@ scene.Push(["Konstal", "Not here….", "normal"]);
 scene.Push(["Konstal", "…", "normal"]);	
 scene.Push(["Konstal", "Aaaargh! I told them there wouldn’t be anything here! ", "angry"]);	
 scene.Push(["Konstal", "Figures, I get stuck doing their dirty work…", "angry"]);	
-scene.Push(["Konstal", "Huh, it’s getting dark. Might as well take a nap here.", "sigh"]);
+scene.Push(["Konstal", "Ugh! And now I'm getting sleepy for no reason!", "angry"]);
+scene.Push(["Konstal", "Why am I so... so... tired...?", "sigh"]);
+scene.Push(["Konstal", "I'll just (yawn) take a small break here...", "sigh"]);
 Set1.Add("konstal_hill_part2",scene);	
 //>CUTSCENE: GET PREGNANT<
 
@@ -1003,6 +1011,7 @@ scene.Push(["Esther", "And we’re all here to watch her back in case something 
 scene.Push(["Esther", "We’re counting on you, Aluna.", "normal"]);
 scene.Push(["Aluna", "Thanks", "normal"]);
 scene.Push(["Esther", "We’ll all watch from behind those bushes.", "normal"]);
+/*
 //(Cutscene: aluna lays under the tree. others move behind the bushes)
 scene.Push(["Konstal", "Stop Pushing!", "angry"]);
 scene.Push(["Esther", "Stop Pulling!", "angry"]);
@@ -1013,7 +1022,8 @@ scene.Push(["Esther", "It’ll happen soon, I’m sure.", "normal"]);
 scene.Push(["Milky", "I don’t - ", "surprise"]);
 scene.Push(["Crator", "HOLY FUCK! WHAT IS THAT?!", "surprise"]);
 //(Image of spider coming down to infect Aluna)
-scene.Push(["Esther", "ALUNA!!! WAKE UP! GET OUT OF THERE!", "surprise"]);
+scene.Push(["Esther", "ALUNA!!! WAKE UP! GET OUT OF THERE!", "surprise"]); */
+
 Set1.Add("Hill_SeeMonster",scene);
 
 
@@ -1194,7 +1204,7 @@ scene.Push(["Aluna", "Thanks, Milky! I couldn’t have done it without you.", "h
 scene.Push(["Milky", "It’s all good.", "happy"]);
 scene.Push(["Aluna", "Just put this here…", "normal"]);
 scene.Push(["Aluna", "A little there…", "normal"]);
-scene.Push(["Aluna", "And Ta-Da! Here it is! The perfect peanut butter sandwich.", "normal"]);
+scene.Push(["Aluna", "And Ta-Da! Here it is! The perfect peanut butter sandwich.", "holdingSandwhich"]);
 scene.Push(["Milky", "Good job, Aluna.", "happy"]);
 Set2.Add("Aluna_Milky_pillow3",scene);
 
@@ -1202,19 +1212,19 @@ Set2.Add("Aluna_Milky_pillow3",scene);
 //54.
 //ALUNA and KONSTAL after #53 anywhere but hill
 scene = new Array();
-scene.Push(["Aluna", "Here’s that sandwich you wanted. ", "normal"]);
+scene.Push(["Aluna", "Here’s that sandwich you wanted. ", "holdingSandwhich"]);
 scene.Push(["Konstal", "What?", "normal"]);
-scene.Push(["Aluna", " You told me to go make one. I realize it was just you being mean", "normal"]);
-scene.Push(["Aluna", "but, um, you do look really pale… and stuff.", "normal"]);
+scene.Push(["Aluna", " You told me to go make one. I realize it was just you being mean", "holdingSandwhich"]);
+scene.Push(["Aluna", "but, um, you do look really pale… and stuff.", "holdingSandwhich"]);
 scene.Push(["Konstal", "Seriously, Aluna? You went through all this trouble…", "surprise"]);
 scene.Push(["Konstal", "... if you want, you can have that body pillow. ", "normal"]);
 scene.Push(["Konstal", "God you must have known I would say that…", "angry"]);
-scene.Push(["Aluna", "How did you even guess?", "happy"]);
-scene.Push(["Aluna", "Thanks for the body Pillow, Konstal.", "normal"]);
+scene.Push(["Aluna", "How did you even guess?", "holdingPillow"]);
+scene.Push(["Aluna", "Thanks for the body Pillow, Konstal.", "holdingPillow"]);
 scene.Push(["Konstal", "Sure…", "normal"]);
-scene.Push(["Aluna", "This won’t really fool the monster, I think.", "normal"]); 
-scene.Push(["Aluna", "I need someone to dress it up. Make it cute.", "normal"]); 
-scene.Push(["Aluna", "Someone who knows makeup… maybe Esther?", "normal"]);
+scene.Push(["Aluna", "This won’t really fool the monster, I think.", "holdingPillow"]); 
+scene.Push(["Aluna", "I need someone to dress it up. Make it cute.", "holdingPillow"]); 
+scene.Push(["Aluna", "Someone who knows makeup… maybe Esther?", "holdingPillow"]);
 Set2.Add("Aluna_Konstal_pillow2",scene);
 
 
@@ -1222,16 +1232,17 @@ Set2.Add("Aluna_Konstal_pillow2",scene);
 //55.
 //ALUNA and ESTHER after #54 anywhere but hill
 scene = new Array();
-scene.Push(["Aluna", "Esther, I was looking for you.", "normal"]);
+scene.Push(["Aluna", "Esther, I was looking for you.", "holdingPillow"]);
 scene.Push(["Esther", "What do you need?", "normal"]);
-scene.Push(["Aluna", "I need you to help me turn this body pillow into a good decoy.", "normal"]);
+scene.Push(["Aluna", "I need you to help me turn this body pillow into a good decoy.", "holdingPillow"]);
 scene.Push(["Esther", "Aluna! That’s perfect! Where did you even find a body pillow?", "surprise"]);
 scene.Push(["Aluna", "It’s a secret. Will you help?", "normal"]);
-scene.Push(["Esther", "Of course! Let me just get out my make up. ", "happy"]);
-scene.Push(["Esther", "Add some red over here… some blush over there…", "happy"]);
-scene.Push(["Esther", "some mascara… eyeliner… and Viola!", "happy"]);
+scene.Push(["Esther", "Of course! Let me just get out my make up. ", "holdingPillow"]);
+scene.Push(["Esther", "Add some red over here… some blush over there…", "holdingPillow"]);
+scene.Push(["Esther", "some mascara… eyeliner… and Viola!", "holdingPillow"]);
 scene.Push(["Esther", "There you go. I think it’s pretty convincing.", "happy"]);
-scene.Push(["Aluna", "Thank you Esther! I’ll put this under the tree once it’s time.", "happy"]);
+scene.Push(["Esther", "This should work.", "normal"]);
+scene.Push(["Aluna", "Thank you Esther! I’ll put this under the tree once it’s time.", "holdingMakeUpPillow"]);
 scene.Push(["Esther", "Great going, Aluna!", "happy"]);
 Set2.Add("Aluna_Esther_pillow",scene);
 
@@ -1242,7 +1253,6 @@ scene = new Array();
 scene.Push(["Aluna", "Any ideas for a weapon? ", "normal"]);
 scene.Push(["Crator", "I’m not sure… Esther is pretty good at fabricating things, isn’t she?", "normal"]);
 scene.Push(["Crator", " Why don’t you ask her?", "normal"]);
-scene.Push(["Crator", "Why don’t you ask her?", "normal"]);
 scene.Push(["Aluna", "Yeah… She is pretty good at stuff like that. I’ll go ask.", "normal"]);
 Set2.Add("Aluna_Crator_weapon1",scene);
 
@@ -1293,15 +1303,15 @@ Set2.Add("Aluna_Milky_weapon",scene);
 //ALUNA and CRATOR after #56 anywhere but hill
 scene = new Array();
 scene.Push(["Aluna", "Hey, any ideas where I can find feathers or string?", "normal"]);
-scene.Push(["Crator", "Actually, I do have some feathers.", "normal"]);
+scene.Push(["Crator", "Actually, I do have some feathers.", "holdingFeathers"]);
 scene.Push(["Aluna", "Really?! You found them here?", "normal"]);
-scene.Push(["Crator", "No, I brought them with me from earth.", "normal"]);
-scene.Push(["Crator", "I kind of have a thing for bird watching.", "normal"]);
-scene.Push(["Crator", "But… it’s ok, I guess, if you take them.", "sad"]);
-scene.Push(["Crator", "It’s for the plan to take care of the monster, right?", "sad"]);
+scene.Push(["Crator", "No, I brought them with me from earth.", "holdingFeathers"]);
+scene.Push(["Crator", "I kind of have a thing for bird watching.", "holdingFeathers"]);
+scene.Push(["Crator", "But… it’s ok, I guess, if you take them.", "holdingFeathers"]);
+scene.Push(["Crator", "It’s for the plan to take care of the monster, right?", "holdingFeathers"]);
 scene.Push(["Aluna", "Crator… are you sure?", "surprise"]);
 scene.Push(["Crator", "Yes, of course. Here you go.", "normal"]);
-scene.Push(["Aluna", "Thank you, Crator.", "happy"]);
+scene.Push(["Aluna", "Thank you, Crator.", "holdingFeather"]);
 Set2.Add("Aluna_Crator_weapon2",scene);
 
 
@@ -1328,13 +1338,14 @@ scene.Push(["Esther", "Just put this here…", "normal"]);
 scene.Push(["Esther", "Some over there…", "normal"]);
 scene.Push(["Esther", "Tie this around here…", "normal"]);
 scene.Push(["Esther", "And there it is! Bows and arrows for all!", "happy"]);
+scene.Push(["Aluna", "Great! Thanks!", "holdingBowArrow"]);
 Set2.Add("Aluna_Esther_Weapon2",scene);
 
 
 //61.
 //ALUNA after #61 & #55 anywhere but hill
 scene = new Array();
-scene.Push(["Aluna", "We’re done! We have all the things we need to face that monster!.", "normal"]);
+scene.Push(["Aluna", "We’re done! We have all the things we need to face that monster!.", "holdingAll"]);
 Set2.Add("Aluna_weapon_decoy_Done",scene);
 
 
@@ -1351,7 +1362,7 @@ scene.Push(["Konstal", "Down with the monster!!", "angry"]);
 scene.Push(["Aluna", "Wow... what a violent group of people.", "surprise"]);
 scene.Push(["Aluna", "Not that I'm not the same.", "sigh"]);
 scene.Push(["Aluna", "C'mon, guys. Let's do this.", "smirk"]);
-scene.Push(["Esther", "Right! Descoy in place?", "smirk"]);
+scene.Push(["Esther", "Right! Decoy in place?", "smirk"]);
 scene.Push(["Konstal", "Check.", "smirk"]);
 scene.Push(["Crator", "Do we have our weapon?", "smirk"]);
 scene.Push(["Milky", "Check!", "surprise"]);

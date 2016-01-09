@@ -1,13 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/All_Interactions/dialogues.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Bubble/MakeBubble.js">
     <Files>
-      <File FileName="Assets/scripts/RestartScript.js" Line="21" Column="39" />
+      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="1206" Column="45" />
+      <File FileName="Assets/scripts/RestartScript.js" Line="30" Column="2" />
       <File FileName="Assets/scripts/All_Interactions/drag&amp;Set.js" Line="1" Column="1" />
       <File FileName="Assets/NewScene.cs" Line="1" Column="1" />
       <File FileName="Assets/StartCredits.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/buttonClick.js" Line="1" Column="1" />
-      <File FileName="Assets/scripts/All_Interactions/dialogues.js" Line="2890" Column="6" />
+      <File FileName="Assets/scripts/storeVars.js" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Bubble/MakeBubble.js" Line="112" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

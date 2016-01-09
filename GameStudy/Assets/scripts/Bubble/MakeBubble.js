@@ -53,6 +53,17 @@ var MilkyImageSurprise: Sprite;
 var CratorImageSurprise: Sprite;
 var KonstalImageSurprise: Sprite;
 
+var AlunaHoldingSandwich: Sprite;
+var AlunaHoldingPillow: Sprite;
+var AlunaHoldingMakeUpPillow: Sprite;
+var AlunaHoldingString: Sprite;
+var AlunaHoldingFeathers: Sprite;
+var AlunaHoldingBowArrow: Sprite;
+var AlunaHoldingAll: Sprite;
+
+var EstherHoldingPillow: Sprite;
+var CratorHoldingFeathers: Sprite;
+
 
 
 var blank: Sprite;
@@ -141,6 +152,34 @@ function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, 
 		{
 			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = AlunaImageSurprise;
 		}
+		else if (emotion == "holdingSandwhich")
+		{
+			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = AlunaHoldingSandwich;
+		}
+		else if (emotion == "holdingPillow")
+		{
+			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = AlunaHoldingPillow;
+		}
+		else if (emotion == "holdingMakeUpPillow")
+		{
+			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = AlunaHoldingMakeUpPillow;
+		}
+		else if (emotion == "holdingString")
+		{
+			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = AlunaHoldingString;
+		}
+		else if (emotion == "holdingFeather")
+		{
+			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = AlunaHoldingFeathers;
+		}
+		else if (emotion == "holdingBowArrow")
+		{
+			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = AlunaHoldingBowArrow;
+		}
+		else if (emotion == "holdingAll")
+		{
+			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = AlunaHoldingAll;
+		}
 		else
 		{
 			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = AlunaImage;
@@ -208,6 +247,10 @@ function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, 
 		{
 			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = EstherImageSurprise;
 		}
+		else if (emotion == "holdingPillow")
+		{
+			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = EstherHoldingPillow;
+		}
 		else
 		{
 			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = EstherImage;
@@ -240,6 +283,10 @@ function makeBubble(instantiatex, instantiatey, speech, speechColor, textColor, 
 		else if (emotion == "surprise")
 		{
 			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = CratorImageSurprise;
+		}
+		else if (emotion == "holdingFeathers")
+		{
+			curImage.GetComponent.<UnityEngine.UI.Image>().sprite = CratorHoldingFeathers;
 		}
 		else
 		{
